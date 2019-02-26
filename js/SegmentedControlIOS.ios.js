@@ -10,8 +10,11 @@
 
 'use strict';
 
-const React = require('React');
-const StyleSheet = require('StyleSheet');
+import React from 'react';
+import { StyleSheet } from 'react-native';
+
+// const React = require('React');
+// const StyleSheet = require('StyleSheet');
 
 const RCTSegmentedControlNativeComponent = require('./RCTSegmentedControlNativeComponent');
 
