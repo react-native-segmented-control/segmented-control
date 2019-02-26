@@ -9,7 +9,9 @@
  */
 'use strict';
 
-const requireNativeComponent = require('requireNativeComponent');
+import { requireNativeComponent } from 'react-native';
+
+// const requireNativeComponent = require('requireNativeComponent');
 
 import type {ViewProps} from 'ViewPropTypes';
 import type {SyntheticEvent} from 'CoreEventTypes';
