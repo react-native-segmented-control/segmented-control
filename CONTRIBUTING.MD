@@ -1,7 +1,7 @@
-# Contributing to React Native NetInfo
+# Contributing to React Native Segmented Control
 
 ## Development Process
-All work on React Native NetInfo happens directly on GitHub. Contributors send pull requests which go through a review process.
+All work on React Native SegmentedControl happens directly on GitHub. Contributors send pull requests which go through a review process.
 
 > **Working on your first pull request?** You can learn how from this *free* series: [How to Contribute to an Open Source Project on GitHub](https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github).
 
