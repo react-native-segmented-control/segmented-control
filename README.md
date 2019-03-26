@@ -1,8 +1,8 @@
 # `@react-native-segmented-control`
 
-React Native SegmentedControlIos library. Use SegmentedControlIOS to render a UISegmentedControl iOS.
+React Native SegmentedControlIOS library. Use SegmentedControlIOS to render a UISegmentedControl iOS.
 
-![alt text](https://github.com/harisbaig100/react-native-segmented-control/blob/branch1/ScreenShots/Screen%20Shot%202019-02-26%20at%206.28.55%20PM.png)
+<img src="https://github.com/react-native-community/react-native-segmented-control/blob/master/ScreenShots/Screen%20Shot%202019-02-26%20at%206.28.55%20PM.png" height="500" />
 
 ## Getting started
 Install the library using either Yarn:
