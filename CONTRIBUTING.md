@@ -48,4 +48,4 @@ We use [Semantic Release](http://semantic-release.org) to automatically release 
 You can report issues on our [bug tracker](https://github.com/react-native-community/react-native-netinfo/issues). Please search for existing issues and follow the issue template when opening an issue.
 
 ## License
-By contributing to React Native NetInfo, you agree that your contributions will be licensed under the **MIT** license.
+By contributing to React Native Segmented Control, you agree that your contributions will be licensed under the **MIT** license.
