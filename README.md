@@ -1,4 +1,6 @@
-# `@react-native-segmented-control`
+# `@react-native-community/segmented-control`
+
+![CircleCI branch](https://img.shields.io/circleci/project/github/react-native-community/react-native-segmented-control/master.svg) ![npm](https://img.shields.io/npm/v/@react-native-community/segmented-control.svg)
 
 React Native SegmentedControlIOS library. Use SegmentedControlIOS to render a UISegmentedControl iOS.
 
