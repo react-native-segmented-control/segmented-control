@@ -9,16 +9,6 @@
  */
 /* eslint-env jest */
 
-import {NativeModules} from 'react-native';
-
-// Mock the RNCNetInfo native module to allow us to unit test the JavaScript code
-NativeModules.RNCNetInfo = {
-  getCurrentConnectivity: jest.fn(),
-  isConnectionMetered: jest.fn(),
-  addListener: jest.fn(),
-  removeListeners: jest.fn(),
-};
-
 // Reset the mocks before each test
 global.beforeEach(() => {
   jest.resetAllMocks();

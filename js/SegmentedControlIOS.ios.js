@@ -10,16 +10,13 @@
 
 'use strict';
 
-import React from 'react';
-import { StyleSheet } from 'react-native';
-
-// const React = require('React');
-// const StyleSheet = require('StyleSheet');
-
-const RCTSegmentedControlNativeComponent = require('./RCTSegmentedControlNativeComponent');
+import * as React from 'react';
+import {StyleSheet} from 'react-native';
 
 import type {SyntheticEvent} from 'CoreEventTypes';
 import type {ViewProps} from 'ViewPropTypes';
+
+import RCTSegmentedControlNativeComponent from './RCTSegmentedControlNativeComponent';
 
 type Event = SyntheticEvent<
   $ReadOnly<{|
@@ -121,6 +118,7 @@ const styles = StyleSheet.create({
   },
 });
 
+// $FlowFixMe
 const SegmentedControlIOSWithRef = React.forwardRef(
   (
     props: SegmentedControlIOSProps,
@@ -130,7 +128,4 @@ const SegmentedControlIOSWithRef = React.forwardRef(
   },
 );
 
-/* $FlowFixMe(>=0.89.0 site=react_native_ios_fb) This comment suppresses an
- * error found when Flow v0.89 was deployed. To see the error, delete this
- * comment and run Flow. */
-module.exports = (SegmentedControlIOSWithRef: NativeSegmentedControlIOS);
+export default SegmentedControlIOSWithRef;

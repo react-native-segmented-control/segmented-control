@@ -5,6 +5,7 @@ React Native SegmentedControlIOS library. Use SegmentedControlIOS to render a UI
 <img src="https://github.com/react-native-community/react-native-segmented-control/blob/master/ScreenShots/Screen%20Shot%202019-02-26%20at%206.28.55%20PM.png" height="500" />
 
 ## Getting started
+
 Install the library using either Yarn:
 
 ```
@@ -18,6 +19,7 @@ npm install --save @react-native-community/segmented-control
 ```
 
 ## Migrating from the core `react-native` module
+
 This module was created when the segmentedControlIos was split out from the core of React Native. To migrate to this module you need to follow the installation instructions above and then change you imports from:
 
 ```javascript
@@ -31,29 +33,32 @@ import SegmentedControlIOS from "@react-native-community/segmented-control";
 ```
 
 ## Usage
+
 Start by importing the library:
 
 Use `SegmentedControlIOS` to render a UISegmentedControl iOS.
 
 #### Programmatically changing selected index
+
 The selected index can be changed on the fly by assigning the
 selectedIndex prop to a state variable, then changing that variable.
 Note that the state variable would need to be updated as the user
 selects a value and changes the index, as shown in the example below.
 
-
 ```javascript
 import SegmentedControlIOS from "@react-native-community/segmented-control";
 
-<SegmentedControlIOS
-    values={['One', 'Two']}
+return (
+  <SegmentedControlIOS
+    values={["One", "Two"]}
     selectedIndex={this.state.selectedIndex}
-    onChange={(event) => {
-    this.setState({selectedIndex: event.nativeEvent.selectedSegmentIndex});
-      }}
- />
+    onChange={event => {
+      this.setState({ selectedIndex: event.nativeEvent.selectedSegmentIndex });
+    }}
+  />
+);
 
- type SegmentedControlIOSProps = $ReadOnly<{|
+type SegmentedControlIOSProps = $ReadOnly<{|
   ...ViewProps,
   /**
    * The labels for the control's segment buttons, in order.
@@ -86,13 +91,13 @@ import SegmentedControlIOS from "@react-native-community/segmented-control";
    * If true, then selecting a segment won't persist visually.
    * The `onValueChange` callback will still work as expected.
    */
-  momentary?: ?boolean,
+  momentary?: ?boolean
 |}>;
 ```
 
 ## Maintainers
 
-* [M.Haris Baig](https://github.com/harisbaig100)
+- [M.Haris Baig](https://github.com/harisbaig100)
 
 ## Contributing
 
@@ -101,4 +106,3 @@ Please see the [`contributing guide`](/CONTRIBUTING.md).
 ## License
 
 The library is released under the MIT licence. For more information see [`LICENSE`](/LICENSE).
-
