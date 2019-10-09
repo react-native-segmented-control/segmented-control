@@ -91,7 +91,7 @@ type SegmentedControlIOSProps = $ReadOnly<{|
    * If true, then selecting a segment won't persist visually.
    * The `onValueChange` callback will still work as expected.
    */
-  momentary?: ?boolean
+  momentary?: ?boolean,
 |}>;
 ```
 
