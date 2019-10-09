@@ -1,23 +1,29 @@
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ *
+ * @format
+ * @flow
+ */
+
+/* eslint-disable react-native/no-inline-styles */
+
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import {StyleSheet, ScrollView, Text, View} from 'react-native';
 import SegmentedControlIOS from '@react-native-community/segmented-control';
 
-export default class App extends React.Component <
-{},
-$FlowFixMeState,
-> {
-state = {
-  values: ['One', 'Two', 'Three'],
-  value: 'Unselected',
-  selectedIndex: undefined,
-};
+export default class App extends React.Component<{}, $FlowFixMeState> {
+  state = {
+    values: ['One', 'Two', 'Three'],
+    value: 'Unselected',
+    selectedIndex: undefined,
+  };
 
-render() {
-  return (
-    <View style={{marginTop: 80}}>
-
+  render() {
+    return (
+      <ScrollView contentContainerStyle={{paddingTop: 80}}>
         <View style={{marginBottom: 10}}>
-          <Text style={styles.text}>Segmented controls can have values</Text> 
+          <Text style={styles.text}>Segmented controls can have values</Text>
           <SegmentedControlIOS values={['One', 'Two']} />
         </View>
 
@@ -25,20 +31,22 @@ render() {
           <SegmentedControlIOS
             values={['One', 'Two', 'Three', 'Four', 'Five']}
           />
-        </View >
+        </View>
 
         <View style={{marginBottom: 25}}>
-        <Text style={styles.text}>Segmented controls can have  pre-selected values</Text>
+          <Text style={styles.text}>
+            Segmented controls can have pre-selected values
+          </Text>
           <SegmentedControlIOS values={['One', 'Two']} selectedIndex={0} />
         </View>
-        
+
         <View style={{marginBottom: 25}}>
-        <Text style={styles.text}>Segmented controls can be momentary</Text>
+          <Text style={styles.text}>Segmented controls can be momentary</Text>
           <SegmentedControlIOS values={['One', 'Two']} momentary={true} />
         </View>
 
         <View style={{marginBottom: 25}}>
-        <Text style={styles.text}>Segmented controls can be disabled</Text>
+          <Text style={styles.text}>Segmented controls can be disabled</Text>
           <SegmentedControlIOS
             enabled={false}
             values={['One', 'Two']}
@@ -63,33 +71,32 @@ render() {
         </View>
 
         <View>
-        <Text style={styles.text}>Custom colors can be provided</Text>
-        <SegmentedControlIOS
-          values={this.state.values}
-          selectedIndex={this.state.selectedIndex}
-          onChange={this._onChange}
-          onValueChange={this._onValueChange}
-        />
-        <Text style={[ styles.text, { marginTop: 10 } ]}>Value: {this.state.value}              Index: {this.state.selectedIndex}</Text>
-        
-      </View>
-    </View>
-  );
-}
+          <Text style={styles.text}>Custom colors can be provided</Text>
+          <SegmentedControlIOS
+            values={this.state.values}
+            selectedIndex={this.state.selectedIndex}
+            onChange={this._onChange}
+            onValueChange={this._onValueChange}
+          />
+          <Text style={[styles.text, {marginTop: 10}]}>
+            Value: {this.state.value} Index: {this.state.selectedIndex}
+          </Text>
+        </View>
+      </ScrollView>
+    );
+  }
 
-_onChange = event => {
-  this.setState({
-    selectedIndex: event.nativeEvent.selectedSegmentIndex,
-  });
-};
+  _onChange = event => {
+    this.setState({
+      selectedIndex: event.nativeEvent.selectedSegmentIndex,
+    });
+  };
 
-_onValueChange = value => {
-  this.setState({
-    value: value,
-  });
-};
-
-
+  _onValueChange = value => {
+    this.setState({
+      value: value,
+    });
+  };
 }
 
 const styles = StyleSheet.create({

@@ -5,26 +5,21 @@
  * LICENSE file in the root directory of this source tree.
  *
  * @format
+ * @flow
  */
 
 'use strict';
 
-const React = require('React');
-const StyleSheet = require('StyleSheet');
-const Text = require('Text');
-const View = require('View');
+import * as React from 'react';
+import {StyleSheet, Text, View} from 'react-native';
 
-class DummySegmentedControlIOS extends React.Component {
-  render() {
-    return (
-      <View style={[styles.dummy, this.props.style]}>
-        <Text style={styles.text}>
-          SegmentedControlIOS is not supported on this platform!
-        </Text>
-      </View>
-    );
-  }
-}
+const DummySegmentedControlIOS = (props: *) => (
+  <View style={[styles.dummy, props.style]}>
+    <Text style={styles.text}>
+      SegmentedControlIOS is not supported on this platform!
+    </Text>
+  </View>
+);
 
 const styles = StyleSheet.create({
   dummy: {
@@ -43,4 +38,4 @@ const styles = StyleSheet.create({
   },
 });
 
-module.exports = DummySegmentedControlIOS;
+export default DummySegmentedControlIOS;
