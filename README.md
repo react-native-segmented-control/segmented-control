@@ -109,7 +109,7 @@ Please see the [`contributing guide`](/CONTRIBUTING.md).
 
 The library is released under the MIT licence. For more information see [`LICENSE`](/LICENSE).
 
-[circle-ci-badge]:https://img.shields.io/circleci/project/github/react-native-community/react-native-segmented-control/master.svg
-[npm-badge]:https://img.shields.io/npm/v/@react-native-community/segmented-control.svg
+[circle-ci-badge]:https://img.shields.io/circleci/project/github/react-native-community/react-native-segmented-control/master.svg?style=flat-square
+[npm-badge]:https://img.shields.io/npm/v/@react-native-community/segmented-control.svg?style=flat-square
 [lean-core-badge]: https://img.shields.io/badge/Lean%20Core-Extracted-brightgreen.svg?style=flat-square
 [lean-core-issue]: https://github.com/facebook/react-native/issues/23313
