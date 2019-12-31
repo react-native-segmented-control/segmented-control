@@ -54,10 +54,12 @@ type SegmentedControlIOSProps = $ReadOnly<{|
   /**
    *
    * Text color of the control.
+   * NOTE: this prop will only work for iOS >= 13
    */
   textColor?: ?string,
   /**
    * Background color of the control.
+   * NOTE: this prop will only work for iOS >= 13
    */
   backgroundColor?: ?string,
   /**
