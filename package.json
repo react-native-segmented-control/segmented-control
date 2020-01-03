@@ -3,6 +3,7 @@
   "version": "1.0.2",
   "description": "React Native SegmentedControlIOS library",
   "main": "js/index.js",
+  "types": "index.d.ts",
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "yarn flow && yarn lint",
@@ -38,7 +39,9 @@
     "react-test-renderer": "16.8.3",
     "rimraf": "^2.6.3",
     "semantic-release": "15.10.3",
-    "typescript": "^3.3.3"
+    "typescript": "^3.3.3",
+    "@types/react": "^16.9.17",
+    "@types/react-native": "0.60.26"
   },
   "jest": {
     "preset": "react-native",
