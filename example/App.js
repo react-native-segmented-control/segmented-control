@@ -60,12 +60,20 @@ export default class App extends React.Component<{}, $FlowFixMeState> {
             tintColor="#ff0000"
             values={['One', 'Two', 'Three', 'Four']}
             selectedIndex={0}
+            backgroundColor="#0000ff"
+          />
+        </View>
+        <View style={{marginBottom: 10}}>
+          <SegmentedControlIOS
+            tintColor="#00ff00"
+            values={['One', 'Two', 'Three']}
+            selectedIndex={1}
           />
         </View>
         <View style={{marginBottom: 25}}>
           <SegmentedControlIOS
-            tintColor="#00ff00"
-            values={['One', 'Two', 'Three']}
+            textColor="#ff00ff"
+            values={['One', 'Two']}
             selectedIndex={1}
           />
         </View>
