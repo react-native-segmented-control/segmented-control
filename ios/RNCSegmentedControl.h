@@ -9,7 +9,7 @@
 
 #import <React/RCTComponent.h>
 
-@interface RCTSegmentedControl : UISegmentedControl
+@interface RNCSegmentedControl : UISegmentedControl
 
 @property (nonatomic, copy) NSArray<NSString *> *values;
 @property (nonatomic, assign) NSInteger selectedIndex;

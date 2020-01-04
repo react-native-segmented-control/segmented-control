@@ -5,13 +5,13 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-#import "RCTSegmentedControl.h"
+#import "RNCSegmentedControl.h"
 
 #import "RCTConvert.h"
 #import "RCTEventDispatcher.h"
 #import "UIView+React.h"
 
-@implementation RCTSegmentedControl
+@implementation RNCSegmentedControl
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
