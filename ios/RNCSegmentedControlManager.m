@@ -5,19 +5,19 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-#import "RCTSegmentedControlManager.h"
+#import "RNCSegmentedControlManager.h"
 
 #import "RCTBridge.h"
 #import "RCTConvert.h"
-#import "RCTSegmentedControl.h"
+#import "RNCSegmentedControl.h"
 
-@implementation RCTSegmentedControlManager
+@implementation RNCSegmentedControlManager
 
 RCT_EXPORT_MODULE()
 
 - (UIView *)view
 {
-  return [RCTSegmentedControl new];
+  return [RNCSegmentedControl new];
 }
 
 RCT_EXPORT_VIEW_PROPERTY(values, NSArray<NSString *>)

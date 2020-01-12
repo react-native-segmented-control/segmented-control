@@ -77,6 +77,10 @@ aliases:
 #   name: Jest Unit Tests
 #   command: yarn test:jest
 
+  - &tsc
+    name: TypeScript type check
+    command: yarn tsc
+
 # -------------------------
 #          JOBS
 # -------------------------
@@ -116,6 +120,13 @@ jobs:
   #   - attach_workspace:
   #       at: ~/react-native-segmented-control
   #   - run: *jest
+
+  tsc:
+    <<: *linux_defaults
+    steps:
+      - attach_workspace:
+          at: ~/react-native-segmented-control
+      - run: *tsc
 
   android-compile:
     <<: *android_defaults
@@ -175,6 +186,9 @@ workflows:
       # - jest:
       #     requires:
       #     - linux-checkout
+      - tsc:
+          requires:
+            - linux-checkout
       - android-compile:
           requires:
             - linux-checkout
