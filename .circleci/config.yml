@@ -10,7 +10,7 @@ defaults: &defaults
 linux_defaults: &linux_defaults
   <<: *defaults
   docker:
-    - image: circleci/node:8
+    - image: circleci/node:10
   environment:
     - PATH: "/opt/yarn/yarn-v1.5.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 
@@ -19,7 +19,7 @@ android_defaults: &android_defaults
   <<: *defaults
   docker:
     - image: circleci/android:api-27-node8-alpha
-  resource_class: "large"
+  resource_class: "medium"
   environment:
     - TERM: "dumb"
     - ADB_INSTALL_TIMEOUT: 10
@@ -30,7 +30,7 @@ android_defaults: &android_defaults
 # MACOS
 macos_defaults: &macos_defaults
   <<: *defaults
-  resource_class: "large"
+  resource_class: "medium"
   macos:
     xcode: "10.1.0"
 
@@ -142,7 +142,9 @@ jobs:
       - run:
           name: Build Android Example App and Library
           command: |-
-            cd example/android
+            cd example
+            yarn install
+            cd android
             ./gradlew clean assembleDebug
       - save-cache: *save-gradle-cache
 
