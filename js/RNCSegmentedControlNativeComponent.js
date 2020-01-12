@@ -75,5 +75,5 @@ type NativeSegmentedControlIOS = Class<
 >;
 
 module.exports = ((requireNativeComponent(
-  'RCTSegmentedControl',
+  'RNCSegmentedControl',
 ): any): NativeSegmentedControlIOS);

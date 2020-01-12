@@ -7,6 +7,6 @@
 
 #import <React/RCTViewManager.h>
 
-@interface RCTSegmentedControlManager : RCTViewManager
+@interface RNCSegmentedControlManager : RCTViewManager
 
 @end
