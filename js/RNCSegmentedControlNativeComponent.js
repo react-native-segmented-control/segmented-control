@@ -11,9 +11,9 @@
 
 import {requireNativeComponent} from 'react-native';
 
-import type {ViewProps} from 'ViewPropTypes';
-import type {SyntheticEvent} from 'CoreEventTypes';
-import type {NativeComponent} from 'ReactNative';
+import type {ViewProps} from 'react-native/Libraries/Components/View/ViewPropTypes';
+import type {SyntheticEvent} from 'react-native/Libraries/Types/CoreEventTypes';
+import type {NativeComponent} from 'react-native/Libraries/Renderer/shims/ReactNative';
 
 type Event = SyntheticEvent<
   $ReadOnly<{|
