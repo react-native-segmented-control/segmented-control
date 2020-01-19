@@ -13,8 +13,8 @@
 import * as React from 'react';
 import {StyleSheet} from 'react-native';
 
-import type {SyntheticEvent} from 'CoreEventTypes';
-import type {ViewProps} from 'ViewPropTypes';
+import type {SyntheticEvent} from 'react-native/Libraries/Types/CoreEventTypes';
+import type {ViewProps} from 'react-native/Libraries/Components/View/ViewPropTypes';
 
 import RNCSegmentedControlNativeComponent from './RNCSegmentedControlNativeComponent';
 
