@@ -73,9 +73,9 @@ aliases:
     name: Flow Checks
     command: yarn flow check
 
-# - &jest
-#   name: Jest Unit Tests
-#   command: yarn test:jest
+  # - &jest
+  #   name: Jest Unit Tests
+  #   command: yarn test:jest
 
   - &tsc
     name: TypeScript type check
@@ -191,11 +191,11 @@ workflows:
       - tsc:
           requires:
             - linux-checkout
-      - android-compile:
+      # Disabled until there are android implementation
+      # - android-compile:
+      #     requires:
+      #       - linux-checkout
+      - ios-checkout
+      - ios-compile:
           requires:
-            - linux-checkout
-# Disabled until we have macOS containers enabled
-#     - ios-checkout
-#     - ios-compile:
-#         requires:
-#         - ios-checkout
+            - ios-checkout
