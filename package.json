@@ -7,7 +7,8 @@
   "files": [
     "index.d.ts",
     "ios",
-    "js"
+    "js",
+    "react-native-segmented-control.podspec"
   ],
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
