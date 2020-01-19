@@ -46,6 +46,18 @@ export interface SegmentedControlIOSProps extends ViewProps {
   tintColor?: string;
 
   /**
+   * (iOS 13 only)
+   * Text color of the control.
+   */
+  textColor?: string;
+
+  /**
+   * (iOS 13 only)
+   * Background color of the control.
+   */
+  backgroundColor?: string;
+
+  /**
    * The labels for the control's segment buttons, in order.
    */
   values?: string[];
