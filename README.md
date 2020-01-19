@@ -25,13 +25,13 @@ npm install --save @react-native-community/segmented-control
 This module was created when the segmentedControlIos was split out from the core of React Native. To migrate to this module you need to follow the installation instructions above and then change you imports from:
 
 ```javascript
-import { SegmentedControlIOS } from "react-native";
+import {SegmentedControlIOS} from 'react-native';
 ```
 
 to:
 
 ```javascript
-import SegmentedControlIOS from "@react-native-community/segmented-control";
+import SegmentedControlIOS from '@react-native-community/segmented-control';
 ```
 
 ## Usage
@@ -48,14 +48,14 @@ Note that the state variable would need to be updated as the user
 selects a value and changes the index, as shown in the example below.
 
 ```javascript
-import SegmentedControlIOS from "@react-native-community/segmented-control";
+import SegmentedControlIOS from '@react-native-community/segmented-control';
 
 return (
   <SegmentedControlIOS
-    values={["One", "Two"]}
+    values={['One', 'Two']}
     selectedIndex={this.state.selectedIndex}
     onChange={event => {
-      this.setState({ selectedIndex: event.nativeEvent.selectedSegmentIndex });
+      this.setState({selectedIndex: event.nativeEvent.selectedSegmentIndex});
     }}
   />
 );
@@ -90,6 +90,16 @@ type SegmentedControlIOSProps = $ReadOnly<{|
    */
   tintColor?: ?string,
   /**
+   * (For iOS >= 13)
+   * Text color of the control.
+   */
+  textColor?: ?string,
+  /**
+   * (For iOS >= 13)
+   * Background color of the control.
+   */
+  backgroundColor?: ?string,
+  /**
    * If true, then selecting a segment won't persist visually.
    * The `onValueChange` callback will still work as expected.
    */
@@ -100,6 +110,7 @@ type SegmentedControlIOSProps = $ReadOnly<{|
 ## Maintainers
 
 - [M.Haris Baig](https://github.com/harisbaig100)
+- [Naturalclar](https://github.com/Naturalclar)
 
 ## Contributing
 
@@ -109,7 +120,7 @@ Please see the [`contributing guide`](/CONTRIBUTING.md).
 
 The library is released under the MIT licence. For more information see [`LICENSE`](/LICENSE).
 
-[circle-ci-badge]:https://img.shields.io/circleci/project/github/react-native-community/react-native-segmented-control/master.svg?style=flat-square
-[npm-badge]:https://img.shields.io/npm/v/@react-native-community/segmented-control.svg?style=flat-square
+[circle-ci-badge]: https://img.shields.io/circleci/project/github/react-native-community/react-native-segmented-control/master.svg?style=flat-square
+[npm-badge]: https://img.shields.io/npm/v/@react-native-community/segmented-control.svg?style=flat-square
 [lean-core-badge]: https://img.shields.io/badge/Lean%20Core-Extracted-brightgreen.svg?style=flat-square
 [lean-core-issue]: https://github.com/facebook/react-native/issues/23313
