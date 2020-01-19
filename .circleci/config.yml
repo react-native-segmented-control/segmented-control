@@ -169,7 +169,9 @@ jobs:
       - run:
           name: Build example app
           command: |-
-            react-native run-ios --project-path example/ios
+            cd example
+            yarn install
+            react-native run-ios --project-path ios
 
 # -------------------------
 #        WORKFLOWS
@@ -191,10 +193,9 @@ workflows:
       - tsc:
           requires:
             - linux-checkout
-      # Disabled until there are android implementation
-      # - android-compile:
-      #     requires:
-      #       - linux-checkout
+      - android-compile:
+          requires:
+            - linux-checkout
       - ios-checkout
       - ios-compile:
           requires:
