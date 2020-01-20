@@ -20,6 +20,8 @@ or npm:
 npm install --save @react-native-community/segmented-control
 ```
 
+Then you will need to link it to your project. You can follow the [manual linking](https://facebook.github.io/react-native/docs/linking-libraries-ios#manual-linking) instructions for that.
+
 ## Migrating from the core `react-native` module
 
 This module was created when the segmentedControlIos was split out from the core of React Native. To migrate to this module you need to follow the installation instructions above and then change you imports from:
