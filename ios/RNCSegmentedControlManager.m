@@ -7,8 +7,8 @@
 
 #import "RNCSegmentedControlManager.h"
 
-#import "RCTBridge.h"
-#import "RCTConvert.h"
+#import <React/RCTBridge.h>
+#import <React/RCTConvert.h>
 #import "RNCSegmentedControl.h"
 
 @implementation RNCSegmentedControlManager
