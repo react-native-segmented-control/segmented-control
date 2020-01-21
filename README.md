@@ -20,7 +20,23 @@ or npm:
 npm install --save @react-native-community/segmented-control
 ```
 
-Then you will need to link it to your project. You can follow the [manual linking](https://facebook.github.io/react-native/docs/linking-libraries-ios#manual-linking) instructions for that.
+## Link
+
+- React Native 0.60+
+
+run `cd ios && pod install`
+
+- React Native <= 0.59
+
+run `react-native link @react-native-community/segmented-control`
+
+or you can follow the instructions to [manually link this package](https://facebook.github.io/react-native/docs/linking-libraries-ios#manual-linking).
+
+## Upgrading to React Native _0.60+_
+
+New React Native comes with `autolinking` feature, which automatically links Native Modules in your project. In order to get it to work, make sure you unlink `Segmented Control` first:
+
+`react-native unlink @react-native-community/segmented-control`
 
 ## Migrating from the core `react-native` module
 
