@@ -4,7 +4,7 @@
 
 React Native SegmentedControlIOS library. Use SegmentedControlIOS to render a UISegmentedControl iOS.
 
-<img src="https://github.com/react-native-community/react-native-segmented-control/blob/master/ScreenShots/Screen%20Shot%202019-02-26%20at%206.28.55%20PM.png" height="500" />
+<img src="https://github.com/react-native-community/segmented-control/blob/master/ScreenShots/Screen%20Shot%202019-02-26%20at%206.28.55%20PM.png" height="500" />
 
 ## Getting started
 
@@ -138,7 +138,7 @@ Please see the [`contributing guide`](/CONTRIBUTING.md).
 
 The library is released under the MIT licence. For more information see [`LICENSE`](/LICENSE).
 
-[circle-ci-badge]: https://img.shields.io/circleci/project/github/react-native-community/react-native-segmented-control/master.svg?style=flat-square
+[circle-ci-badge]: https://img.shields.io/circleci/project/github/react-native-community/segmented-control/master.svg?style=flat-square
 [npm-badge]: https://img.shields.io/npm/v/@react-native-community/segmented-control.svg?style=flat-square
 [lean-core-badge]: https://img.shields.io/badge/Lean%20Core-Extracted-brightgreen.svg?style=flat-square
 [lean-core-issue]: https://github.com/facebook/react-native/issues/23313

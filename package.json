@@ -64,7 +64,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/react-native-community/react-native-segmented-control.git"
+    "url": "git+https://github.com/react-native-community/segmented-control.git"
   },
   "keywords": [
     "SegmentedControlIOS",
@@ -73,7 +73,7 @@
   "author": "M.Haris Baig",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/react-native-community/react-native-segmented-control/issues"
+    "url": "https://github.com/react-native-community/segmented-control/issues"
   },
-  "homepage": "https://github.com/react-native-community/react-native-segmented-control#readme"
+  "homepage": "https://github.com/react-native-community/segmented-control#readme"
 }
