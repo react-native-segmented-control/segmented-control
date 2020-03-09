@@ -84,8 +84,10 @@ const styles = StyleSheet.create({
   },
 });
 
-// $FlowFixMe
-const SegmentedControlIOSWithRef = React.forwardRef(
+const SegmentedControlIOSWithRef = React.forwardRef<
+  SegmentedControlIOSProps,
+  RNCSegmentedControlNativeComponent,
+>(
   (
     props: SegmentedControlIOSProps,
     forwardedRef: ?React.Ref<typeof RNCSegmentedControlNativeComponent>,
