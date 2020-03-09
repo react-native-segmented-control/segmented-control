@@ -22,7 +22,7 @@ type Event = SyntheticEvent<
   |}>,
 >;
 
-type SegmentedControlIOSProps = $ReadOnly<{|
+export type SegmentedControlIOSProps = $ReadOnly<{|
   ...ViewProps,
   /**
    * The labels for the control's segment buttons, in order.
@@ -57,6 +57,12 @@ type SegmentedControlIOSProps = $ReadOnly<{|
    * NOTE: this prop will only work for iOS >= 13
    */
   textColor?: ?string,
+  /**
+   *
+   * Text color of the control when selected.
+   * NOTE: this prop will only work for iOS >= 13
+   */
+  selectedTextColor?: ?string,
   /**
    * Background color of the control.
    * NOTE: this prop will only work for iOS >= 13
