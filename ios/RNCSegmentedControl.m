@@ -60,7 +60,7 @@
     #endif
 }
 
-- (void)setSelectedTextColor:(UIColor *)textColor
+- (void)setActiveTextColor:(UIColor *)textColor
 {
     #if defined(__IPHONE_OS_VERSION_MAX_ALLOWED) && defined(__IPHONE_13_0) && \
         __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_13_0
