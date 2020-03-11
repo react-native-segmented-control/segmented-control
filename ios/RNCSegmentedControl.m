@@ -25,7 +25,6 @@
 
 - (void)setValues:(NSArray<NSString *> *)values
 {
-  _values = [values copy];
   [self removeAllSegments];
   for (NSString *value in values) {
     [self insertSegmentWithTitle:value atIndex:self.numberOfSegments animated:NO];
