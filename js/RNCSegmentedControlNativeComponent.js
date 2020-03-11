@@ -22,7 +22,7 @@ type Event = SyntheticEvent<
   |}>,
 >;
 
-type SegmentedControlIOSProps = $ReadOnly<{|
+export type SegmentedControlIOSProps = $ReadOnly<{|
   ...ViewProps,
   /**
    * The labels for the control's segment buttons, in order.
@@ -52,17 +52,20 @@ type SegmentedControlIOSProps = $ReadOnly<{|
    */
   tintColor?: ?string,
   /**
-   *
    * Text color of the control.
    * NOTE: this prop will only work for iOS >= 13
    */
   textColor?: ?string,
   /**
+   * Text color of the control when selected.
+   * NOTE: this prop will only work for iOS >= 13
+   */
+  activeTextColor?: ?string,
+  /**
    * Background color of the control.
    * NOTE: this prop will only work for iOS >= 13
    */
   backgroundColor?: ?string,
-  /**
   /**
    * If true, then selecting a segment won't persist visually.
    * The `onValueChange` callback will still work as expected.
