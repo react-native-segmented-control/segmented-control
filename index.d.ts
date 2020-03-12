@@ -53,6 +53,12 @@ export interface SegmentedControlIOSProps extends ViewProps {
 
   /**
    * (iOS 13 only)
+   * Text color of the active control.
+   */
+  activeTextColor?: string;
+
+  /**
+   * (iOS 13 only)
    * Background color of the control.
    */
   backgroundColor?: string;
