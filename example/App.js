@@ -2,11 +2,8 @@
  * Sample React Native App
  * https://github.com/facebook/react-native
  *
- * @format
  * @flow
  */
-
-/* eslint-disable react-native/no-inline-styles */
 
 import React from 'react';
 import {StyleSheet, ScrollView, Text, View} from 'react-native';
