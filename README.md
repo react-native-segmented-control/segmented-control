@@ -77,53 +77,113 @@ return (
     }}
   />
 );
-
-type SegmentedControlIOSProps = $ReadOnly<{|
-  ...ViewProps,
-  /**
-   * The labels for the control's segment buttons, in order.
-   */
-  values?: $ReadOnlyArray<string>,
-  /**
-   * The index in `props.values` of the segment to be (pre)selected.
-   */
-  selectedIndex?: ?number,
-  /**
-   * Callback that is called when the user taps a segment;
-   * passes the segment's value as an argument
-   */
-  onValueChange?: ?(value: number) => mixed,
-  /**
-   * Callback that is called when the user taps a segment;
-   * passes the event as an argument
-   */
-  onChange?: ?(event: Event) => mixed,
-  /**
-   * If false the user won't be able to interact with the control.
-   * Default value is true.
-   */
-  enabled?: boolean,
-  /**
-   * Accent color of the control.
-   */
-  tintColor?: ?string,
-  /**
-   * (For iOS >= 13)
-   * Text color of the control.
-   */
-  textColor?: ?string,
-  /**
-   * (For iOS >= 13)
-   * Background color of the control.
-   */
-  backgroundColor?: ?string,
-  /**
-   * If true, then selecting a segment won't persist visually.
-   * The `onValueChange` callback will still work as expected.
-   */
-  momentary?: ?boolean,
-|}>;
 ```
+
+---
+
+# Reference
+
+## Props
+
+Inherits [View Props](view.md#props).
+
+### `enabled`
+
+If false the user won't be able to interact with the control. Default value is true.
+
+| Type | Required |
+| ---- | -------- |
+| bool | No       |
+
+---
+
+### `momentary`
+
+If true, then selecting a segment won't persist visually. The `onValueChange` callback will still work as expected.
+
+| Type | Required |
+| ---- | -------- |
+| bool | No       |
+
+---
+
+### `onChange`
+
+Callback that is called when the user taps a segment; passes the event as an argument
+
+| Type     | Required |
+| -------- | -------- |
+| function | No       |
+
+---
+
+### `onValueChange`
+
+Callback that is called when the user taps a segment; passes the segment's value as an argument
+
+| Type     | Required |
+| -------- | -------- |
+| function | No       |
+
+---
+
+### `selectedIndex`
+
+The index in `props.values` of the segment to be (pre)selected.
+
+| Type   | Required |
+| ------ | -------- |
+| number | No       |
+
+---
+
+### `tintColor`
+
+Accent color of the control.
+
+| Type   | Required |
+| ------ | -------- |
+| string | No       |
+
+---
+
+### `textColor`
+
+Text color of the control. (iOS 13+ only)
+
+| Type   | Required | Supported Version |
+| ------ | -------- | ----------------- |
+| string | No       | iOS 13+           |
+
+---
+
+### `activeTextColor`
+
+Text color of the active control. (iOS 13+ only)
+
+| Type   | Required | Supported Version |
+| ------ | -------- | ----------------- |
+| string | No       | iOS 13+           |
+
+---
+
+### `backgroundColor`
+
+Background color color of the control. (iOS 13+ only)
+
+| Type   | Required | Supported Version |
+| ------ | -------- | ----------------- |
+| string | No       | iOS 13+           |
+
+---
+
+### `values`
+
+The labels for the control's segment buttons, in order.
+
+| Type            | Required |
+| --------------- | -------- |
+| array of string | No       |
 
 ## Maintainers
 

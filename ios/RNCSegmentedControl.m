@@ -25,7 +25,6 @@
 
 - (void)setValues:(NSArray<NSString *> *)values
 {
-  _values = [values copy];
   [self removeAllSegments];
   for (NSString *value in values) {
     [self insertSegmentWithTitle:value atIndex:self.numberOfSegments animated:NO];
@@ -60,6 +59,17 @@
     #endif
 }
 
+- (void)setActiveTextColor:(UIColor *)textColor
+{
+    #if defined(__IPHONE_OS_VERSION_MAX_ALLOWED) && defined(__IPHONE_13_0) && \
+        __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_13_0
+    if (@available(iOS 13.0, *)) {
+      [self setTitleTextAttributes:@{NSForegroundColorAttributeName: textColor}
+                  forState:UIControlStateSelected];
+    }
+    #endif
+}
+
 - (void)setTintColor:(UIColor *)tintColor
 {
   [super setTintColor:tintColor];
@@ -67,8 +77,6 @@
     __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_13_0
   if (@available(iOS 13.0, *)) {
     [self setSelectedSegmentTintColor:tintColor];
-    [self setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}
-                        forState:UIControlStateSelected];
     [self setTitleTextAttributes:@{NSForegroundColorAttributeName: tintColor}
                          forState:UIControlStateNormal];
   }

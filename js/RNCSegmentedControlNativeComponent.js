@@ -10,9 +10,10 @@
 
 import {requireNativeComponent} from 'react-native';
 
-import type {ViewProps} from 'ViewPropTypes';
-import type {SyntheticEvent} from 'CoreEventTypes';
-import type {NativeComponent} from 'ReactNative';
+import type {ViewProps} from 'react-native/Libraries/Components/View/ViewPropTypes';
+import type {SyntheticEvent} from 'react-native/Libraries/Types/CoreEventTypes';
+import type {NativeComponent} from 'react-native/Libraries/Renderer/shims/ReactNative';
+import type {ColorValue} from 'react-native/Libraries/StyleSheet/StyleSheetTypes';
 
 type Event = SyntheticEvent<
   $ReadOnly<{|
@@ -21,7 +22,7 @@ type Event = SyntheticEvent<
   |}>,
 >;
 
-type SegmentedControlIOSProps = $ReadOnly<{|
+export type SegmentedControlIOSProps = $ReadOnly<{|
   ...ViewProps,
   /**
    * The labels for the control's segment buttons, in order.
@@ -49,19 +50,22 @@ type SegmentedControlIOSProps = $ReadOnly<{|
   /**
    * Accent color of the control.
    */
-  tintColor?: ?string,
+  tintColor?: ?ColorValue,
   /**
-   *
    * Text color of the control.
    * NOTE: this prop will only work for iOS >= 13
    */
-  textColor?: ?string,
+  textColor?: ?ColorValue,
+  /**
+   * Text color of the control when selected.
+   * NOTE: this prop will only work for iOS >= 13
+   */
+  activeTextColor?: ?ColorValue,
   /**
    * Background color of the control.
    * NOTE: this prop will only work for iOS >= 13
    */
-  backgroundColor?: ?string,
-  /**
+  backgroundColor?: ?ColorValue,
   /**
    * If true, then selecting a segment won't persist visually.
    * The `onValueChange` callback will still work as expected.

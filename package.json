@@ -1,6 +1,6 @@
 {
   "name": "@react-native-community/segmented-control",
-  "version": "1.1.1",
+  "version": "1.2.1",
   "description": "React Native SegmentedControl library",
   "main": "js/index.js",
   "types": "index.d.ts",
@@ -31,12 +31,12 @@
     "@types/react": "^16.9.17",
     "@types/react-native": "0.60.26",
     "babel-eslint": "^10.0.1",
-    "babel-jest": "^24.9.0",
+    "babel-jest": "^25.1.0",
     "eslint": "^6.8.0",
     "eslint-plugin-prettier": "^3.1.2",
     "flow-bin": "0.105.2",
     "husky": "^4.0.10",
-    "jest": "^24.5.0",
+    "jest": "^25.1.0",
     "lint-staged": "^10.0.0",
     "metro-react-native-babel-preset": "0.56.0",
     "prettier": "^1.19.1",
@@ -44,7 +44,7 @@
     "react-native": "0.61.5",
     "react-test-renderer": "16.9.0",
     "rimraf": "^2.6.3",
-    "semantic-release": "^16.0.2",
+    "semantic-release": "^17.0.4",
     "typescript": "^3.3.3"
   },
   "jest": {
