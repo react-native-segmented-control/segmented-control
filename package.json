@@ -1,7 +1,7 @@
 {
   "name": "@react-native-community/segmented-control",
   "version": "1.1.1",
-  "description": "React Native SegmentedControlIOS library",
+  "description": "React Native SegmentedControl library",
   "main": "js/index.js",
   "types": "index.d.ts",
   "files": [
@@ -15,7 +15,9 @@
     "test": "yarn flow && yarn lint",
     "flow": "flow",
     "lint": "eslint .",
-    "tsc": "tsc --noEmit"
+    "tsc": "tsc --noEmit",
+    "android-sync": "cp -r android example/node_modules/@react-native-community/segmented-control",
+    "js-sync": "cp -r js example/node_modules/@react-native-community/"
   },
   "peerDependencies": {
     "react": "^16.0",
@@ -67,7 +69,7 @@
     "url": "git+https://github.com/react-native-community/segmented-control.git"
   },
   "keywords": [
-    "SegmentedControlIOS",
+    "SegmentedControl",
     "react-native"
   ],
   "author": "M.Haris Baig",

@@ -4,7 +4,6 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- * @format
  * @flow
  */
 
@@ -13,8 +12,8 @@
 import * as React from 'react';
 import {StyleSheet} from 'react-native';
 
-import type {SyntheticEvent} from 'react-native/Libraries/Types/CoreEventTypes';
-import type {ViewProps} from 'react-native/Libraries/Components/View/ViewPropTypes';
+import type {SyntheticEvent} from 'CoreEventTypes';
+import type {ViewProps} from 'ViewPropTypes';
 
 import RNCSegmentedControlNativeComponent from './RNCSegmentedControlNativeComponent';
 
