@@ -15,7 +15,7 @@ import {StyleSheet} from 'react-native';
 import type {SyntheticEvent} from 'react-native/Libraries/Types/CoreEventTypes';
 
 import RNCSegmentedControlNativeComponent, {
-  type SegmentedControlIOSProps,
+  type SegmentedControlProps,
 } from './RNCSegmentedControlNativeComponent';
 
 type Event = SyntheticEvent<
@@ -26,12 +26,12 @@ type Event = SyntheticEvent<
 >;
 
 type Props = $ReadOnly<{|
-  ...SegmentedControlIOSProps,
+  ...SegmentedControlProps,
   forwardedRef: ?React.Ref<typeof RNCSegmentedControlNativeComponent>,
 |}>;
 
 /**
- * Use `SegmentedControlIOS` to render a UISegmentedControl iOS.
+ * Use `SegmentedControl` to render a UISegmentedControl .
  *
  * #### Programmatically changing selected index
  *
@@ -41,7 +41,7 @@ type Props = $ReadOnly<{|
  * selects a value and changes the index, as shown in the example below.
  *
  * ````
- * <SegmentedControlIOS
+ * <SegmentedControl
  *   values={['One', 'Two']}
  *   selectedIndex={this.state.selectedIndex}
  *   onChange={(event) => {
@@ -51,7 +51,7 @@ type Props = $ReadOnly<{|
  * ````
  */
 
-class SegmentedControlIOS extends React.Component<Props> {
+class SegmentedControl extends React.Component<Props> {
   static defaultProps = {
     values: [],
     enabled: true,
@@ -82,16 +82,16 @@ const styles = StyleSheet.create({
   },
 });
 
-const SegmentedControlIOSWithRef = React.forwardRef<
-  SegmentedControlIOSProps,
+const SegmentedControlWithRef = React.forwardRef<
+  SegmentedControlProps,
   RNCSegmentedControlNativeComponent,
 >(
   (
-    props: SegmentedControlIOSProps,
+    props: SegmentedControlProps,
     forwardedRef: ?React.Ref<typeof RNCSegmentedControlNativeComponent>,
   ) => {
-    return <SegmentedControlIOS {...props} forwardedRef={forwardedRef} />;
+    return <SegmentedControl {...props} forwardedRef={forwardedRef} />;
   },
 );
 
-export default SegmentedControlIOSWithRef;
+export default SegmentedControlWithRef;

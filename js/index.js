@@ -7,4 +7,4 @@
  * @flow
  */
 
-export {default} from './SegmentedControlIOS';
+export {default} from './SegmentedControl';

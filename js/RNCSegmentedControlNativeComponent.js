@@ -22,7 +22,7 @@ type Event = SyntheticEvent<
   |}>,
 >;
 
-export type SegmentedControlIOSProps = $ReadOnly<{|
+export type SegmentedControlProps = $ReadOnly<{|
   ...ViewProps,
   /**
    * The labels for the control's segment buttons, in order.
@@ -73,10 +73,8 @@ export type SegmentedControlIOSProps = $ReadOnly<{|
   momentary?: ?boolean,
 |}>;
 
-type NativeSegmentedControlIOS = Class<
-  NativeComponent<SegmentedControlIOSProps>,
->;
+type NativeSegmentedControl = Class<NativeComponent<SegmentedControlProps>>;
 
 module.exports = ((requireNativeComponent(
   'RNCSegmentedControl',
-): any): NativeSegmentedControlIOS);
+): any): NativeSegmentedControl);

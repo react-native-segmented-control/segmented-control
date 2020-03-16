@@ -5,12 +5,12 @@ import * as React from 'react';
 import {
   ViewProps,
   NativeSyntheticEvent,
-  NativeSegmentedControlIOSChangeEvent,
+  NativeSegmentedControlIOSChangeEvent, // TODO: define Event type in this package
   NativeMethodsMixin,
   Constructor,
 } from 'react-native';
 
-export interface SegmentedControlIOSProps extends ViewProps {
+export interface SegmentedControlProps extends ViewProps {
   /**
    * If false the user won't be able to interact with the control. Default value is true.
    */
@@ -46,19 +46,19 @@ export interface SegmentedControlIOSProps extends ViewProps {
   tintColor?: string;
 
   /**
-   * (iOS 13 only)
+   * ( 13 only)
    * Text color of the control.
    */
   textColor?: string;
 
   /**
-   * (iOS 13 only)
+   * ( 13 only)
    * Text color of the active control.
    */
   activeTextColor?: string;
 
   /**
-   * (iOS 13 only)
+   * ( 13 only)
    * Background color of the control.
    */
   backgroundColor?: string;
@@ -70,7 +70,7 @@ export interface SegmentedControlIOSProps extends ViewProps {
 }
 
 /**
- * Use `SegmentedControlIOS` to render a UISegmentedControl iOS.
+ * Use `SegmentedControl` to render a UISegmentedControl .
  *
  * #### Programmatically changing selected index
  *
@@ -80,7 +80,7 @@ export interface SegmentedControlIOSProps extends ViewProps {
  * selects a value and changes the index, as shown in the example below.
  *
  * ````
- * <SegmentedControlIOS
+ * <SegmentedControl
  *   values={['One', 'Two']}
  *   selectedIndex={this.state.selectedIndex}
  *   onChange={(event) => {
@@ -89,9 +89,9 @@ export interface SegmentedControlIOSProps extends ViewProps {
  * />
  * ````
  */
-declare class SegmentedControlIOSComponent extends React.Component<
-  SegmentedControlIOSProps
+declare class SegmentedControlComponent extends React.Component<
+  SegmentedControlProps
 > {}
-declare const SegmentedControlIOSBase: Constructor<NativeMethodsMixin> &
-  typeof SegmentedControlIOSComponent;
-export default class SegmentedControlIOS extends SegmentedControlIOSBase {}
+declare const SegmentedControlBase: Constructor<NativeMethodsMixin> &
+  typeof SegmentedControlComponent;
+export default class SegmentedControl extends SegmentedControlBase {}
