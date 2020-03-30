@@ -4,7 +4,7 @@
 
 React Native SegmentedControlIOS library. Use SegmentedControlIOS to render a UISegmentedControl iOS.
 
-<img src="https://github.com/react-native-community/segmented-control/blob/master/ScreenShots/Screen%20Shot%202019-02-26%20at%206.28.55%20PM.png" height="500" />
+<img src="https://user-images.githubusercontent.com/6936373/71608757-dc6ef680-2bc6-11ea-85be-aa31f25ecf36.png" height="500" />
 
 ## Getting started
 
@@ -72,7 +72,7 @@ return (
   <SegmentedControlIOS
     values={['One', 'Two']}
     selectedIndex={this.state.selectedIndex}
-    onChange={event => {
+    onChange={(event) => {
       this.setState({selectedIndex: event.nativeEvent.selectedSegmentIndex});
     }}
   />
@@ -152,8 +152,8 @@ Accent color of the control.
 Text color of the control. (iOS 13+ only)
 
 | Type   | Required | Supported Version |
-| ------ | -------- | ----- |
-| string | No       |  iOS 13+ |
+| ------ | -------- | ----------------- |
+| string | No       | iOS 13+           |
 
 ---
 
@@ -162,8 +162,8 @@ Text color of the control. (iOS 13+ only)
 Text color of the active control. (iOS 13+ only)
 
 | Type   | Required | Supported Version |
-| ------ | -------- | ----- |
-| string | No       |  iOS 13+ |
+| ------ | -------- | ----------------- |
+| string | No       | iOS 13+           |
 
 ---
 
@@ -172,8 +172,8 @@ Text color of the active control. (iOS 13+ only)
 Background color color of the control. (iOS 13+ only)
 
 | Type   | Required | Supported Version |
-| ------ | -------- | ----- |
-| string | No       |  iOS 13+ |
+| ------ | -------- | ----------------- |
+| string | No       | iOS 13+           |
 
 ---
 
@@ -184,7 +184,6 @@ The labels for the control's segment buttons, in order.
 | Type            | Required |
 | --------------- | -------- |
 | array of string | No       |
-
 
 ## Maintainers
 
