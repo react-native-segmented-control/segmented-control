@@ -18,31 +18,31 @@ export default class App extends React.Component<{}, $FlowFixMeState> {
 
   render() {
     return (
-      <ScrollView contentContainerStyle={{paddingTop: 80}}>
-        <View style={{marginBottom: 10}}>
+      <ScrollView contentContainerStyle={styles.container}>
+        <View style={styles.segmentContainer}>
           <Text style={styles.text}>Segmented controls can have values</Text>
           <SegmentedControlIOS values={['One', 'Two']} />
         </View>
 
-        <View style={{marginBottom: 25}}>
+        <View style={styles.segmentSection}>
           <SegmentedControlIOS
             values={['One', 'Two', 'Three', 'Four', 'Five']}
           />
         </View>
 
-        <View style={{marginBottom: 25}}>
+        <View style={styles.segmentSection}>
           <Text style={styles.text}>
             Segmented controls can have pre-selected values
           </Text>
           <SegmentedControlIOS values={['One', 'Two']} selectedIndex={0} />
         </View>
 
-        <View style={{marginBottom: 25}}>
+        <View style={styles.segmentSection}>
           <Text style={styles.text}>Segmented controls can be momentary</Text>
           <SegmentedControlIOS values={['One', 'Two']} momentary={true} />
         </View>
 
-        <View style={{marginBottom: 25}}>
+        <View style={styles.segmentSection}>
           <Text style={styles.text}>Segmented controls can be disabled</Text>
           <SegmentedControlIOS
             enabled={false}
@@ -51,7 +51,7 @@ export default class App extends React.Component<{}, $FlowFixMeState> {
           />
         </View>
 
-        <View style={{marginBottom: 10}}>
+        <View style={styles.segmentContainer}>
           <Text style={styles.text}>Custom colors can be provided</Text>
           <SegmentedControlIOS
             tintColor="#ff0000"
@@ -60,14 +60,14 @@ export default class App extends React.Component<{}, $FlowFixMeState> {
             backgroundColor="#0000ff"
           />
         </View>
-        <View style={{marginBottom: 10}}>
+        <View style={styles.segmentContainer}>
           <SegmentedControlIOS
             tintColor="#00ff00"
             values={['One', 'Two', 'Three']}
             selectedIndex={1}
           />
         </View>
-        <View style={{marginBottom: 25}}>
+        <View style={styles.segmentSection}>
           <SegmentedControlIOS
             textColor="#ff00ff"
             values={['One', 'Two']}
@@ -77,13 +77,15 @@ export default class App extends React.Component<{}, $FlowFixMeState> {
 
         <View>
           <Text style={styles.text}>Custom colors can be provided</Text>
-          <SegmentedControlIOS
-            values={this.state.values}
-            selectedIndex={this.state.selectedIndex}
-            onChange={this._onChange}
-            onValueChange={this._onValueChange}
-          />
-          <Text style={[styles.text, {marginTop: 10}]}>
+          <View style={styles.segmentContainer}>
+            <SegmentedControlIOS
+              values={this.state.values}
+              selectedIndex={this.state.selectedIndex}
+              onChange={this._onChange}
+              onValueChange={this._onValueChange}
+            />
+          </View>
+          <Text style={[styles.text]}>
             Value: {this.state.value} Index: {this.state.selectedIndex}
           </Text>
         </View>
@@ -91,13 +93,13 @@ export default class App extends React.Component<{}, $FlowFixMeState> {
     );
   }
 
-  _onChange = event => {
+  _onChange = (event) => {
     this.setState({
       selectedIndex: event.nativeEvent.selectedSegmentIndex,
     });
   };
 
-  _onValueChange = value => {
+  _onValueChange = (value) => {
     this.setState({
       value: value,
     });
@@ -110,5 +112,14 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontWeight: '500',
     margin: 10,
+  },
+  segmentContainer: {
+    marginBottom: 10,
+  },
+  segmentSection: {
+    marginBottom: 25,
+  },
+  container: {
+    paddingTop: 80,
   },
 });
