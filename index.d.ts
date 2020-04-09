@@ -67,6 +67,12 @@ export interface SegmentedControlIOSProps extends ViewProps {
    * The labels for the control's segment buttons, in order.
    */
   values?: string[];
+
+  /**
+   * (iOS 13 only)
+   * Overrides the control's appearance irrespective of the OS theme
+   */
+  appearance?: 'dark' | 'light'
 }
 
 /**

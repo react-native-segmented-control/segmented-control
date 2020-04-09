@@ -29,5 +29,6 @@ RCT_EXPORT_VIEW_PROPERTY(activeTextColor, UIColor)
 RCT_EXPORT_VIEW_PROPERTY(momentary, BOOL)
 RCT_EXPORT_VIEW_PROPERTY(enabled, BOOL)
 RCT_EXPORT_VIEW_PROPERTY(onChange, RCTBubblingEventBlock)
+RCT_EXPORT_VIEW_PROPERTY(appearance, NSString)
 
 @end
