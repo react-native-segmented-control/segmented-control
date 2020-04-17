@@ -9,6 +9,11 @@ import {StyleSheet, View} from 'react-native';
 import {SegmentedControlTab} from './SegmentedControlTab';
 
 import type {SegmentedControlProps} from './types';
+
+/**
+ * SegmentedControl
+ * iOS 13 Style UISegmentedControl Component for Android and Web
+ */
 const SegmentedControl = ({
   style,
   onChange,
@@ -23,7 +28,7 @@ const SegmentedControl = ({
 }: SegmentedControlProps) => {
   const handleChange = (index: number) => {
     // mocks iOS's nativeEvent
-    const event = {
+    const event: any = {
       nativeEvent: {
         value: values[index],
         selectedSegmentIndex: index,
@@ -40,22 +45,23 @@ const SegmentedControl = ({
         backgroundColor && {backgroundColor},
         !enabled && styles.disabled,
       ]}>
-      {values.map((value, index) => {
-        return (
-          <SegmentedControlTab
-            enabled={enabled}
-            selected={selectedIndex === index}
-            key={index}
-            value={value}
-            tintColor={tintColor}
-            textColor={textColor}
-            activeTextColor={activeTextColor}
-            onSelect={() => {
-              handleChange(index);
-            }}
-          />
-        );
-      })}
+      {values &&
+        values.map((value, index) => {
+          return (
+            <SegmentedControlTab
+              enabled={enabled}
+              selected={selectedIndex === index}
+              key={index}
+              value={value}
+              tintColor={tintColor}
+              textColor={textColor}
+              activeTextColor={activeTextColor}
+              onSelect={() => {
+                handleChange(index);
+              }}
+            />
+          );
+        })}
     </View>
   );
 };

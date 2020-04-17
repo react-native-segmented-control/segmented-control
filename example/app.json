@@ -1,4 +1,7 @@
 {
   "name": "example",
-  "displayName": "example"
+  "displayName": "example",
+  "expo": {
+    "platforms": ["web"]
+  }
 }

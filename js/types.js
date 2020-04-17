@@ -6,7 +6,7 @@ import type {ViewProps} from 'react-native/Libraries/Components/View/ViewPropTyp
 import type {SyntheticEvent} from 'react-native/Libraries/Types/CoreEventTypes';
 import type {ColorValue} from 'react-native/Libraries/StyleSheet/StyleSheetTypes';
 
-type Event = SyntheticEvent<
+export type Event = SyntheticEvent<
   $ReadOnly<{|
     value: number,
     selectedSegmentIndex: number,
