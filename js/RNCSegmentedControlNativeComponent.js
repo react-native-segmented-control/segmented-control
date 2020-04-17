@@ -72,6 +72,11 @@ export type SegmentedControlIOSProps = $ReadOnly<{|
    * The `onValueChange` callback will still work as expected.
    */
   momentary?: ?boolean,
+  /**
+   * (iOS 13 only)
+   * Overrides the control's appearance irrespective of the OS theme
+   */
+  appearance?: 'dark' | 'light',
 |}>;
 
 type NativeSegmentedControlIOS = Class<
