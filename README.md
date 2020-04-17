@@ -4,11 +4,11 @@
 
 React Native SegmentedControl library. Use SegmentedControl to render a UISegmentedControl iOS.
 
-For Android, it has a js implementation that mocks iOS 13 style of UISegmentedControl.
+For Android and Web, it has a js implementation that mocks iOS 13 style of UISegmentedControl.
 
-| iOS | Android |
-| --- | ---- |
-|  <img src="https://user-images.githubusercontent.com/6936373/71608757-dc6ef680-2bc6-11ea-85be-aa31f25ecf36.png" width="320" /> | <img src="https://user-images.githubusercontent.com/6936373/79550655-9edd9d00-80d3-11ea-98bf-8b7c0b0798d3.png" width="320" /> |
+| iOS | Android | Web |
+| --- | ---- | --- | 
+|  <img src="https://user-images.githubusercontent.com/6936373/71608757-dc6ef680-2bc6-11ea-85be-aa31f25ecf36.png" width="320" /> | <img src="https://user-images.githubusercontent.com/6936373/79550655-9edd9d00-80d3-11ea-98bf-8b7c0b0798d3.png" width="320" /> | <img src="https://user-images.githubusercontent.com/6936373/79590620-3f52b200-8112-11ea-863b-236c4465fba6.png" width="640"/> |
 
 
 
@@ -217,4 +217,4 @@ The library is released under the MIT licence. For more information see [`LICENS
 [npm-badge]: https://img.shields.io/npm/v/@react-native-community/segmented-control.svg?style=flat-square
 [lean-core-badge]: https://img.shields.io/badge/Lean%20Core-Extracted-brightgreen.svg?style=flat-square
 [lean-core-issue]: https://github.com/facebook/react-native/issues/23313
-[support-badge]:https://img.shields.io/badge/platforms-android%20|%20ios-lightgrey.svg?style=flat-square
+[support-badge]:https://img.shields.io/badge/platforms-android%20|%20ios%20|%20web-lightgrey.svg?style=flat-square
