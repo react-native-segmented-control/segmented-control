@@ -12,17 +12,8 @@
 import * as React from 'react';
 import {StyleSheet} from 'react-native';
 
-import type {SyntheticEvent} from 'react-native/Libraries/Types/CoreEventTypes';
-
 import RNCSegmentedControlNativeComponent from './RNCSegmentedControlNativeComponent';
-import type {SegmentedControlProps} from './types';
-
-type Event = SyntheticEvent<
-  $ReadOnly<{|
-    value: number,
-    selectedSegmentIndex: number,
-  |}>,
->;
+import type {Event, SegmentedControlProps} from './types';
 
 type Props = $ReadOnly<{|
   ...SegmentedControlProps,

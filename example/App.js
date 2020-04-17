@@ -7,7 +7,7 @@
 
 import React from 'react';
 import {StyleSheet, ScrollView, Text, View} from 'react-native';
-import SegmentedControlIOS from '@react-native-community/segmented-control';
+import SegmentedControl from '@react-native-community/segmented-control';
 
 export default class App extends React.Component<{}, $FlowFixMeState> {
   state = {
@@ -21,30 +21,28 @@ export default class App extends React.Component<{}, $FlowFixMeState> {
       <ScrollView contentContainerStyle={styles.container}>
         <View style={styles.segmentContainer}>
           <Text style={styles.text}>Segmented controls can have values</Text>
-          <SegmentedControlIOS values={['One', 'Two']} />
+          <SegmentedControl values={['One', 'Two']} />
         </View>
 
         <View style={styles.segmentSection}>
-          <SegmentedControlIOS
-            values={['One', 'Two', 'Three', 'Four', 'Five']}
-          />
+          <SegmentedControl values={['One', 'Two', 'Three', 'Four', 'Five']} />
         </View>
 
         <View style={styles.segmentSection}>
           <Text style={styles.text}>
             Segmented controls can have pre-selected values
           </Text>
-          <SegmentedControlIOS values={['One', 'Two']} selectedIndex={0} />
+          <SegmentedControl values={['One', 'Two']} selectedIndex={0} />
         </View>
 
         <View style={styles.segmentSection}>
           <Text style={styles.text}>Segmented controls can be momentary</Text>
-          <SegmentedControlIOS values={['One', 'Two']} momentary={true} />
+          <SegmentedControl values={['One', 'Two']} momentary={true} />
         </View>
 
         <View style={styles.segmentSection}>
           <Text style={styles.text}>Segmented controls can be disabled</Text>
-          <SegmentedControlIOS
+          <SegmentedControl
             enabled={false}
             values={['One', 'Two']}
             selectedIndex={1}
@@ -53,22 +51,24 @@ export default class App extends React.Component<{}, $FlowFixMeState> {
 
         <View style={styles.segmentContainer}>
           <Text style={styles.text}>Custom colors can be provided</Text>
-          <SegmentedControlIOS
+          <SegmentedControl
             tintColor="#ff0000"
             values={['One', 'Two', 'Three', 'Four']}
             selectedIndex={0}
             backgroundColor="#0000ff"
+            activeTextColor="white"
           />
         </View>
         <View style={styles.segmentContainer}>
-          <SegmentedControlIOS
+          <SegmentedControl
             tintColor="#00ff00"
             values={['One', 'Two', 'Three']}
             selectedIndex={1}
+            activeTextColor="black"
           />
         </View>
         <View style={styles.segmentSection}>
-          <SegmentedControlIOS
+          <SegmentedControl
             textColor="#ff00ff"
             values={['One', 'Two']}
             selectedIndex={1}
@@ -78,7 +78,7 @@ export default class App extends React.Component<{}, $FlowFixMeState> {
         <View>
           <Text style={styles.text}>Custom colors can be provided</Text>
           <View style={styles.segmentContainer}>
-            <SegmentedControlIOS
+            <SegmentedControl
               values={this.state.values}
               selectedIndex={this.state.selectedIndex}
               onChange={this._onChange}

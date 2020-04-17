@@ -6,9 +6,9 @@ import type {ViewProps} from 'react-native/Libraries/Components/View/ViewPropTyp
 import type {SyntheticEvent} from 'react-native/Libraries/Types/CoreEventTypes';
 import type {ColorValue} from 'react-native/Libraries/StyleSheet/StyleSheetTypes';
 
-type Event = SyntheticEvent<
+export type Event = SyntheticEvent<
   $ReadOnly<{|
-    value: number,
+    value: string,
     selectedSegmentIndex: number,
   |}>,
 >;
@@ -18,7 +18,7 @@ export type SegmentedControlProps = $ReadOnly<{|
   /**
    * The labels for the control's segment buttons, in order.
    */
-  values?: $ReadOnlyArray<string>,
+  values: $ReadOnlyArray<string>,
   /**
    * The index in `props.values` of the segment to be (pre)selected.
    */
@@ -27,7 +27,7 @@ export type SegmentedControlProps = $ReadOnly<{|
    * Callback that is called when the user taps a segment;
    * passes the segment's value as an argument
    */
-  onValueChange?: ?(value: number) => mixed,
+  onValueChange?: ?(value: string) => mixed,
   /**
    * Callback that is called when the user taps a segment;
    * passes the event as an argument

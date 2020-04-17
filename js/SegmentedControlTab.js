@@ -9,12 +9,12 @@ import {StyleSheet, View, Text, TouchableOpacity} from 'react-native';
 
 type Props = $ReadOnly<{|
   value: string,
-  tintColor?: string,
-  textColor?: string,
-  activeTextColor?: string,
+  tintColor?: ?string,
+  textColor?: ?string,
+  activeTextColor?: ?string,
   onSelect: () => void,
-  selected: Boolean,
-  enabled: Boolean,
+  selected: boolean,
+  enabled: boolean,
 |}>;
 
 export const SegmentedControlTab = ({
