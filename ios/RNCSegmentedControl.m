@@ -94,4 +94,18 @@
   }
 }
 
+- (void)setAppearance:(NSString *)appearanceString
+{
+#if defined(__IPHONE_OS_VERSION_MAX_ALLOWED) && defined(__IPHONE_13_0) && \
+    __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_13_0
+  if (@available(iOS 13.0, *)) {
+      if ([appearanceString  isEqual: @"dark"]) {
+          [self setOverrideUserInterfaceStyle:UIUserInterfaceStyleDark];
+      } else if ([appearanceString  isEqual: @"light"]) {
+          [self setOverrideUserInterfaceStyle:UIUserInterfaceStyleLight];
+      }
+  }
+#endif
+}
+
 @end
