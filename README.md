@@ -1,10 +1,16 @@
 # `@react-native-community/segmented-control`
 
-![CircleCI branch][circle-ci-badge] ![npm][npm-badge] [![Lean Core Extracted][lean-core-badge]][lean-core-issue]
+![Supports iOS and Android][support-badge]![CircleCI branch][circle-ci-badge] ![npm][npm-badge] [![Lean Core Extracted][lean-core-badge]][lean-core-issue]
 
-React Native SegmentedControlIOS library. Use SegmentedControlIOS to render a UISegmentedControl iOS.
+React Native SegmentedControl library. Use SegmentedControl to render a UISegmentedControl iOS.
 
-<img src="https://user-images.githubusercontent.com/6936373/71608757-dc6ef680-2bc6-11ea-85be-aa31f25ecf36.png" height="500" />
+For Android, it has a js implementation that mocks iOS 13 style of UISegmentedControl.
+
+| iOS | Android |
+| --- | ---- |
+|  <img src="https://user-images.githubusercontent.com/6936373/71608757-dc6ef680-2bc6-11ea-85be-aa31f25ecf36.png" width="320" /> | <img src="https://user-images.githubusercontent.com/6936373/79550655-9edd9d00-80d3-11ea-98bf-8b7c0b0798d3.png" width="320" /> |
+
+
 
 ## Getting started
 
@@ -49,14 +55,14 @@ import {SegmentedControlIOS} from 'react-native';
 to:
 
 ```javascript
-import SegmentedControlIOS from '@react-native-community/segmented-control';
+import SegmentedControl from '@react-native-community/segmented-control';
 ```
 
 ## Usage
 
 Start by importing the library:
 
-Use `SegmentedControlIOS` to render a UISegmentedControl iOS.
+Use `SegmentedControl` to render a UISegmentedControl iOS.
 
 #### Programmatically changing selected index
 
@@ -66,10 +72,10 @@ Note that the state variable would need to be updated as the user
 selects a value and changes the index, as shown in the example below.
 
 ```javascript
-import SegmentedControlIOS from '@react-native-community/segmented-control';
+import SegmentedControl from '@react-native-community/segmented-control';
 
 return (
-  <SegmentedControlIOS
+  <SegmentedControl
     values={['One', 'Two']}
     selectedIndex={this.state.selectedIndex}
     onChange={(event) => {
@@ -101,9 +107,9 @@ If false the user won't be able to interact with the control. Default value is t
 
 If true, then selecting a segment won't persist visually. The `onValueChange` callback will still work as expected.
 
-| Type | Required |
-| ---- | -------- |
-| bool | No       |
+| Type | Required | Platform |
+| ---- | -------- | ---- |
+| bool | No       | iOS |
 
 ---
 
@@ -190,9 +196,9 @@ The labels for the control's segment buttons, in order.
 (iOS 13 only)
 Overrides the control's appearance irrespective of the OS theme
 
-| Type            | Required |
-| --------------- | -------- |
-| 'dark' | 'light' | No       |
+| Type            | Required | Platform |
+| --------------- | -------- | ---- |
+| 'dark' | 'light' | No       | iOS |
 
 ## Maintainers
 
@@ -211,3 +217,4 @@ The library is released under the MIT licence. For more information see [`LICENS
 [npm-badge]: https://img.shields.io/npm/v/@react-native-community/segmented-control.svg?style=flat-square
 [lean-core-badge]: https://img.shields.io/badge/Lean%20Core-Extracted-brightgreen.svg?style=flat-square
 [lean-core-issue]: https://github.com/facebook/react-native/issues/23313
+[support-badge]:https://img.shields.io/badge/platforms-android%20|%20ios-lightgrey.svg?style=flat-square
