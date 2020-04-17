@@ -7,6 +7,7 @@ import {
   NativeSyntheticEvent,
   NativeMethodsMixin,
   Constructor,
+  TargetedEvent,
 } from 'react-native';
 
 export interface NativeSegmentedControlIOSChangeEvent extends TargetedEvent {
