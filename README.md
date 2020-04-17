@@ -185,6 +185,15 @@ The labels for the control's segment buttons, in order.
 | --------------- | -------- |
 | array of string | No       |
 
+### `appearance`
+
+(iOS 13 only)
+Overrides the control's appearance irrespective of the OS theme
+
+| Type            | Required |
+| --------------- | -------- |
+| 'dark' | 'light' | No       |
+
 ## Maintainers
 
 - [M.Haris Baig](https://github.com/harisbaig100)
