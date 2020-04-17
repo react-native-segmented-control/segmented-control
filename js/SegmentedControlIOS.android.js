@@ -1,40 +1,77 @@
 /**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
  * @flow
  */
 
 'use strict';
 
 import * as React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
+import {SegmentedControlTab} from './SegmentedControlTab';
 
-const DummySegmentedControlIOS = (props: *) => (
-  <View style={[styles.dummy, props.style]}>
-    <Text style={styles.text}>
-      SegmentedControlIOS is not supported on this platform!
-    </Text>
-  </View>
-);
+import type {SegmentedControlProps} from './types';
+const SegmentedControl = ({
+  style,
+  onChange,
+  onValueChange,
+  enabled = true,
+  selectedIndex,
+  activeTextColor,
+  values,
+  tintColor,
+  textColor,
+  backgroundColor,
+}: SegmentedControlProps) => {
+  const handleChange = (index: number) => {
+    // mocks iOS's nativeEvent
+    const event = {
+      nativeEvent: {
+        value: values[index],
+        selectedSegmentIndex: index,
+      },
+    };
+    onChange && onChange(event);
+    onValueChange && onValueChange(values[index]);
+  };
+  return (
+    <View
+      style={[
+        styles.default,
+        style,
+        backgroundColor && {backgroundColor},
+        !enabled && styles.disabled,
+      ]}>
+      {values.map((value, index) => {
+        return (
+          <SegmentedControlTab
+            enabled={enabled}
+            selected={selectedIndex === index}
+            key={index}
+            value={value}
+            tintColor={tintColor}
+            textColor={textColor}
+            activeTextColor={activeTextColor}
+            onSelect={() => {
+              handleChange(index);
+            }}
+          />
+        );
+      })}
+    </View>
+  );
+};
 
 const styles = StyleSheet.create({
-  dummy: {
-    width: 120,
-    height: 50,
-    backgroundColor: '#ffbcbc',
-    borderWidth: 1,
-    borderColor: 'red',
-    alignItems: 'center',
-    justifyContent: 'center',
+  default: {
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    alignContent: 'center',
+    height: 28,
+    backgroundColor: '#eee',
+    borderRadius: 5,
   },
-  text: {
-    color: '#333333',
-    margin: 5,
-    fontSize: 10,
+  disabled: {
+    opacity: 0.4,
   },
 });
 
-export default DummySegmentedControlIOS;
+export default SegmentedControl;

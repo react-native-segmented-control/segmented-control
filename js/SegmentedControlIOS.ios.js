@@ -14,9 +14,8 @@ import {StyleSheet} from 'react-native';
 
 import type {SyntheticEvent} from 'react-native/Libraries/Types/CoreEventTypes';
 
-import RNCSegmentedControlNativeComponent, {
-  type SegmentedControlIOSProps,
-} from './RNCSegmentedControlNativeComponent';
+import RNCSegmentedControlNativeComponent from './RNCSegmentedControlNativeComponent';
+import type {SegmentedControlProps} from './types';
 
 type Event = SyntheticEvent<
   $ReadOnly<{|
@@ -26,7 +25,7 @@ type Event = SyntheticEvent<
 >;
 
 type Props = $ReadOnly<{|
-  ...SegmentedControlIOSProps,
+  ...SegmentedControlProps,
   forwardedRef: ?React.Ref<typeof RNCSegmentedControlNativeComponent>,
 |}>;
 
@@ -83,11 +82,11 @@ const styles = StyleSheet.create({
 });
 
 const SegmentedControlIOSWithRef = React.forwardRef<
-  SegmentedControlIOSProps,
+  SegmentedControlProps,
   RNCSegmentedControlNativeComponent,
 >(
   (
-    props: SegmentedControlIOSProps,
+    props: SegmentedControlProps,
     forwardedRef: ?React.Ref<typeof RNCSegmentedControlNativeComponent>,
   ) => {
     return <SegmentedControlIOS {...props} forwardedRef={forwardedRef} />;

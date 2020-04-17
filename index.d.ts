@@ -10,7 +10,7 @@ import {
   Constructor,
 } from 'react-native';
 
-export interface SegmentedControlIOSProps extends ViewProps {
+export interface SegmentedControlProps extends ViewProps {
   /**
    * If false the user won't be able to interact with the control. Default value is true.
    */
@@ -72,11 +72,11 @@ export interface SegmentedControlIOSProps extends ViewProps {
    * (iOS 13 only)
    * Overrides the control's appearance irrespective of the OS theme
    */
-  appearance?: 'dark' | 'light'
+  appearance?: 'dark' | 'light';
 }
 
 /**
- * Use `SegmentedControlIOS` to render a UISegmentedControl iOS.
+ * Use `SegmentedControl` to render a UISegmentedControl iOS.
  *
  * #### Programmatically changing selected index
  *
@@ -86,7 +86,7 @@ export interface SegmentedControlIOSProps extends ViewProps {
  * selects a value and changes the index, as shown in the example below.
  *
  * ````
- * <SegmentedControlIOS
+ * <SegmentedControl
  *   values={['One', 'Two']}
  *   selectedIndex={this.state.selectedIndex}
  *   onChange={(event) => {
@@ -95,9 +95,10 @@ export interface SegmentedControlIOSProps extends ViewProps {
  * />
  * ````
  */
-declare class SegmentedControlIOSComponent extends React.Component<
-  SegmentedControlIOSProps
+
+declare class SegmentedControlComponent extends React.Component<
+  SegmentedControlProps
 > {}
-declare const SegmentedControlIOSBase: Constructor<NativeMethodsMixin> &
-  typeof SegmentedControlIOSComponent;
-export default class SegmentedControlIOS extends SegmentedControlIOSBase {}
+declare const SegmentedControlBase: Constructor<NativeMethodsMixin> &
+  typeof SegmentedControlComponent;
+export default class SegmentedControl extends SegmentedControlBase {}
