@@ -5,10 +5,14 @@ import * as React from 'react';
 import {
   ViewProps,
   NativeSyntheticEvent,
-  NativeSegmentedControlIOSChangeEvent,
   NativeMethodsMixin,
   Constructor,
 } from 'react-native';
+
+export interface NativeSegmentedControlIOSChangeEvent extends TargetedEvent {
+  value: string;
+  selectedSegmentIndex: number;
+}
 
 export interface SegmentedControlProps extends ViewProps {
   /**
