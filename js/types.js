@@ -43,18 +43,18 @@ export type SegmentedControlProps = $ReadOnly<{|
    */
   tintColor?: ?ColorValue,
   /**
+   * (iOS 13 only)
    * Text color of the control.
-   * NOTE: this prop will only work for iOS >= 13
    */
   textColor?: ?ColorValue,
   /**
+   * (iOS 13 only)
    * Text color of the control when selected.
-   * NOTE: this prop will only work for iOS >= 13
    */
   activeTextColor?: ?ColorValue,
   /**
+   * (iOS 13 only)
    * Background color of the control.
-   * NOTE: this prop will only work for iOS >= 13
    */
   backgroundColor?: ?ColorValue,
   /**
@@ -67,4 +67,8 @@ export type SegmentedControlProps = $ReadOnly<{|
    * Overrides the control's appearance irrespective of the OS theme
    */
   appearance?: 'dark' | 'light',
+  /**
+   * FontSize of the segmented control
+   */
+  fontSize?: ?number,
 |}>;

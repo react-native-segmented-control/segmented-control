@@ -15,6 +15,7 @@ type Props = $ReadOnly<{|
   onSelect: () => void,
   selected: boolean,
   enabled: boolean,
+  fontSize?: ?number,
 |}>;
 
 export const SegmentedControlTab = ({
@@ -25,6 +26,7 @@ export const SegmentedControlTab = ({
   tintColor,
   textColor,
   activeTextColor,
+  fontSize,
 }: Props) => {
   const getColor = () => {
     if (selected && activeTextColor) {
@@ -56,7 +58,14 @@ export const SegmentedControlTab = ({
           styles.default,
           selected && {backgroundColor: getBackgroundColor()},
         ]}>
-        <Text style={[{color}, selected && styles.activeText]}>{value}</Text>
+        <Text
+          style={[
+            {color},
+            !(fontSize == null) && {fontSize},
+            selected && styles.activeText,
+          ]}>
+          {value}
+        </Text>
       </View>
     </TouchableOpacity>
   );

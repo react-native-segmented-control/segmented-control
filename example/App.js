@@ -74,7 +74,16 @@ export default class App extends React.Component<{}, $FlowFixMeState> {
             selectedIndex={1}
           />
         </View>
-
+        <View style={styles.segmentContainer}>
+          <Text style={styles.text}>
+            Segmented controls can have defined fontSize
+          </Text>
+          <SegmentedControl
+            values={['One', 'Two']}
+            style={{height: 80}}
+            fontSize={32}
+          />
+        </View>
         <View>
           <Text style={styles.text}>Custom colors can be provided</Text>
           <View style={styles.segmentContainer}>

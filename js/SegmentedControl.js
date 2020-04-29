@@ -25,6 +25,7 @@ const SegmentedControl = ({
   tintColor,
   textColor,
   backgroundColor,
+  fontSize,
 }: SegmentedControlProps) => {
   const handleChange = (index: number) => {
     // mocks iOS's nativeEvent
@@ -55,6 +56,7 @@ const SegmentedControl = ({
               value={value}
               tintColor={tintColor}
               textColor={textColor}
+              fontSize={fontSize}
               activeTextColor={activeTextColor}
               onSelect={() => {
                 handleChange(index);
