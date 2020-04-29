@@ -11,9 +11,9 @@
   "dependencies": {
     "@react-native-community/segmented-control": "file:../",
     "expo": "^37.0.7",
-    "react": "16.9.0",
-    "react-dom": "16.9.0",
-    "react-native": "0.61.5",
+    "react": "16.11.0",
+    "react-dom": "16.11.0",
+    "react-native": "0.62.2",
     "react-native-web": "^0.12.2"
   },
   "devDependencies": {
