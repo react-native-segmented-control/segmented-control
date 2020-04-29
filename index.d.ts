@@ -78,6 +78,10 @@ export interface SegmentedControlProps extends ViewProps {
    * Overrides the control's appearance irrespective of the OS theme
    */
   appearance?: 'dark' | 'light';
+  /**
+   * Font Size of Segmented Control
+   */
+  fontSize?: number;
 }
 
 /**
