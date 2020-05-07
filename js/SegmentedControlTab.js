@@ -42,22 +42,12 @@ export const SegmentedControlTab = ({
   };
   const color = getColor();
 
-  const getBackgroundColor = () => {
-    if (selected && tintColor) {
-      return tintColor;
-    }
-    return 'white';
-  };
   return (
     <TouchableOpacity
       style={styles.container}
       disabled={!enabled}
       onPress={onSelect}>
-      <View
-        style={[
-          styles.default,
-          selected && {backgroundColor: getBackgroundColor()},
-        ]}>
+      <View style={[styles.default]}>
         <Text
           style={[
             {color},
