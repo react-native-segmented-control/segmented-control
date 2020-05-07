@@ -122,9 +122,11 @@ const styles = StyleSheet.create({
   },
   slider: {
     position: 'absolute',
-    left: 0,
-    height: '100%',
     borderRadius: 5,
+    top: 1,
+    bottom: 1,
+    right: 1,
+    left: 1,
   },
 });
 
