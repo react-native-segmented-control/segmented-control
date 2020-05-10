@@ -41,10 +41,14 @@
 
 - (void)setFontSize:(NSInteger)fontSize
 {
-  UIFont *font = [UIFont boldSystemFontOfSize: fontSize];
+  UIFont *font = [UIFont systemFontOfSize: fontSize];
     [_attributes setObject: font forKey:NSFontAttributeName];
     [self setTitleTextAttributes:_attributes
                                 forState:UIControlStateNormal];
+  UIFont *fontBold = [UIFont boldSystemFontOfSize: fontSize];
+    [_attributes setObject: fontBold forKey:NSFontAttributeName];
+    [self setTitleTextAttributes:_attributes
+                                forState:UIControlStateSelected];
 }
 
 - (void)setBackgroundColor:(UIColor *)backgroundColor
