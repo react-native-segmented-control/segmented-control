@@ -41,10 +41,14 @@
 
 - (void)setFontSize:(NSInteger)fontSize
 {
-  UIFont *font = [UIFont boldSystemFontOfSize: fontSize];
+  UIFont *font = [UIFont systemFontOfSize: fontSize];
     [_attributes setObject: font forKey:NSFontAttributeName];
     [self setTitleTextAttributes:_attributes
                                 forState:UIControlStateNormal];
+  UIFont *fontBold = [UIFont boldSystemFontOfSize: fontSize];
+    [_attributes setObject: fontBold forKey:NSFontAttributeName];
+    [self setTitleTextAttributes:_attributes
+                                forState:UIControlStateSelected];
 }
 
 - (void)setBackgroundColor:(UIColor *)backgroundColor
@@ -74,7 +78,8 @@
     #if defined(__IPHONE_OS_VERSION_MAX_ALLOWED) && defined(__IPHONE_13_0) && \
         __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_13_0
     if (@available(iOS 13.0, *)) {
-      [self setTitleTextAttributes:@{NSForegroundColorAttributeName: textColor}
+      [_attributes setObject: textColor forKey:NSForegroundColorAttributeName];
+      [self setTitleTextAttributes:_attributes
                   forState:UIControlStateSelected];
     }
     #endif
@@ -87,8 +92,9 @@
     __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_13_0
   if (@available(iOS 13.0, *)) {
     [self setSelectedSegmentTintColor:tintColor];
-    [self setTitleTextAttributes:@{NSForegroundColorAttributeName: tintColor}
-                         forState:UIControlStateNormal];
+    [_attributes setObject: tintColor forKey:NSForegroundColorAttributeName];
+    [self setTitleTextAttributes:_attributes
+                  forState:UIControlStateNormal];
   }
 #endif
 }
