@@ -10,7 +10,7 @@
 'use strict';
 
 import * as React from 'react';
-import {StyleSheet} from 'react-native';
+import {StyleSheet, processColor} from 'react-native';
 
 import RNCSegmentedControlNativeComponent from './RNCSegmentedControlNativeComponent';
 import type {Event, SegmentedControlProps} from './types';
@@ -54,9 +54,31 @@ class SegmentedControlIOS extends React.Component<Props> {
   };
 
   render() {
-    const {forwardedRef, ...props} = this.props;
+    const {forwardedRef, fontStyle, activeFontStyle, ...props} = this.props;
     return (
       <RNCSegmentedControlNativeComponent
+        fontStyle={
+          fontStyle
+            ? {
+                ...fontStyle,
+                color: fontStyle.color
+                  ? // $FlowFixMe color is converted to number
+                    processColor(fontStyle.color)
+                  : undefined,
+              }
+            : undefined
+        }
+        activeFontStyle={
+          activeFontStyle
+            ? {
+                ...activeFontStyle,
+                color: activeFontStyle.color
+                  ? // $FlowFixMe color is converted to number
+                    processColor(activeFontStyle.color)
+                  : undefined,
+              }
+            : undefined
+        }
         {...props}
         ref={forwardedRef}
         style={[styles.segmentedControl, this.props.style]}
