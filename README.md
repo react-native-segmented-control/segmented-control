@@ -30,7 +30,7 @@ npm install --save @react-native-community/segmented-control
 
 - React Native 0.60+
 
-run `cd ios && pod install`
+run `npx pod-install`
 
 - React Native <= 0.59
 
