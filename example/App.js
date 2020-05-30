@@ -75,10 +75,7 @@ export default class App extends React.Component<{}, $FlowFixMeState> {
             <SegmentedControl
               values={['One', 'Two']}
               style={{height: 80}}
-              fontStyle={{
-                fontSize: 32,
-                fontFamily: 'Roboto',
-              }}
+              fontStyle={styles.fontStyle}
             />
           </View>
           <SegmentedControl
@@ -89,11 +86,7 @@ export default class App extends React.Component<{}, $FlowFixMeState> {
               fontFamily: 'Optima',
               fontSize: 32,
             }}
-            activeFontStyle={{
-              fontSize: 40,
-              fontFamily: 'Optima-Bold',
-              color: 'blue',
-            }}
+            activeFontStyle={styles.activeFontStyle}
           />
         </View>
         <View>
@@ -142,5 +135,14 @@ const styles = StyleSheet.create({
   },
   container: {
     paddingTop: 80,
+  },
+  fontStyle: {
+    fontSize: 32,
+    fontFamily: 'serif',
+  },
+  activeFontStyle: {
+    fontSize: 40,
+    fontFamily: 'Optima-Bold',
+    color: 'blue',
   },
 });

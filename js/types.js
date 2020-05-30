@@ -13,6 +13,21 @@ export type Event = SyntheticEvent<
   |}>,
 >;
 
+export type FontStyle = $ReadOnly<{|
+  /**
+   * Font Color of Segmented Control
+   */
+  color?: ?ColorValue,
+  /**
+   * Font Size of Segmented Control
+   */
+  fontSize?: ?number,
+  /**
+   * Font Family of the Segmented Control
+   */
+  fontFamily?: ?string,
+|}>;
+
 export type SegmentedControlProps = $ReadOnly<{|
   ...ViewProps,
   /**
@@ -58,33 +73,15 @@ export type SegmentedControlProps = $ReadOnly<{|
    * Overrides the control's appearance irrespective of the OS theme
    */
   appearance?: 'dark' | 'light',
-  fontStyle?: {
-    /**
-     * Font Color of Segmented Control
-     */
-    color?: ?ColorValue,
-    /**
-     * Font Size of Segmented Control
-     */
-    fontSize?: ?number,
-    /**
-     * Font Family of the Segmented Control
-     */
-    fontFamily?: ?string,
-  },
-
-  activeFontStyle?: ?{
-    /**
-     * Font Color of Segmented Control when Active
-     */
-    color?: ?ColorValue,
-    /**
-     * Font Size of Segmented Control when Active
-     */
-    fontSize?: ?number,
-    /**
-     * Font Family of the Segmented Control when Active
-     */
-    fontFamily?: ?string,
-  },
+  /**
+   * (iOS 13+ only)
+   * fontStyle for segmented control.
+   */
+  fontStyle?: FontStyle,
+  /**
+   * (iOS 13+ only)
+   * fontStyle for selected segment.
+   * it will override fontStyle for the selected segment
+   */
+  activeFontStyle?: FontStyle,
 |}>;

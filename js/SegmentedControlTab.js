@@ -6,16 +6,16 @@
 
 import * as React from 'react';
 import {StyleSheet, View, Text, TouchableOpacity} from 'react-native';
+import type {FontStyle} from './types';
 
 type Props = $ReadOnly<{|
   value: string,
   tintColor?: ?string,
-  textColor?: ?string,
-  activeTextColor?: ?string,
   onSelect: () => void,
   selected: boolean,
   enabled: boolean,
-  fontSize?: ?number,
+  fontStyle?: FontStyle,
+  activeFontStyle?: FontStyle,
 |}>;
 
 export const SegmentedControlTab = ({
@@ -24,23 +24,39 @@ export const SegmentedControlTab = ({
   enabled,
   selected,
   tintColor,
-  textColor,
-  activeTextColor,
-  fontSize,
+  fontStyle = {},
+  activeFontStyle = {},
 }: Props) => {
+  const {color: textColor, fontSize, fontFamily} = fontStyle;
+  const {
+    color: activeColor,
+    fontSize: activeFontSize,
+    fontFamily: activeFontFamily,
+  } = activeFontStyle;
+
   const getColor = () => {
-    if (selected && activeTextColor) {
-      return activeTextColor;
-    }
     if (textColor) {
       return textColor;
     }
     if (tintColor) {
-      return tintColor;
+      return 'white';
     }
     return 'black';
   };
   const color = getColor();
+
+  const activeStyle = {
+    ...styles.activeText,
+    fontFamily: activeFontFamily || fontFamily,
+    fontSize: activeFontSize || fontSize,
+    color: activeColor || color,
+  };
+
+  const idleStyle = {
+    color,
+    fontSize: fontSize || undefined,
+    fontFamily: fontFamily || undefined,
+  };
 
   return (
     <TouchableOpacity
@@ -48,14 +64,7 @@ export const SegmentedControlTab = ({
       disabled={!enabled}
       onPress={onSelect}>
       <View style={[styles.default]}>
-        <Text
-          style={[
-            {color},
-            !(fontSize == null) && {fontSize},
-            selected && styles.activeText,
-          ]}>
-          {value}
-        </Text>
+        <Text style={[idleStyle, selected && activeStyle]}>{value}</Text>
       </View>
     </TouchableOpacity>
   );
