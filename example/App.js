@@ -23,23 +23,19 @@ export default class App extends React.Component<{}, $FlowFixMeState> {
           <Text style={styles.text}>Segmented controls can have values</Text>
           <SegmentedControl values={['One', 'Two']} />
         </View>
-
         <View style={styles.segmentSection}>
           <SegmentedControl values={['One', 'Two', 'Three', 'Four', 'Five']} />
         </View>
-
         <View style={styles.segmentSection}>
           <Text style={styles.text}>
             Segmented controls can have pre-selected values
           </Text>
           <SegmentedControl values={['One', 'Two']} selectedIndex={0} />
         </View>
-
         <View style={styles.segmentSection}>
           <Text style={styles.text}>Segmented controls can be momentary</Text>
           <SegmentedControl values={['One', 'Two']} momentary={true} />
         </View>
-
         <View style={styles.segmentSection}>
           <Text style={styles.text}>Segmented controls can be disabled</Text>
           <SegmentedControl
@@ -48,7 +44,6 @@ export default class App extends React.Component<{}, $FlowFixMeState> {
             selectedIndex={1}
           />
         </View>
-
         <View style={styles.segmentContainer}>
           <Text style={styles.text}>Custom colors can be provided</Text>
           <SegmentedControl
@@ -56,7 +51,6 @@ export default class App extends React.Component<{}, $FlowFixMeState> {
             values={['One', 'Two', 'Three', 'Four']}
             selectedIndex={0}
             backgroundColor="#0000ff"
-            activeTextColor="white"
           />
         </View>
         <View style={styles.segmentContainer}>
@@ -64,12 +58,11 @@ export default class App extends React.Component<{}, $FlowFixMeState> {
             tintColor="#00ff00"
             values={['One', 'Two', 'Three']}
             selectedIndex={1}
-            activeTextColor="black"
           />
         </View>
         <View style={styles.segmentSection}>
           <SegmentedControl
-            textColor="#ff00ff"
+            fontStyle={{color: '#ff00ff'}}
             values={['One', 'Two']}
             selectedIndex={1}
           />
@@ -82,16 +75,18 @@ export default class App extends React.Component<{}, $FlowFixMeState> {
             <SegmentedControl
               values={['One', 'Two']}
               style={{height: 80}}
-              fontSize={32}
+              fontStyle={styles.fontStyle}
             />
           </View>
           <SegmentedControl
             values={['One', 'Two']}
+            tintColor="red"
             style={{height: 80}}
-            fontSize={32}
-            textColor="blue"
-            tintColor="green"
-            activeTextColor="red"
+            fontStyle={{
+              fontFamily: 'Optima',
+              fontSize: 32,
+            }}
+            activeFontStyle={styles.activeFontStyle}
           />
         </View>
         <View>
@@ -140,5 +135,14 @@ const styles = StyleSheet.create({
   },
   container: {
     paddingTop: 80,
+  },
+  fontStyle: {
+    fontSize: 32,
+    fontFamily: 'serif',
+  },
+  activeFontStyle: {
+    fontSize: 40,
+    fontFamily: 'Optima-Bold',
+    color: 'blue',
   },
 });

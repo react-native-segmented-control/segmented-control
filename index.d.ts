@@ -15,6 +15,21 @@ export interface NativeSegmentedControlIOSChangeEvent extends TargetedEvent {
   selectedSegmentIndex: number;
 }
 
+export type FontStyle = {
+  /**
+   * Font Color of Segmented Control when Active
+   */
+  color?: string;
+  /**
+   * Font Size of Segmented Control when Active
+   */
+  fontSize?: number;
+  /**
+   * Font Family of the Segmented Control when Active
+   */
+  fontFamily?: string;
+};
+
 export interface SegmentedControlProps extends ViewProps {
   /**
    * If false the user won't be able to interact with the control. Default value is true.
@@ -51,19 +66,7 @@ export interface SegmentedControlProps extends ViewProps {
   tintColor?: string;
 
   /**
-   * (iOS 13 only)
-   * Text color of the control.
-   */
-  textColor?: string;
-
-  /**
-   * (iOS 13 only)
-   * Text color of the active control.
-   */
-  activeTextColor?: string;
-
-  /**
-   * (iOS 13 only)
+   * (iOS 13+ only)
    * Background color of the control.
    */
   backgroundColor?: string;
@@ -74,27 +77,18 @@ export interface SegmentedControlProps extends ViewProps {
   values?: string[];
 
   /**
-   * (iOS 13 only)
+   * (iOS 13+ only)
    * Overrides the control's appearance irrespective of the OS theme
    */
   appearance?: 'dark' | 'light';
   /**
    * Font style properties of the Segmented Control
    */
-  fontStyle?: {
-    /**
-   * Font Size of Segmented Control
+  fontStyle?: FontStyle;
+  /**
+   * Active Font style properties of the Segmented Control
    */
-    fontSize?: number;
-    /**
-     * Font Family of the Segmented Control when idle/normal
-     */
-    fontFamilyIdle?: string;
-    /**
-     * Font Family of the Segmented Control when selected
-     */
-    fontFamilySelected?: string;
-  }
+  activeFontStyle?: FontStyle;
 }
 
 /**
