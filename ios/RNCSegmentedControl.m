@@ -39,18 +39,6 @@
   super.selectedSegmentIndex = selectedIndex;
 }
 
-- (void)setFontSize:(NSInteger)fontSize
-{
-  UIFont *font = [UIFont systemFontOfSize: fontSize];
-    [_attributes setObject: font forKey:NSFontAttributeName];
-    [self setTitleTextAttributes:_attributes
-                                forState:UIControlStateNormal];
-  UIFont *fontBold = [UIFont boldSystemFontOfSize: fontSize];
-    [_attributes setObject: fontBold forKey:NSFontAttributeName];
-    [self setTitleTextAttributes:_attributes
-                                forState:UIControlStateSelected];
-}
-
 - (void)setBackgroundColor:(UIColor *)backgroundColor
 {
     #if defined(__IPHONE_OS_VERSION_MAX_ALLOWED) && defined(__IPHONE_13_0) && \
