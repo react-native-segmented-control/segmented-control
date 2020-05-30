@@ -15,6 +15,21 @@ export interface NativeSegmentedControlIOSChangeEvent extends TargetedEvent {
   selectedSegmentIndex: number;
 }
 
+export type FontStyle = {
+  /**
+   * Font Color of Segmented Control when Active
+   */
+  color?: string;
+  /**
+   * Font Size of Segmented Control when Active
+   */
+  fontSize?: number;
+  /**
+   * Font Family of the Segmented Control when Active
+   */
+  fontFamily?: string;
+};
+
 export interface SegmentedControlProps extends ViewProps {
   /**
    * If false the user won't be able to interact with the control. Default value is true.
@@ -69,37 +84,11 @@ export interface SegmentedControlProps extends ViewProps {
   /**
    * Font style properties of the Segmented Control
    */
-  fontStyle?: {
-    /**
-     * Font Color of Segmented Control
-     */
-    color?: string;
-    /**
-     * Font Size of Segmented Control
-     */
-    fontSize?: number;
-    /**
-     * Font Family of the Segmented Control
-     */
-    fontFamily?: string;
-  };
+  fontStyle?: FontStyle;
   /**
    * Active Font style properties of the Segmented Control
    */
-  activeFontStyle?: {
-    /**
-     * Font Color of Segmented Control when Active
-     */
-    color?: string;
-    /**
-     * Font Size of Segmented Control when Active
-     */
-    fontSize?: number;
-    /**
-     * Font Family of the Segmented Control when Active
-     */
-    fontFamily?: string;
-  };
+  activeFontStyle?: FontStyle;
 }
 
 /**
