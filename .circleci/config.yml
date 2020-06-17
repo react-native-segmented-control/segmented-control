@@ -1,6 +1,7 @@
---- # -------------------------
 # -------------------------
 #        DEFAULTS
+# -------------------------
+  
 defaults: &defaults
   working_directory: ~/react-native-segmented-control
   environment:
