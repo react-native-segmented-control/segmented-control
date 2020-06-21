@@ -19,7 +19,7 @@ RCT_EXPORT_MODULE()
   return [RNCSegmentedControl new];
 }
 
-RCT_EXPORT_VIEW_PROPERTY(values, NSArray<NSString *>)
+RCT_EXPORT_VIEW_PROPERTY(values, NSArray)
 RCT_EXPORT_VIEW_PROPERTY(selectedIndex, NSInteger)
 RCT_EXPORT_VIEW_PROPERTY(tintColor, UIColor)
 RCT_EXPORT_VIEW_PROPERTY(backgroundColor, UIColor)
