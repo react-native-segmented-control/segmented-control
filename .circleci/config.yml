@@ -1,6 +1,7 @@
 # -------------------------
 #        DEFAULTS
 # -------------------------
+  
 defaults: &defaults
   working_directory: ~/react-native-segmented-control
   environment:
@@ -12,27 +13,27 @@ linux_defaults: &linux_defaults
   docker:
     - image: circleci/node:10
   environment:
-    - PATH: "/opt/yarn/yarn-v1.5.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+    - PATH: '/opt/yarn/yarn-v1.5.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
 
 # ANDROID
 android_defaults: &android_defaults
   <<: *defaults
   docker:
     - image: circleci/android:api-27-node8-alpha
-  resource_class: "medium"
+  resource_class: 'medium'
   environment:
-    - TERM: "dumb"
+    - TERM: 'dumb'
     - ADB_INSTALL_TIMEOUT: 10
-    - _JAVA_OPTIONS: "-XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap"
+    - _JAVA_OPTIONS: '-XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap'
     - GRADLE_OPTS: '-Dorg.gradle.daemon=false -Dorg.gradle.jvmargs="-XX:+HeapDumpOnOutOfMemoryError"'
     - BUILD_THREADS: 2
 
 # MACOS
 macos_defaults: &macos_defaults
   <<: *defaults
-  resource_class: "medium"
+  resource_class: 'medium'
   macos:
-    xcode: "10.1.0"
+    xcode: '10.1.0'
 
 # -------------------------
 #         ALIASES
@@ -73,9 +74,9 @@ aliases:
     name: Flow Checks
     command: yarn flow check
 
-# - &jest
-#   name: Jest Unit Tests
-#   command: yarn test:jest
+  # - &jest
+  #   name: Jest Unit Tests
+  #   command: yarn test:jest
 
   - &tsc
     name: TypeScript type check
@@ -133,7 +134,6 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/react-native-segmented-control
-      - restore-cache: *restore-gradle-cache
       - run:
           name: Accept Android licences
           command: |-
@@ -146,7 +146,6 @@ jobs:
             yarn install
             cd android
             ./gradlew clean assembleDebug
-      - save-cache: *save-gradle-cache
 
   ios-checkout:
     <<: *macos_defaults

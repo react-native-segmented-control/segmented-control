@@ -20,12 +20,11 @@ const SegmentedControl = ({
   onValueChange,
   enabled = true,
   selectedIndex,
-  activeTextColor,
   values,
   tintColor,
-  textColor,
   backgroundColor,
-  fontSize,
+  fontStyle,
+  activeFontStyle,
 }: SegmentedControlProps) => {
   const [segmentWidth, setSegmentWidth] = React.useState(0);
   const animation = React.useRef(new Animated.Value(0)).current;
@@ -93,9 +92,8 @@ const SegmentedControl = ({
               key={index}
               value={value}
               tintColor={tintColor}
-              textColor={textColor}
-              fontSize={fontSize}
-              activeTextColor={activeTextColor}
+              fontStyle={fontStyle}
+              activeFontStyle={activeFontStyle}
               onSelect={() => {
                 handleChange(index);
               }}

@@ -1,6 +1,6 @@
 {
   "name": "@react-native-community/segmented-control",
-  "version": "1.6.1",
+  "version": "2.0.1",
   "description": "React Native SegmentedControlIOS library",
   "main": "js/index.js",
   "types": "index.d.ts",
@@ -25,24 +25,24 @@
     "react-native": ">=0.57"
   },
   "devDependencies": {
-    "@babel/core": "^7.6.2",
-    "@babel/runtime": "^7.6.2",
+    "@babel/core": "^7.10.2",
+    "@babel/runtime": "^7.10.2",
     "@expo/webpack-config": "^0.12.15",
     "@react-native-community/eslint-config": "^2.0.0",
     "@semantic-release/git": "^8.0.0",
     "@types/react": "^16.9.17",
     "@types/react-native": "^0.62.1",
     "babel-eslint": "^10.1.0",
-    "babel-jest": "^25.1.0",
+    "babel-jest": "^26.0.1",
     "babel-preset-expo": "^8.2.1",
-    "eslint": "^6.8.0",
+    "eslint": "7",
     "eslint-plugin-prettier": "^3.1.2",
     "expo": "^37.0.8",
     "flow-bin": "^0.113.0",
     "husky": "^4.0.10",
-    "jest": "^25.2.4",
+    "jest": "^26.0.1",
     "lint-staged": "^10.0.0",
-    "metro-react-native-babel-preset": "0.56.0",
+    "metro-react-native-babel-preset": "0.59.0",
     "react": "16.11.0",
     "react-dom": "16.11.0",
     "react-native": "^0.62.2",
@@ -51,6 +51,9 @@
     "rimraf": "^3.0.2",
     "semantic-release": "^17.0.4",
     "typescript": "^3.8.3"
+  },
+  "resolutions": {
+    "@react-native-community/cli": "4.10.0"
   },
   "jest": {
     "preset": "react-native",
