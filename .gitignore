@@ -58,3 +58,13 @@ index.ios.bundle
 
 # Eslint Cache
 .eslintcache
+
+# Bundle artifact
+*.jsbundle
+
+# CocoaPods
+example/ios/Pods/
+
+# expo generated files
+.expo
+web-build
