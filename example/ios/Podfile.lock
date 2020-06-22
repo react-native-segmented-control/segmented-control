@@ -233,7 +233,7 @@ PODS:
     - React-cxxreact (= 0.62.2)
     - React-jsi (= 0.62.2)
   - React-jsinspector (0.62.2)
-  - react-native-segmented-control (1.5.0):
+  - react-native-segmented-control (2.0.1):
     - React
   - React-RCTActionSheet (0.62.2):
     - React-Core/RCTActionSheetHeaders (= 0.62.2)
@@ -299,9 +299,9 @@ PODS:
     - Yoga (~> 1.14)
 
 DEPENDENCIES:
-  - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
-  - FBLazyVector (from `../node_modules/react-native/Libraries/FBLazyVector`)
-  - FBReactNativeSpec (from `../node_modules/react-native/Libraries/FBReactNativeSpec`)
+  - DoubleConversion (from `../../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
+  - FBLazyVector (from `../../node_modules/react-native/Libraries/FBLazyVector`)
+  - FBReactNativeSpec (from `../../node_modules/react-native/Libraries/FBReactNativeSpec`)
   - Flipper (~> 0.33.1)
   - Flipper-DoubleConversion (= 1.1.7)
   - Flipper-Folly (~> 2.1)
@@ -321,32 +321,32 @@ DEPENDENCIES:
   - FlipperKit/FlipperKitReactPlugin (~> 0.33.1)
   - FlipperKit/FlipperKitUserDefaultsPlugin (~> 0.33.1)
   - FlipperKit/SKIOSNetworkPlugin (~> 0.33.1)
-  - Folly (from `../node_modules/react-native/third-party-podspecs/Folly.podspec`)
-  - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
-  - RCTRequired (from `../node_modules/react-native/Libraries/RCTRequired`)
-  - RCTTypeSafety (from `../node_modules/react-native/Libraries/TypeSafety`)
-  - React (from `../node_modules/react-native/`)
-  - React-Core (from `../node_modules/react-native/`)
-  - React-Core/DevSupport (from `../node_modules/react-native/`)
-  - React-Core/RCTWebSocket (from `../node_modules/react-native/`)
-  - React-CoreModules (from `../node_modules/react-native/React/CoreModules`)
-  - React-cxxreact (from `../node_modules/react-native/ReactCommon/cxxreact`)
-  - React-jsi (from `../node_modules/react-native/ReactCommon/jsi`)
-  - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
-  - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
-  - "react-native-segmented-control (from `../node_modules/@react-native-community/segmented-control`)"
-  - React-RCTActionSheet (from `../node_modules/react-native/Libraries/ActionSheetIOS`)
-  - React-RCTAnimation (from `../node_modules/react-native/Libraries/NativeAnimation`)
-  - React-RCTBlob (from `../node_modules/react-native/Libraries/Blob`)
-  - React-RCTImage (from `../node_modules/react-native/Libraries/Image`)
-  - React-RCTLinking (from `../node_modules/react-native/Libraries/LinkingIOS`)
-  - React-RCTNetwork (from `../node_modules/react-native/Libraries/Network`)
-  - React-RCTSettings (from `../node_modules/react-native/Libraries/Settings`)
-  - React-RCTText (from `../node_modules/react-native/Libraries/Text`)
-  - React-RCTVibration (from `../node_modules/react-native/Libraries/Vibration`)
-  - ReactCommon/callinvoker (from `../node_modules/react-native/ReactCommon`)
-  - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
-  - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
+  - Folly (from `../../node_modules/react-native/third-party-podspecs/Folly.podspec`)
+  - glog (from `../../node_modules/react-native/third-party-podspecs/glog.podspec`)
+  - RCTRequired (from `../../node_modules/react-native/Libraries/RCTRequired`)
+  - RCTTypeSafety (from `../../node_modules/react-native/Libraries/TypeSafety`)
+  - React (from `../../node_modules/react-native/`)
+  - React-Core (from `../../node_modules/react-native/`)
+  - React-Core/DevSupport (from `../../node_modules/react-native/`)
+  - React-Core/RCTWebSocket (from `../../node_modules/react-native/`)
+  - React-CoreModules (from `../../node_modules/react-native/React/CoreModules`)
+  - React-cxxreact (from `../../node_modules/react-native/ReactCommon/cxxreact`)
+  - React-jsi (from `../../node_modules/react-native/ReactCommon/jsi`)
+  - React-jsiexecutor (from `../../node_modules/react-native/ReactCommon/jsiexecutor`)
+  - React-jsinspector (from `../../node_modules/react-native/ReactCommon/jsinspector`)
+  - react-native-segmented-control (from `../..`)
+  - React-RCTActionSheet (from `../../node_modules/react-native/Libraries/ActionSheetIOS`)
+  - React-RCTAnimation (from `../../node_modules/react-native/Libraries/NativeAnimation`)
+  - React-RCTBlob (from `../../node_modules/react-native/Libraries/Blob`)
+  - React-RCTImage (from `../../node_modules/react-native/Libraries/Image`)
+  - React-RCTLinking (from `../../node_modules/react-native/Libraries/LinkingIOS`)
+  - React-RCTNetwork (from `../../node_modules/react-native/Libraries/Network`)
+  - React-RCTSettings (from `../../node_modules/react-native/Libraries/Settings`)
+  - React-RCTText (from `../../node_modules/react-native/Libraries/Text`)
+  - React-RCTVibration (from `../../node_modules/react-native/Libraries/Vibration`)
+  - ReactCommon/callinvoker (from `../../node_modules/react-native/ReactCommon`)
+  - ReactCommon/turbomodule/core (from `../../node_modules/react-native/ReactCommon`)
+  - Yoga (from `../../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
   trunk:
@@ -365,57 +365,57 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   DoubleConversion:
-    :podspec: "../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec"
+    :podspec: "../../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec"
   FBLazyVector:
-    :path: "../node_modules/react-native/Libraries/FBLazyVector"
+    :path: "../../node_modules/react-native/Libraries/FBLazyVector"
   FBReactNativeSpec:
-    :path: "../node_modules/react-native/Libraries/FBReactNativeSpec"
+    :path: "../../node_modules/react-native/Libraries/FBReactNativeSpec"
   Folly:
-    :podspec: "../node_modules/react-native/third-party-podspecs/Folly.podspec"
+    :podspec: "../../node_modules/react-native/third-party-podspecs/Folly.podspec"
   glog:
-    :podspec: "../node_modules/react-native/third-party-podspecs/glog.podspec"
+    :podspec: "../../node_modules/react-native/third-party-podspecs/glog.podspec"
   RCTRequired:
-    :path: "../node_modules/react-native/Libraries/RCTRequired"
+    :path: "../../node_modules/react-native/Libraries/RCTRequired"
   RCTTypeSafety:
-    :path: "../node_modules/react-native/Libraries/TypeSafety"
+    :path: "../../node_modules/react-native/Libraries/TypeSafety"
   React:
-    :path: "../node_modules/react-native/"
+    :path: "../../node_modules/react-native/"
   React-Core:
-    :path: "../node_modules/react-native/"
+    :path: "../../node_modules/react-native/"
   React-CoreModules:
-    :path: "../node_modules/react-native/React/CoreModules"
+    :path: "../../node_modules/react-native/React/CoreModules"
   React-cxxreact:
-    :path: "../node_modules/react-native/ReactCommon/cxxreact"
+    :path: "../../node_modules/react-native/ReactCommon/cxxreact"
   React-jsi:
-    :path: "../node_modules/react-native/ReactCommon/jsi"
+    :path: "../../node_modules/react-native/ReactCommon/jsi"
   React-jsiexecutor:
-    :path: "../node_modules/react-native/ReactCommon/jsiexecutor"
+    :path: "../../node_modules/react-native/ReactCommon/jsiexecutor"
   React-jsinspector:
-    :path: "../node_modules/react-native/ReactCommon/jsinspector"
+    :path: "../../node_modules/react-native/ReactCommon/jsinspector"
   react-native-segmented-control:
-    :path: "../node_modules/@react-native-community/segmented-control"
+    :path: "../.."
   React-RCTActionSheet:
-    :path: "../node_modules/react-native/Libraries/ActionSheetIOS"
+    :path: "../../node_modules/react-native/Libraries/ActionSheetIOS"
   React-RCTAnimation:
-    :path: "../node_modules/react-native/Libraries/NativeAnimation"
+    :path: "../../node_modules/react-native/Libraries/NativeAnimation"
   React-RCTBlob:
-    :path: "../node_modules/react-native/Libraries/Blob"
+    :path: "../../node_modules/react-native/Libraries/Blob"
   React-RCTImage:
-    :path: "../node_modules/react-native/Libraries/Image"
+    :path: "../../node_modules/react-native/Libraries/Image"
   React-RCTLinking:
-    :path: "../node_modules/react-native/Libraries/LinkingIOS"
+    :path: "../../node_modules/react-native/Libraries/LinkingIOS"
   React-RCTNetwork:
-    :path: "../node_modules/react-native/Libraries/Network"
+    :path: "../../node_modules/react-native/Libraries/Network"
   React-RCTSettings:
-    :path: "../node_modules/react-native/Libraries/Settings"
+    :path: "../../node_modules/react-native/Libraries/Settings"
   React-RCTText:
-    :path: "../node_modules/react-native/Libraries/Text"
+    :path: "../../node_modules/react-native/Libraries/Text"
   React-RCTVibration:
-    :path: "../node_modules/react-native/Libraries/Vibration"
+    :path: "../../node_modules/react-native/Libraries/Vibration"
   ReactCommon:
-    :path: "../node_modules/react-native/ReactCommon"
+    :path: "../../node_modules/react-native/ReactCommon"
   Yoga:
-    :path: "../node_modules/react-native/ReactCommon/yoga"
+    :path: "../../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
@@ -443,7 +443,7 @@ SPEC CHECKSUMS:
   React-jsi: b6dc94a6a12ff98e8877287a0b7620d365201161
   React-jsiexecutor: 1540d1c01bb493ae3124ed83351b1b6a155db7da
   React-jsinspector: 512e560d0e985d0e8c479a54a4e5c147a9c83493
-  react-native-segmented-control: 1a9262635e7842f8f0bf2468c70aa89d5b535ed3
+  react-native-segmented-control: b922568e7ff4e1ee241c9b747a29cea89f68548c
   React-RCTActionSheet: f41ea8a811aac770e0cc6e0ad6b270c644ea8b7c
   React-RCTAnimation: 49ab98b1c1ff4445148b72a3d61554138565bad0
   React-RCTBlob: a332773f0ebc413a0ce85942a55b064471587a71
@@ -457,6 +457,6 @@ SPEC CHECKSUMS:
   Yoga: 3ebccbdd559724312790e7742142d062476b698e
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: 79ca0d949f09a7c2ff51fed03be24f2aa963d8da
+PODFILE CHECKSUM: c16115da1c09b22e5a0bb855c3910ce7864566e7
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.1

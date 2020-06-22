@@ -38,25 +38,18 @@ RCT_CUSTOM_VIEW_PROPERTY(fontStyle, NSObject, RNCSegmentedControl) {
       NSInteger fontSize =
           json[@"fontSize"] ? [RCTConvert NSInteger:json[@"fontSize"]] : 13.0;
       UIFont *font = [UIFont systemFontOfSize:fontSize];
-      UIFont *activeFont = [UIFont boldSystemFontOfSize:fontSize];
       if (json[@"fontFamily"]) {
         UIFont *tempFont = [UIFont fontWithName:json[@"fontFamily"]
                                            size:fontSize];
         if (tempFont != nil) {
           font = tempFont;
-          activeFont = tempFont;
         }
       }
 
       NSDictionary *attributes = [NSDictionary
           dictionaryWithObjectsAndKeys:font, NSFontAttributeName, color,
                                        NSForegroundColorAttributeName, nil];
-      NSDictionary *activeAttributes = [NSDictionary
-          dictionaryWithObjectsAndKeys:activeFont, NSFontAttributeName, color,
-                                       NSForegroundColorAttributeName, nil];
       [view setTitleTextAttributes:attributes forState:UIControlStateNormal];
-      [view setTitleTextAttributes:activeAttributes
-                          forState:UIControlStateSelected];
     }
   }
 #endif
