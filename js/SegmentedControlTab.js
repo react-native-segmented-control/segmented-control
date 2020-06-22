@@ -9,7 +9,7 @@ import {StyleSheet, View, Text, Image, TouchableOpacity} from 'react-native';
 import type {FontStyle} from './types';
 
 type Props = $ReadOnly<{|
-  value: string,
+  value: string | number | Object,
   tintColor?: ?string,
   onSelect: () => void,
   selected: boolean,
@@ -69,13 +69,12 @@ export const SegmentedControlTab = ({
       disabled={!enabled}
       onPress={onSelect}>
       <View style={[styles.default]}>
-        {typeof value === 'string' && !isBase64(value) ? (
-          <Text style={[idleStyle, selected && activeStyle]}>{value}</Text>
+        {typeof value === 'number' || typeof value === 'object' ? (
+          <Image source={value} style={styles.segmentImage} />
+        ) : isBase64(value) ? (
+          <Image source={{uri: value}} style={styles.segmentImage} />
         ) : (
-          <Image
-            source={isBase64(value) ? {uri: value} : value}
-            style={styles.segmentImage}
-          />
+          <Text style={[idleStyle, selected && activeStyle]}>{value}</Text>
         )}
       </View>
     </TouchableOpacity>
