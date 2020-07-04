@@ -28,6 +28,7 @@ node_modules/react-native/interface.js
 node_modules/react-native/flow/
 
 [options]
+server.max_workers=4
 emoji=true
 
 esproposal.optional_chaining=enable
