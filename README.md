@@ -1,6 +1,6 @@
 # `@react-native-community/segmented-control`
 
-![Supports iOS and Android][support-badge]![CircleCI branch][circle-ci-badge] ![npm][npm-badge] [![Lean Core Extracted][lean-core-badge]][lean-core-issue]
+![Supports iOS and Android and Web][support-badge]![CircleCI branch][circle-ci-badge] ![npm][npm-badge] [![Lean Core Extracted][lean-core-badge]][lean-core-issue]
 
 React Native SegmentedControl library. Use SegmentedControl to render a UISegmentedControl iOS.
 
@@ -26,11 +26,19 @@ npm install --save @react-native-community/segmented-control
 
 ## Link
 
-- React Native 0.60+
+### React Native 0.60+
 
-run `npx pod-install`
+The package is [automatically linked](https://github.com/react-native-community/cli/blob/master/docs/autolinking.md) when building the app. All you need to do is:
 
-- React Native <= 0.59
+```sh
+npx pod-install
+```
+
+For android, no linking is needed, as the module is implemented in js.
+
+<details>
+   <summary>For React Native version 0.59 or older</summary>
+### React Native <= 0.59
 
 run `react-native link @react-native-community/segmented-control`
 
@@ -41,6 +49,8 @@ or you can follow the instructions to [manually link this package](https://faceb
 New React Native comes with `autolinking` feature, which automatically links Native Modules in your project. In order to get it to work, make sure you unlink `Segmented Control` first:
 
 `react-native unlink @react-native-community/segmented-control`
+
+</details>
 
 ## Migrating from the core `react-native` module
 
@@ -167,7 +177,7 @@ The labels for the control's segment buttons, in order.
 
 | Type            | Required |
 | --------------- | -------- |
-| array of string | No       |
+| (string|number|Image)[] | No       |
 
 ### `appearance`
 
