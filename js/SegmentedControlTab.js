@@ -5,11 +5,11 @@
 'use strict';
 
 import * as React from 'react';
-import {StyleSheet, View, Text, TouchableOpacity} from 'react-native';
+import {StyleSheet, View, Text, Image, TouchableOpacity} from 'react-native';
 import type {FontStyle} from './types';
 
 type Props = $ReadOnly<{|
-  value: string,
+  value: string | number | Object,
   tintColor?: ?string,
   onSelect: () => void,
   selected: boolean,
@@ -17,6 +17,11 @@ type Props = $ReadOnly<{|
   fontStyle?: FontStyle,
   activeFontStyle?: FontStyle,
 |}>;
+
+function isBase64(str) {
+  const regex = /^data:image\/(?:gif|png|jpeg|bmp|webp)(?:;charset=utf-8)?;base64,(?:[A-Za-z0-9]|[+/])+={0,2}/;
+  return str && regex.test(str);
+}
 
 export const SegmentedControlTab = ({
   onSelect,
@@ -64,7 +69,13 @@ export const SegmentedControlTab = ({
       disabled={!enabled}
       onPress={onSelect}>
       <View style={[styles.default]}>
-        <Text style={[idleStyle, selected && activeStyle]}>{value}</Text>
+        {typeof value === 'number' || typeof value === 'object' ? (
+          <Image source={value} style={styles.segmentImage} />
+        ) : isBase64(value) ? (
+          <Image source={{uri: value}} style={styles.segmentImage} />
+        ) : (
+          <Text style={[idleStyle, selected && activeStyle]}>{value}</Text>
+        )}
       </View>
     </TouchableOpacity>
   );
@@ -81,5 +92,10 @@ const styles = StyleSheet.create({
   },
   activeText: {
     fontWeight: '700',
+  },
+  segmentImage: {
+    width: 17,
+    height: 17,
+    resizeMode: 'contain',
   },
 });

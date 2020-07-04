@@ -23,14 +23,21 @@
   return self;
 }
 
-- (void)setValues:(NSArray<NSString *> *)values {
-  [self removeAllSegments];
-  for (NSString *value in values) {
-    [self insertSegmentWithTitle:value
-                         atIndex:self.numberOfSegments
-                        animated:NO];
-  }
-  super.selectedSegmentIndex = _selectedIndex;
+- (void)setValues:(NSArray *)values {
+	[self removeAllSegments];
+	for (id segment in values) {
+		if ([segment isKindOfClass:[NSMutableDictionary class]]){
+			UIImage *image = [[RCTConvert UIImage:segment] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+			[self insertSegmentWithImage:image
+								 atIndex:self.numberOfSegments
+								animated:NO];
+		} else {
+			[self insertSegmentWithTitle:(NSString *)segment
+								 atIndex:self.numberOfSegments
+								animated:NO];
+		}
+	}
+	super.selectedSegmentIndex = _selectedIndex;
 }
 
 - (void)setSelectedIndex:(NSInteger)selectedIndex {
@@ -69,8 +76,9 @@
 - (void)didChange {
   _selectedIndex = self.selectedSegmentIndex;
   if (_onChange) {
+	  NSString *segmentTitle = [self titleForSegmentAtIndex:_selectedIndex];
     _onChange(@{
-      @"value" : [self titleForSegmentAtIndex:_selectedIndex],
+		@"value" : (segmentTitle) ? segmentTitle : [self imageForSegmentAtIndex:_selectedIndex],
       @"selectedSegmentIndex" : @(_selectedIndex)
     });
   }

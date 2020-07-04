@@ -33,7 +33,7 @@ export type SegmentedControlProps = $ReadOnly<{|
   /**
    * The labels for the control's segment buttons, in order.
    */
-  values: $ReadOnlyArray<string>,
+  values: $ReadOnlyArray<string | number | Object>,
   /**
    * The index in `props.values` of the segment to be (pre)selected.
    */
@@ -42,7 +42,7 @@ export type SegmentedControlProps = $ReadOnly<{|
    * Callback that is called when the user taps a segment;
    * passes the segment's value as an argument
    */
-  onValueChange?: ?(value: string) => mixed,
+  onValueChange?: ?(value: string | number | Object) => mixed,
   /**
    * Callback that is called when the user taps a segment;
    * passes the event as an argument

@@ -20,11 +20,24 @@ export default class App extends React.Component<{}, $FlowFixMeState> {
     return (
       <ScrollView contentContainerStyle={styles.container}>
         <View style={styles.segmentContainer}>
-          <Text style={styles.text}>Segmented controls can have values</Text>
-          <SegmentedControl values={['One', 'Two']} />
+          <Text style={styles.text}>
+            Segmented controls can have values and images
+          </Text>
+          <SegmentedControl
+            values={['One', 'Two', require('../assets/images/user.png')]}
+          />
         </View>
         <View style={styles.segmentSection}>
-          <SegmentedControl values={['One', 'Two', 'Three', 'Four', 'Five']} />
+          <SegmentedControl
+            values={[
+              'One',
+              'Two',
+              require('../assets/images/user.png'),
+              'Three',
+              'Four',
+              'Five',
+            ]}
+          />
         </View>
         <View style={styles.segmentSection}>
           <Text style={styles.text}>
