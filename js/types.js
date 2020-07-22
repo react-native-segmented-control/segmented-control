@@ -21,11 +21,11 @@ export type FontStyle = $ReadOnly<{|
   /**
    * Font Size of Segmented Control
    */
-  fontSize?: ?number,
+  fontSize?: number,
   /**
    * Font Family of the Segmented Control
    */
-  fontFamily?: ?string,
+  fontFamily?: string,
 |}>;
 
 export type SegmentedControlProps = $ReadOnly<{|
@@ -56,13 +56,13 @@ export type SegmentedControlProps = $ReadOnly<{|
   /**
    * Accent color of the control.
    */
-  tintColor?: ?ColorValue,
+  tintColor?: string,
 
   /**
    * (iOS 13+ only)
    * Background color of the control.
    */
-  backgroundColor?: ?ColorValue,
+  backgroundColor?: string,
   /**
    * If true, then selecting a segment won't persist visually.
    * The `onValueChange` callback will still work as expected.

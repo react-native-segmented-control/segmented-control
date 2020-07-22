@@ -31,7 +31,7 @@ export const SegmentedControlTab = ({
   tintColor,
   fontStyle = {},
   activeFontStyle = {},
-}: Props) => {
+}: Props): React.Node => {
   const {color: textColor, fontSize, fontFamily} = fontStyle;
   const {
     color: activeColor,
@@ -59,8 +59,8 @@ export const SegmentedControlTab = ({
 
   const idleStyle = {
     color,
-    fontSize: fontSize || undefined,
-    fontFamily: fontFamily || undefined,
+    fontSize: fontSize,
+    fontFamily: fontFamily,
   };
 
   return (

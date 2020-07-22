@@ -48,6 +48,10 @@ suppress_type=$FlowFixMe
 suppress_type=$FlowFixMeProps
 suppress_type=$FlowFixMeState
 
+well_formed_exports=true
+types_first=true
+experimental.abstract_locations=true
+
 [lints]
 sketchy-null-number=warn
 sketchy-null-mixed=warn
@@ -59,6 +63,7 @@ unsafe-getters-setters=warn
 unnecessary-invariant=warn
 signature-verification-failure=warn
 deprecated-utility=error
+unsafe-addition=error
 
 [strict]
 deprecated-type
