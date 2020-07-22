@@ -9,10 +9,10 @@
 'use strict';
 
 import {requireNativeComponent} from 'react-native';
-import type {NativeComponent} from 'react-native/Libraries/Renderer/shims/ReactNative';
+import type {HostComponent} from 'react-native/Libraries/Renderer/shims/ReactNativeTypes';
 import type {SegmentedControlProps} from './types';
 
-type NativeSegmentedControlIOS = Class<NativeComponent<SegmentedControlProps>>;
+type NativeSegmentedControlIOS = HostComponent<SegmentedControlProps>;
 
 module.exports = ((requireNativeComponent(
   'RNCSegmentedControl',

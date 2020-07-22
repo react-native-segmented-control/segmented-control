@@ -25,7 +25,7 @@ const SegmentedControl = ({
   backgroundColor,
   fontStyle,
   activeFontStyle,
-}: SegmentedControlProps) => {
+}: SegmentedControlProps): React.Node => {
   const [segmentWidth, setSegmentWidth] = React.useState(0);
   const animation = React.useRef(new Animated.Value(0)).current;
 
