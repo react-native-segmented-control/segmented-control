@@ -65,7 +65,7 @@ const SegmentedControl = ({
           layout: {width},
         },
       }) => {
-        const newSegmentWidth = values.length ? width / values.length : 0;
+        const newSegmentWidth = values.length ? (width - 4) / values.length : 0;
         if (newSegmentWidth !== segmentWidth) {
           animation.setValue(newSegmentWidth * (selectedIndex || 0));
           setSegmentWidth(newSegmentWidth);
@@ -121,10 +121,10 @@ const styles = StyleSheet.create({
   slider: {
     position: 'absolute',
     borderRadius: 5,
-    top: 1,
-    bottom: 1,
-    right: 1,
-    left: 1,
+    top: 2,
+    bottom: 2,
+    right: 2,
+    left: 2,
   },
 });
 
