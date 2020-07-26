@@ -77,7 +77,7 @@ const SegmentedControl = ({
             styles.slider,
             {
               transform: [{translateX: animation}],
-              width: segmentWidth,
+              width: segmentWidth - 2,
               backgroundColor: tintColor || 'white',
             },
           ]}
