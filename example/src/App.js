@@ -30,7 +30,7 @@ export default class App extends React.Component<{}, $FlowFixMeState> {
         <View style={styles.segmentSection}>
           <SegmentedControl
             values={[
-              'OneOne',
+              'One\nOne',
               'Two',
               require('../assets/images/user.png'),
               'Three',
