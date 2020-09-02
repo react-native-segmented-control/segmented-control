@@ -5,7 +5,7 @@
 'use strict';
 
 import * as React from 'react';
-import {Animated,I18nManager, Easing, StyleSheet, View} from 'react-native';
+import {Animated, I18nManager, Easing, StyleSheet, View} from 'react-native';
 import {SegmentedControlTab} from './SegmentedControlTab';
 
 import type {SegmentedControlProps} from './types';
