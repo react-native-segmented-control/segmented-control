@@ -5,7 +5,7 @@
 'use strict';
 
 import * as React from 'react';
-import {Animated, Easing, StyleSheet, View} from 'react-native';
+import {Animated, I18nManager, Easing, StyleSheet, View} from 'react-native';
 import {SegmentedControlTab} from './SegmentedControlTab';
 
 import type {SegmentedControlProps} from './types';
@@ -43,8 +43,9 @@ const SegmentedControl = ({
 
   React.useEffect(() => {
     if (animation && segmentWidth) {
+      let isRTL = I18nManager.isRTL ? -segmentWidth : segmentWidth;
       Animated.timing(animation, {
-        toValue: segmentWidth * (selectedIndex || 0),
+        toValue: isRTL * (selectedIndex || 0),
         duration: 300,
         easing: Easing.out(Easing.quad),
         useNativeDriver: true,
