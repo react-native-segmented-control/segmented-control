@@ -5,7 +5,16 @@
 'use strict';
 
 import * as React from 'react';
-import {StyleSheet, View, Text, Image, TouchableOpacity} from 'react-native';
+
+import {
+  Image,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+  useColorScheme,
+} from 'react-native';
+
 import type {FontStyle} from './types';
 
 type Props = $ReadOnly<{|
@@ -15,7 +24,10 @@ type Props = $ReadOnly<{|
   selected: boolean,
   enabled: boolean,
   fontStyle?: FontStyle,
+  darkFontStyle?: FontStyle,
   activeFontStyle?: FontStyle,
+  darkActiveFontStyle?: FontStyle,
+  appearance?: 'dark' | 'light' | null,
 |}>;
 
 function isBase64(str) {
@@ -30,14 +42,31 @@ export const SegmentedControlTab = ({
   selected,
   tintColor,
   fontStyle = {},
+  darkFontStyle = {},
   activeFontStyle = {},
+  darkActiveFontStyle = {},
+  appearance,
 }: Props): React.Node => {
+  const colorSchemeHook = useColorScheme();
+  const colorScheme = appearance || colorSchemeHook;
   const {color: textColor, fontSize, fontFamily} = fontStyle;
+  const {
+    color: darkTextColor,
+    fontSize: darkFontSize,
+    fontFamily: darkFontFamily,
+  } = darkFontStyle;
+
   const {
     color: activeColor,
     fontSize: activeFontSize,
     fontFamily: activeFontFamily,
   } = activeFontStyle;
+
+  const {
+    color: darkActiveColor,
+    fontSize: darkActiveFontSize,
+    fontFamily: darkActiveFontFamily,
+  } = darkActiveFontStyle;
 
   const getColor = () => {
     if (textColor) {
@@ -46,21 +75,30 @@ export const SegmentedControlTab = ({
     if (tintColor) {
       return 'white';
     }
-    return 'black';
+    return colorScheme === 'dark' ? '#FFF' : '#000';
   };
-  const color = getColor();
+  const defaultFontColor = getColor();
 
   const activeStyle = {
     ...styles.activeText,
-    fontFamily: activeFontFamily || fontFamily,
-    fontSize: activeFontSize || fontSize,
-    color: activeColor || color,
+    color:
+      (colorScheme === 'dark' && darkActiveColor) ||
+      activeColor ||
+      defaultFontColor,
+    fontSize:
+      (colorScheme === 'dark' && darkActiveFontSize) ||
+      activeFontSize ||
+      fontSize,
+    fontFamily:
+      (colorScheme === 'dark' && darkActiveFontFamily) ||
+      activeFontFamily ||
+      fontFamily,
   };
 
   const idleStyle = {
-    color,
-    fontSize: fontSize,
-    fontFamily: fontFamily,
+    color: (colorScheme === 'dark' && darkTextColor) || defaultFontColor,
+    fontSize: (colorScheme === 'dark' && darkFontSize) || fontSize,
+    fontFamily: (colorScheme === 'dark' && darkFontFamily) || fontFamily,
   };
 
   return (

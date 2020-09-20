@@ -5,10 +5,18 @@
 'use strict';
 
 import * as React from 'react';
-import {Animated, I18nManager, Easing, StyleSheet, View} from 'react-native';
-import {SegmentedControlTab} from './SegmentedControlTab';
+
+import {
+  Animated,
+  Easing,
+  I18nManager,
+  StyleSheet,
+  View,
+  useColorScheme,
+} from 'react-native';
 
 import type {SegmentedControlProps} from './types';
+import {SegmentedControlTab} from './SegmentedControlTab';
 
 /**
  * SegmentedControl
@@ -24,8 +32,13 @@ const SegmentedControl = ({
   tintColor,
   backgroundColor,
   fontStyle,
+  darkFontStyle,
   activeFontStyle,
+  darkActiveFontStyle,
+  appearance,
 }: SegmentedControlProps): React.Node => {
+  const colorSchemeHook = useColorScheme();
+  const colorScheme = appearance || colorSchemeHook;
   const [segmentWidth, setSegmentWidth] = React.useState(0);
   const animation = React.useRef(new Animated.Value(0)).current;
 
@@ -58,6 +71,7 @@ const SegmentedControl = ({
       style={[
         styles.default,
         style,
+        colorScheme === 'dark' && styles.darkControl,
         backgroundColor && {backgroundColor},
         !enabled && styles.disabled,
       ]}
@@ -72,35 +86,41 @@ const SegmentedControl = ({
           setSegmentWidth(newSegmentWidth);
         }
       }}>
+      <View style={styles.segmentsContainer}>
+        {values &&
+          values.map((value, index) => {
+            return (
+              <SegmentedControlTab
+                enabled={enabled}
+                selected={selectedIndex === index}
+                key={index}
+                value={value}
+                tintColor={tintColor}
+                fontStyle={fontStyle}
+                darkFontStyle={darkFontStyle}
+                activeFontStyle={activeFontStyle}
+                darkActiveFontStyle={darkActiveFontStyle}
+                appearance={colorScheme}
+                onSelect={() => {
+                  handleChange(index);
+                }}
+              />
+            );
+          })}
+      </View>
       {selectedIndex != null && segmentWidth ? (
         <Animated.View
           style={[
             styles.slider,
             {
               transform: [{translateX: animation}],
-              width: segmentWidth - 2,
-              backgroundColor: tintColor || 'white',
+              width: segmentWidth - 4,
+              backgroundColor:
+                tintColor || (colorScheme === 'dark' ? '#636366' : 'white'),
             },
           ]}
         />
       ) : null}
-      {values &&
-        values.map((value, index) => {
-          return (
-            <SegmentedControlTab
-              enabled={enabled}
-              selected={selectedIndex === index}
-              key={index}
-              value={value}
-              tintColor={tintColor}
-              fontStyle={fontStyle}
-              activeFontStyle={activeFontStyle}
-              onSelect={() => {
-                handleChange(index);
-              }}
-            />
-          );
-        })}
     </View>
   );
 };
@@ -109,23 +129,42 @@ const styles = StyleSheet.create({
   default: {
     overflow: 'hidden',
     position: 'relative',
-    flexDirection: 'row',
-    justifyContent: 'space-evenly',
-    alignContent: 'center',
-    height: 28,
-    backgroundColor: '#eee',
-    borderRadius: 5,
+    height: 32,
+    backgroundColor: '#EEEEF0',
+    borderRadius: 9,
+  },
+  darkControl: {
+    backgroundColor: '#1C1C1F',
   },
   disabled: {
     opacity: 0.4,
   },
   slider: {
     position: 'absolute',
-    borderRadius: 5,
-    top: 1,
-    bottom: 1,
-    right: 1,
-    left: 1,
+    borderRadius: 7,
+    top: 2,
+    bottom: 2,
+    right: 2,
+    left: 2,
+    borderWidth: 0.5,
+    borderColor: 'rgba(0,0,0,0.04)',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.22,
+    shadowRadius: 2.22,
+    elevation: 3,
+  },
+  segmentsContainer: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    alignContent: 'center',
+    elevation: 5,
+    backgroundColor: 'transparent',
+    zIndex: 99,
   },
 });
 
