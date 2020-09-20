@@ -17,6 +17,7 @@ import {
 
 import type {SegmentedControlProps} from './types';
 import {SegmentedControlTab} from './SegmentedControlTab';
+import {SegmentsSeparators} from './SegmentsSeparators';
 
 /**
  * SegmentedControl
@@ -84,6 +85,12 @@ const SegmentedControl = ({
           setSegmentWidth(newSegmentWidth);
         }
       }}>
+      {!backgroundColor && !tintColor && (
+        <SegmentsSeparators
+          values={values.length}
+          selectedIndex={selectedIndex}
+        />
+      )}
       <View style={styles.segmentsContainer}>
         {values &&
           values.map((value, index) => {
@@ -157,7 +164,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-evenly',
-    alignContent: 'center',
+    alignItems: 'center',
     elevation: 5,
     backgroundColor: 'transparent',
     zIndex: 99,
