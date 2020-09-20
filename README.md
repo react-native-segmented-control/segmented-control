@@ -167,9 +167,9 @@ Accent color of the control.
 
 Background color color of the control. (iOS 13+ only)
 
-| Type   | Required | Supported Version |
-| ------ | -------- | ----------------- |
-| string | No       | iOS 13+           |
+| Type   | Required | Supported Version     |
+| ------ | -------- | --------------------- |
+| string | No       | iOS 13+, Android, Web |
 
 ---
 
@@ -177,25 +177,25 @@ Background color color of the control. (iOS 13+ only)
 
 The labels for the control's segment buttons, in order.
 
-| Type            | Required |
-| --------------- | -------- |
-| (string|number|Image)[] | No       |
+| Type    | Required |
+| ------- | -------- |
+| (string | number   | Image)[] | No |
 
 ### `appearance`
 
 (iOS 13+ only)
 Overrides the control's appearance irrespective of the OS theme
 
-| Type            | Required | Platform |
-| --------------- | -------- | -------- |
-| 'dark', 'light' | No       | iOS      |
+| Type            | Required | Platform          |
+| --------------- | -------- | ----------------- |
+| 'dark', 'light' | No       | iOS, Android, Web |
 
 ### `fontStyle`
 
 (iOS 13+ only)
 | Type | Required | Platform |
 | ------ | -------- | -------- |
-| object | No | iOS, Android |
+| object | No | iOS, Android, Web |
 
 An object container
 
@@ -203,16 +203,38 @@ An object container
 - `fontSize`: font-size of segment text
 - `fontFamily`: font-family of segment text
 
+### `darkFontStyle`
+
+| Type   | Required | Platform     |
+| ------ | -------- | ------------ |
+| object | No       | Android, Web |
+
+An object container
+
+- `color`: color of segment text when the appearance is dark
+- `fontSize`: font-size of segment text when the appearance is dark
+- `fontFamily`: font-family of segment text when the appearance is dark
+
 ### `activeFontStyle`
 
 (iOS 13+ only)
 | Type | Required | Platform |
 | ------ | -------- | -------- |
-| object | No | iOS, Android |
+| object | No | iOS, Android, Web |
 
 - `color`: overrides color of selected segment text
 - `fontSize`: overrides font-size of selected segment text
 - `fontFamily`: overrides font-family of selected segment text
+
+### `darkActiveFontStyle`
+
+| Type   | Required | Platform     |
+| ------ | -------- | ------------ |
+| object | No       | Android, Web |
+
+- `color`: overrides color of selected segment text when the appearance is dark
+- `fontSize`: overrides font-size of selected segment text when the appearance is dark
+- `fontFamily`: overrides font-family of selected segment text when the appearance is dark
 
 ## Maintainers
 
