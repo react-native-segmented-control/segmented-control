@@ -98,8 +98,6 @@ const App = () => {
         <SegmentedControl
           fontStyle={{color: '#ff00ff'}}
           activeFontStyle={{color: 'blue'}}
-          darkFontStyle={{color: 'blue'}}
-          darkActiveFontStyle={{color: '#ff00ff'}}
           values={['One', 'Two']}
           selectedIndex={1}
         />

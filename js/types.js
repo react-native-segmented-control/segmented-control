@@ -79,20 +79,9 @@ export type SegmentedControlProps = $ReadOnly<{|
    */
   fontStyle?: FontStyle,
   /**
-   * (iOS 13+ only, Android, Web)
-   * darkFontStyle for segmented control.
-   */
-  darkFontStyle?: FontStyle,
-  /**
    * (iOS 13+ only)
    * activeFontStyle for selected segment.
    * it will override fontStyle for the selected segment
    */
   activeFontStyle?: FontStyle,
-  /**
-   * (iOS 13+ only, Android, Web)
-   * darkActiveFontStyle for selected segment.
-   * it will override fontStyle for the selected segment
-   */
-  darkActiveFontStyle?: FontStyle,
 |}>;

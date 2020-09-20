@@ -32,9 +32,7 @@ const SegmentedControl = ({
   tintColor,
   backgroundColor,
   fontStyle,
-  darkFontStyle,
   activeFontStyle,
-  darkActiveFontStyle,
   appearance,
 }: SegmentedControlProps): React.Node => {
   const colorSchemeHook = useColorScheme();
@@ -97,9 +95,7 @@ const SegmentedControl = ({
                 value={value}
                 tintColor={tintColor}
                 fontStyle={fontStyle}
-                darkFontStyle={darkFontStyle}
                 activeFontStyle={activeFontStyle}
-                darkActiveFontStyle={darkActiveFontStyle}
                 appearance={colorScheme}
                 onSelect={() => {
                   handleChange(index);

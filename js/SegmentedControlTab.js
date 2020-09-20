@@ -24,9 +24,7 @@ type Props = $ReadOnly<{|
   selected: boolean,
   enabled: boolean,
   fontStyle?: FontStyle,
-  darkFontStyle?: FontStyle,
   activeFontStyle?: FontStyle,
-  darkActiveFontStyle?: FontStyle,
   appearance?: 'dark' | 'light' | null,
 |}>;
 
@@ -42,31 +40,18 @@ export const SegmentedControlTab = ({
   selected,
   tintColor,
   fontStyle = {},
-  darkFontStyle = {},
   activeFontStyle = {},
-  darkActiveFontStyle = {},
   appearance,
 }: Props): React.Node => {
   const colorSchemeHook = useColorScheme();
   const colorScheme = appearance || colorSchemeHook;
   const {color: textColor, fontSize, fontFamily} = fontStyle;
-  const {
-    color: darkTextColor,
-    fontSize: darkFontSize,
-    fontFamily: darkFontFamily,
-  } = darkFontStyle;
 
   const {
     color: activeColor,
     fontSize: activeFontSize,
     fontFamily: activeFontFamily,
   } = activeFontStyle;
-
-  const {
-    color: darkActiveColor,
-    fontSize: darkActiveFontSize,
-    fontFamily: darkActiveFontFamily,
-  } = darkActiveFontStyle;
 
   const getColor = () => {
     if (textColor) {
@@ -77,28 +62,19 @@ export const SegmentedControlTab = ({
     }
     return colorScheme === 'dark' ? '#FFF' : '#000';
   };
-  const defaultFontColor = getColor();
+  const color = getColor();
 
   const activeStyle = {
     ...styles.activeText,
-    color:
-      (colorScheme === 'dark' && darkActiveColor) ||
-      activeColor ||
-      defaultFontColor,
-    fontSize:
-      (colorScheme === 'dark' && darkActiveFontSize) ||
-      activeFontSize ||
-      fontSize,
-    fontFamily:
-      (colorScheme === 'dark' && darkActiveFontFamily) ||
-      activeFontFamily ||
-      fontFamily,
+    fontFamily: activeFontFamily || fontFamily,
+    fontSize: activeFontSize || fontSize,
+    color: activeColor || color,
   };
 
   const idleStyle = {
-    color: (colorScheme === 'dark' && darkTextColor) || defaultFontColor,
-    fontSize: (colorScheme === 'dark' && darkFontSize) || fontSize,
-    fontFamily: (colorScheme === 'dark' && darkFontFamily) || fontFamily,
+    color,
+    fontSize: fontSize,
+    fontFamily: fontFamily,
   };
 
   return (
