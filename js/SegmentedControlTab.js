@@ -5,7 +5,16 @@
 'use strict';
 
 import * as React from 'react';
-import {StyleSheet, View, Text, Image, TouchableOpacity} from 'react-native';
+
+import {
+  Image,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+  useColorScheme,
+} from 'react-native';
+
 import type {FontStyle} from './types';
 
 type Props = $ReadOnly<{|
@@ -16,6 +25,7 @@ type Props = $ReadOnly<{|
   enabled: boolean,
   fontStyle?: FontStyle,
   activeFontStyle?: FontStyle,
+  appearance?: 'dark' | 'light' | null,
 |}>;
 
 function isBase64(str) {
@@ -31,8 +41,12 @@ export const SegmentedControlTab = ({
   tintColor,
   fontStyle = {},
   activeFontStyle = {},
+  appearance,
 }: Props): React.Node => {
+  const colorSchemeHook = useColorScheme();
+  const colorScheme = appearance || colorSchemeHook;
   const {color: textColor, fontSize, fontFamily} = fontStyle;
+
   const {
     color: activeColor,
     fontSize: activeFontSize,
@@ -46,7 +60,7 @@ export const SegmentedControlTab = ({
     if (tintColor) {
       return 'white';
     }
-    return 'black';
+    return colorScheme === 'dark' ? '#FFF' : '#000';
   };
   const color = getColor();
 

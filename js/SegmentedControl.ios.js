@@ -10,10 +10,11 @@
 'use strict';
 
 import * as React from 'react';
-import {StyleSheet, Image, processColor} from 'react-native';
+
+import type {Event, SegmentedControlProps} from './types';
+import {Image, StyleSheet, processColor} from 'react-native';
 
 import RNCSegmentedControlNativeComponent from './RNCSegmentedControlNativeComponent';
-import type {Event, SegmentedControlProps} from './types';
 
 type Props = $ReadOnly<{|
   ...SegmentedControlProps,
@@ -99,7 +100,7 @@ class SegmentedControlIOS extends React.Component<Props> {
 
 const styles = StyleSheet.create({
   segmentedControl: {
-    height: 28,
+    height: 32,
   },
 });
 
