@@ -67,6 +67,9 @@ export const SegmentedControlTab = ({
     <TouchableOpacity
       style={styles.container}
       disabled={!enabled}
+      activeOpacity={0.5}
+      delayPressIn={0}
+      delayPressOut={0}
       onPress={onSelect}>
       <View style={[styles.default]}>
         {typeof value === 'number' || typeof value === 'object' ? (
