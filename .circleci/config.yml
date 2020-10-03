@@ -1,7 +1,7 @@
 # -------------------------
 #        DEFAULTS
 # -------------------------
-  
+
 defaults: &defaults
   working_directory: ~/react-native-segmented-control
   environment:
@@ -65,23 +65,6 @@ aliases:
     command: |
       yarn install --network-concurrency 1 --non-interactive --cache-folder ~/.cache/yarn & wait
 
-  # ANALYSE
-  - &eslint
-    name: ESLint Checks
-    command: yarn lint
-
-  - &flow
-    name: Flow Checks
-    command: yarn flow check
-
-  # - &jest
-  #   name: Jest Unit Tests
-  #   command: yarn test:jest
-
-  - &tsc
-    name: TypeScript type check
-    command: yarn tsc
-
 # -------------------------
 #          JOBS
 # -------------------------
@@ -100,34 +83,6 @@ jobs:
       - persist_to_workspace:
           root: .
           paths: .
-
-  eslint:
-    <<: *linux_defaults
-    steps:
-      - attach_workspace:
-          at: ~/react-native-segmented-control
-      - run: *eslint
-
-  flow:
-    <<: *linux_defaults
-    steps:
-      - attach_workspace:
-          at: ~/react-native-segmented-control
-      - run: *flow
-
-  # jest:
-  #   <<: *linux_defaults
-  #   steps:
-  #   - attach_workspace:
-  #       at: ~/react-native-segmented-control
-  #   - run: *jest
-
-  tsc:
-    <<: *linux_defaults
-    steps:
-      - attach_workspace:
-          at: ~/react-native-segmented-control
-      - run: *tsc
 
   android-compile:
     <<: *android_defaults
@@ -178,18 +133,9 @@ workflows:
   Test:
     jobs:
       - linux-checkout
-      - eslint:
-          requires:
-            - linux-checkout
-      - flow:
-          requires:
-            - linux-checkout
       # - jest:
       #     requires:
       #     - linux-checkout
-      - tsc:
-          requires:
-            - linux-checkout
       - android-compile:
           requires:
             - linux-checkout
