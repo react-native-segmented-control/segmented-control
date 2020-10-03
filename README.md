@@ -1,6 +1,6 @@
 # `@react-native-community/segmented-control`
 
-![Supports iOS and Android and Web][support-badge]![CircleCI branch][circle-ci-badge] ![npm][npm-badge] [![Lean Core Extracted][lean-core-badge]][lean-core-issue]
+![Supports iOS and Android and Web][support-badge]![Github Action Badge][gha-badge] ![npm][npm-badge] [![Lean Core Extracted][lean-core-badge]][lean-core-issue]
 
 React Native SegmentedControl library. Use SegmentedControl to render a UISegmentedControl iOS.
 
@@ -177,9 +177,9 @@ Background color color of the control. (iOS 13+ only)
 
 The labels for the control's segment buttons, in order.
 
-| Type            | Required |
-| --------------- | -------- |
-| (string|number|Image)[] | No       |
+| Type    | Required |
+| ------- | -------- |
+| (string | number   | Image)[] | No |
 
 ### `appearance`
 
@@ -227,7 +227,7 @@ Please see the [`contributing guide`](/CONTRIBUTING.md).
 
 The library is released under the MIT licence. For more information see [`LICENSE`](/LICENSE).
 
-[circle-ci-badge]: https://img.shields.io/circleci/project/github/react-native-community/segmented-control/master.svg?style=flat-square
+[gha-badge]: https://github.com/react-native-segmented-control/segmented-control/workflows/Build/badge.svg
 [npm-badge]: https://img.shields.io/npm/v/@react-native-community/segmented-control.svg?style=flat-square
 [lean-core-badge]: https://img.shields.io/badge/Lean%20Core-Extracted-brightgreen.svg?style=flat-square
 [lean-core-issue]: https://github.com/facebook/react-native/issues/23313
