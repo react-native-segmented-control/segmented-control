@@ -186,16 +186,16 @@ The labels for the control's segment buttons, in order.
 (iOS 13+ only)
 Overrides the control's appearance irrespective of the OS theme
 
-| Type            | Required | Platform |
-| --------------- | -------- | -------- |
-| 'dark', 'light' | No       | iOS      |
+| Type            | Required | Platform          |
+| --------------- | -------- | ----------------- |
+| 'dark', 'light' | No       | iOS, Android, Web |
 
 ### `fontStyle`
 
 (iOS 13+ only)
 | Type | Required | Platform |
 | ------ | -------- | -------- |
-| object | No | iOS, Android |
+| object | No | iOS, Android, Web |
 
 An object container
 
@@ -208,7 +208,7 @@ An object container
 (iOS 13+ only)
 | Type | Required | Platform |
 | ------ | -------- | -------- |
-| object | No | iOS, Android |
+| object | No | iOS, Android, Web |
 
 - `color`: overrides color of selected segment text
 - `fontSize`: overrides font-size of selected segment text

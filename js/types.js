@@ -2,9 +2,9 @@
  * @flow
  */
 
-import type {ViewProps} from 'react-native/Libraries/Components/View/ViewPropTypes';
-import type {SyntheticEvent} from 'react-native/Libraries/Types/CoreEventTypes';
 import type {ColorValue} from 'react-native/Libraries/StyleSheet/StyleSheetTypes';
+import type {SyntheticEvent} from 'react-native/Libraries/Types/CoreEventTypes';
+import type {ViewProps} from 'react-native/Libraries/Components/View/ViewPropTypes';
 
 export type Event = SyntheticEvent<
   $ReadOnly<{|
@@ -69,18 +69,18 @@ export type SegmentedControlProps = $ReadOnly<{|
    */
   momentary?: ?boolean,
   /**
-   * (iOS 13+ only)
+   * (iOS 13+ only, Android, Web)
    * Overrides the control's appearance irrespective of the OS theme
    */
   appearance?: 'dark' | 'light',
   /**
-   * (iOS 13+ only)
+   * (iOS 13+ only, Android, Web)
    * fontStyle for segmented control.
    */
   fontStyle?: FontStyle,
   /**
    * (iOS 13+ only)
-   * fontStyle for selected segment.
+   * activeFontStyle for selected segment.
    * it will override fontStyle for the selected segment
    */
   activeFontStyle?: FontStyle,
