@@ -45,12 +45,13 @@ export const SegmentedControlTab = ({
 }: Props): React.Node => {
   const colorSchemeHook = useColorScheme();
   const colorScheme = appearance || colorSchemeHook;
-  const {color: textColor, fontSize, fontFamily} = fontStyle;
+  const {color: textColor, fontSize, fontFamily, fontWeight} = fontStyle;
 
   const {
     color: activeColor,
     fontSize: activeFontSize,
     fontFamily: activeFontFamily,
+    fontWeight: activeFontWeight,
   } = activeFontStyle;
 
   const getColor = () => {
@@ -69,12 +70,14 @@ export const SegmentedControlTab = ({
     fontFamily: activeFontFamily || fontFamily,
     fontSize: activeFontSize || fontSize,
     color: activeColor || color,
+    fontWeight: activeFontWeight || fontWeight || styles.activeText.fontWeight,
   };
 
   const idleStyle = {
     color,
     fontSize: fontSize,
     fontFamily: fontFamily,
+    fontWeight: fontWeight,
   };
 
   return (
