@@ -26,6 +26,10 @@ export type FontStyle = $ReadOnly<{|
    * Font Family of the Segmented Control
    */
   fontFamily?: string,
+  /**
+   * Font Weight of the Segmented Control
+   */
+  fontWeight?: string,
 |}>;
 
 export type SegmentedControlProps = $ReadOnly<{|
