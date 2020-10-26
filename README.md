@@ -202,6 +202,7 @@ An object container
 - `color`: color of segment text
 - `fontSize`: font-size of segment text
 - `fontFamily`: font-family of segment text
+- `fontWeight`: font-weight of segment text
 
 ### `activeFontStyle`
 
@@ -213,6 +214,7 @@ An object container
 - `color`: overrides color of selected segment text
 - `fontSize`: overrides font-size of selected segment text
 - `fontFamily`: overrides font-family of selected segment text
+- `fontWeight`: overrides font-weight of selected segment text
 
 ## Maintainers
 
