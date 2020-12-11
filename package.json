@@ -21,7 +21,7 @@
     "tsc": "tsc --noEmit"
   },
   "peerDependencies": {
-    "react": ">=^16.0",
+    "react": ">=16.0",
     "react-native": ">=0.62"
   },
   "devDependencies": {
