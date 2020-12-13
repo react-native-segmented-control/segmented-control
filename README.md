@@ -12,6 +12,15 @@ For Android and Web, it has a js implementation that mocks iOS 13 style of UISeg
 | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
 | <img src="https://user-images.githubusercontent.com/6936373/71608757-dc6ef680-2bc6-11ea-85be-aa31f25ecf36.png" width="320" /> | <img src="https://user-images.githubusercontent.com/6936373/79550655-9edd9d00-80d3-11ea-98bf-8b7c0b0798d3.png" width="320" /> | <img src="https://user-images.githubusercontent.com/6936373/79590620-3f52b200-8112-11ea-863b-236c4465fba6.png" width="640"/> |
 
+## Supported React Native Version
+
+| react-native-segmented-control | react-native | 
+| --- | --- |
+| v2.2.0 | >= 0.62 |
+| <= v2.2.0 | >= 0.57 |
+
+This module is NOT supported for expo.
+
 ## Getting started
 
 Install the library using either Yarn:
