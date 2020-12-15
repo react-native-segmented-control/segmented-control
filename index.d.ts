@@ -5,7 +5,7 @@ import * as React from 'react';
 import {
   ViewProps,
   NativeSyntheticEvent,
-  NativeMethodsMixin,
+  NativeMethods,
   Constructor,
   TargetedEvent,
 } from 'react-native';
@@ -17,17 +17,32 @@ export interface NativeSegmentedControlIOSChangeEvent extends TargetedEvent {
 
 export type FontStyle = {
   /**
-   * Font Color of Segmented Control when Active
+   * Font Color of Segmented Control
    */
   color?: string;
   /**
-   * Font Size of Segmented Control when Active
+   * Font Size of Segmented Control
    */
   fontSize?: number;
   /**
-   * Font Family of the Segmented Control when Active
+   * Font Family of the Segmented Control
    */
   fontFamily?: string;
+  /**
+   * Font Weight of the Segmented Control
+   */
+  fontWeight?:
+    | 'normal'
+    | 'bold'
+    | '100'
+    | '200'
+    | '300'
+    | '400'
+    | '500'
+    | '600'
+    | '700'
+    | '800'
+    | '900';
 };
 
 export interface SegmentedControlProps extends ViewProps {
@@ -115,6 +130,6 @@ export interface SegmentedControlProps extends ViewProps {
 declare class SegmentedControlComponent extends React.Component<
   SegmentedControlProps
 > {}
-declare const SegmentedControlBase: Constructor<NativeMethodsMixin> &
+declare const SegmentedControlBase: Constructor<NativeMethods> &
   typeof SegmentedControlComponent;
 export default class SegmentedControl extends SegmentedControlBase {}
