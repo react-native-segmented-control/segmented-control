@@ -41,7 +41,7 @@
     "flow-bin": "^0.129.0",
     "husky": "^4.0.10",
     "jest": "^26.0.1",
-    "metro-react-native-babel-preset": "0.59.0",
+    "metro-react-native-babel-preset": "0.64.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "0.63.2",
