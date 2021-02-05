@@ -51,7 +51,7 @@ We use [Semantic Release](http://semantic-release.org) to automatically release 
 
 ## Reporting issues
 
-You can report issues on our [bug tracker](https://github.com/react-native-community/react-native-segmented-control/issues). Please search for existing issues and follow the issue template when opening an issue.
+You can report issues on our [bug tracker](https://github.com/react-native-segmented-control/segmented-control/issues). Please search for existing issues and follow the issue template when opening an issue.
 
 ## License
 

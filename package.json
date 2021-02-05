@@ -1,5 +1,5 @@
 {
-  "name": "@react-native-community/segmented-control",
+  "name": "@react-native-segmented-control/segmented-control",
   "version": "2.2.1",
   "description": "React Native SegmentedControlIOS library",
   "main": "js/index.js",
