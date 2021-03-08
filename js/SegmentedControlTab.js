@@ -84,7 +84,8 @@ export const SegmentedControlTab = ({
     <TouchableOpacity
       style={styles.container}
       disabled={!enabled}
-      onPress={onSelect}>
+      onPress={onSelect}
+      accessibilityState={{selected: selected}}>
       <View style={[styles.default]}>
         {typeof value === 'number' || typeof value === 'object' ? (
           <Image source={value} style={styles.segmentImage} />
