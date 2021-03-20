@@ -18,7 +18,8 @@
     "android": "react-native run-android",
     "flow": "flow",
     "lint": "eslint . --cache",
-    "tsc": "tsc --noEmit"
+    "tsc": "tsc --noEmit",
+    "ci:publish": "yarn semantic-release"
   },
   "peerDependencies": {
     "react": ">=16.0",
