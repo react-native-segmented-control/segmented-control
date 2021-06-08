@@ -5,6 +5,7 @@
 import type {ColorValue} from 'react-native/Libraries/StyleSheet/StyleSheetTypes';
 import type {SyntheticEvent} from 'react-native/Libraries/Types/CoreEventTypes';
 import type {ViewProps} from 'react-native/Libraries/Components/View/ViewPropTypes';
+import type {ViewStyleProp} from 'react-native/Libraries/StyleSheet/StyleSheet';
 
 export type Event = SyntheticEvent<
   $ReadOnly<{|
@@ -12,6 +13,8 @@ export type Event = SyntheticEvent<
     selectedSegmentIndex: number,
   |}>,
 >;
+
+export type ViewStyle = ViewStyleProp;
 
 export type FontStyle = $ReadOnly<{|
   /**
@@ -99,4 +102,9 @@ export type SegmentedControlProps = $ReadOnly<{|
    * it will override fontStyle for the selected segment
    */
   activeFontStyle?: FontStyle,
+
+  /**
+   * Touchable style properties for Segmented Control Tab
+   */
+  touchableStyle?: ViewStyle,
 |}>;

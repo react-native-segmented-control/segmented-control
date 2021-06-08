@@ -91,7 +91,11 @@ class SegmentedControlIOS extends React.Component<Props> {
         )}
         {...props}
         ref={forwardedRef}
-        style={[styles.segmentedControl, this.props.style]}
+        style={[
+          styles.segmentedControl,
+          this.props.style,
+          this.props.touchableStyle,
+        ]}
         onChange={this._onChange}
       />
     );
