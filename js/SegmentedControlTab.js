@@ -25,7 +25,7 @@ type Props = $ReadOnly<{|
   enabled: boolean,
   fontStyle?: FontStyle,
   activeFontStyle?: FontStyle,
-  touchableStyle?: ViewStyle,
+  tabStyle?: ViewStyle,
   appearance?: 'dark' | 'light' | null,
 |}>;
 
@@ -43,7 +43,7 @@ export const SegmentedControlTab = ({
   fontStyle = {},
   activeFontStyle = {},
   appearance,
-  touchableStyle,
+  tabStyle,
 }: Props): React.Node => {
   const colorSchemeHook = useColorScheme();
   const colorScheme = appearance || colorSchemeHook;
@@ -84,7 +84,7 @@ export const SegmentedControlTab = ({
 
   return (
     <TouchableOpacity
-      style={[styles.container, touchableStyle]}
+      style={[styles.container, tabStyle]}
       disabled={!enabled}
       onPress={onSelect}
       accessibilityState={{selected: selected, disabled: !enabled}}>

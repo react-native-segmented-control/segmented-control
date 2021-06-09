@@ -109,7 +109,7 @@ export interface SegmentedControlProps extends ViewProps {
   /**
    * Touchable style properties for Segmented Control Tab
    */
-  touchableStyle?: ViewStyle;
+  tabStyle?: ViewStyle;
 }
 
 /**

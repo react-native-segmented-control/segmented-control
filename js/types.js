@@ -106,5 +106,5 @@ export type SegmentedControlProps = $ReadOnly<{|
   /**
    * Touchable style properties for Segmented Control Tab
    */
-  touchableStyle?: ViewStyle,
+  tabStyle?: ViewStyle,
 |}>;
