@@ -88,7 +88,7 @@ export const SegmentedControlTab = ({
       disabled={!enabled}
       onPress={onSelect}
       accessibilityState={{selected: selected, disabled: !enabled}}>
-      <View style={[styles.default]}>
+      <View style={styles.default}>
         {typeof value === 'number' || typeof value === 'object' ? (
           <Image source={value} style={styles.segmentImage} />
         ) : isBase64(value) ? (
