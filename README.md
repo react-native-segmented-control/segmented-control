@@ -225,6 +225,41 @@ An object container
 - `fontFamily`: overrides font-family of selected segment text
 - `fontWeight`: overrides font-weight of selected segment text
 
+### `tabStyle`
+
+(Android and Web only) Styles the clickable surface which is responsible to change tabs
+| Type | Required | Platform |
+| ------ | -------- | -------- |
+| object | No | Android, Web |
+
+Extends [ViewStyles](https://reactnative.dev/docs/view-style-props)
+
+## Tips and Tricks
+
+### How can I increase the height of the tab ?
+
+For android and IOS, simply pass `prop.style`:
+
+```json
+{
+  "height": number
+}
+```
+
+For react-native-web, additionally pass :
+
+```json
+{
+  "paddingVertical": number,
+  or
+  "height": number
+}
+```
+
+### Adding padding makes text disappear on Android
+
+If padding amount exceeds the fixed height of the container, it will shrink the text. So either increase the height or reduce your padding. 
+
 ## Maintainers
 
 - [M.Haris Baig](https://github.com/harisbaig100)

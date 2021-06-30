@@ -32,6 +32,7 @@ const SegmentedControl = ({
   values,
   tintColor,
   backgroundColor,
+  tabStyle,
   fontStyle,
   activeFontStyle,
   appearance,
@@ -101,6 +102,7 @@ const SegmentedControl = ({
                 key={index}
                 value={value}
                 tintColor={tintColor}
+                tabStyle={tabStyle}
                 fontStyle={fontStyle}
                 activeFontStyle={activeFontStyle}
                 appearance={colorScheme}

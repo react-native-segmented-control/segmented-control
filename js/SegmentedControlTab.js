@@ -15,7 +15,7 @@ import {
   useColorScheme,
 } from 'react-native';
 
-import type {FontStyle} from './types';
+import type {FontStyle, ViewStyle} from './types';
 
 type Props = $ReadOnly<{|
   value: string | number | Object,
@@ -25,6 +25,7 @@ type Props = $ReadOnly<{|
   enabled: boolean,
   fontStyle?: FontStyle,
   activeFontStyle?: FontStyle,
+  tabStyle?: ViewStyle,
   appearance?: 'dark' | 'light' | null,
 |}>;
 
@@ -42,6 +43,7 @@ export const SegmentedControlTab = ({
   fontStyle = {},
   activeFontStyle = {},
   appearance,
+  tabStyle,
 }: Props): React.Node => {
   const colorSchemeHook = useColorScheme();
   const colorScheme = appearance || colorSchemeHook;
@@ -82,11 +84,11 @@ export const SegmentedControlTab = ({
 
   return (
     <TouchableOpacity
-      style={styles.container}
+      style={[styles.container, tabStyle]}
       disabled={!enabled}
       onPress={onSelect}
       accessibilityState={{selected: selected, disabled: !enabled}}>
-      <View style={[styles.default]}>
+      <View style={styles.default}>
         {typeof value === 'number' || typeof value === 'object' ? (
           <Image source={value} style={styles.segmentImage} />
         ) : isBase64(value) ? (

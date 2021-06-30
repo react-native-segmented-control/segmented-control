@@ -8,6 +8,7 @@ import {
   NativeMethods,
   Constructor,
   TargetedEvent,
+  ViewStyle,
 } from 'react-native';
 
 export interface NativeSegmentedControlIOSChangeEvent extends TargetedEvent {
@@ -104,6 +105,11 @@ export interface SegmentedControlProps extends ViewProps {
    * Active Font style properties of the Segmented Control
    */
   activeFontStyle?: FontStyle;
+
+  /**
+   * Touchable style properties for Segmented Control Tab
+   */
+  tabStyle?: ViewStyle;
 }
 
 /**
