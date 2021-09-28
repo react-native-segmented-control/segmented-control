@@ -19,7 +19,7 @@ For Android and Web, it has a js implementation that mocks iOS 13 style of UISeg
 | v2.2.0                         | >= 0.62      |
 | <= v2.2.0                      | >= 0.57      |
 
-This module is NOT supported for expo.
+This module is NOT supported in the Expo Go app on iOS, because it requires custom native code. You need to use a custom development client or eject into bare workflow in order to use this module on iOS.
 
 ## Getting started
 
