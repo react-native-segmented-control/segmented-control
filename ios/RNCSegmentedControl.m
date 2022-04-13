@@ -37,6 +37,7 @@
 								animated:NO];
 		}
 	}
+  [[UILabel appearanceWhenContainedIn:[UISegmentedControl class], nil] setNumberOfLines:0];
 	super.selectedSegmentIndex = _selectedIndex;
 }
 
