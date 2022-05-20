@@ -110,6 +110,11 @@ export interface SegmentedControlProps extends ViewProps {
    * Touchable style properties for Segmented Control Tab
    */
   tabStyle?: ViewStyle;
+
+  /**
+   * Style properties for the Animated.View component
+   */
+  sliderStyle?: ViewStyle;
 }
 
 /**

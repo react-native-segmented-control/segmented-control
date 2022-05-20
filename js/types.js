@@ -107,4 +107,9 @@ export type SegmentedControlProps = $ReadOnly<{|
    * Touchable style properties for Segmented Control Tab
    */
   tabStyle?: ViewStyle,
+
+  /**
+   * Style properties for the slider component (Animated.View)
+   */
+   sliderStyle?: ViewStyle,
 |}>;

@@ -234,6 +234,15 @@ An object container
 
 Extends [ViewStyles](https://reactnative.dev/docs/view-style-props)
 
+### `sliderStyle`
+
+(Android and Web only) Styles the slider component (Animated.View)
+| Type | Required | Platform |
+| ------ | -------- | -------- |
+| object | No | Android, Web |
+
+Extends [ViewStyles](https://reactnative.dev/docs/view-style-props)
+
 ## Tips and Tricks
 
 ### How can I increase the height of the tab ?

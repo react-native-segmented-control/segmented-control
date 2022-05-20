@@ -36,6 +36,7 @@ const SegmentedControl = ({
   fontStyle,
   activeFontStyle,
   appearance,
+  sliderStyle,
 }: SegmentedControlProps): React.Node => {
   const colorSchemeHook = useColorScheme();
   const colorScheme = appearance || colorSchemeHook;
@@ -117,6 +118,7 @@ const SegmentedControl = ({
         <Animated.View
           style={[
             styles.slider,
+            sliderStyle,
             {
               transform: [{translateX: animation}],
               width: segmentWidth - 4,
