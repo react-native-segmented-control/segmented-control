@@ -38,6 +38,7 @@ const SegmentedControl = ({
   appearance,
   accessibilityHintSeperator = 'out of',
   testIDS,
+  sliderStyle,
 }: SegmentedControlProps): React.Node => {
   const colorSchemeHook = useColorScheme();
   const colorScheme = appearance || colorSchemeHook;
@@ -100,7 +101,8 @@ const SegmentedControl = ({
         nativeEvent: {
           layout: {width},
         },
-      }) => updateSegmentWidth(width)}>
+      }) => updateSegmentWidth(width)}
+    >
       {!backgroundColor && !tintColor && (
         <SegmentsSeparators
           values={values.length}
@@ -118,6 +120,7 @@ const SegmentedControl = ({
               backgroundColor:
                 tintColor || (colorScheme === 'dark' ? '#636366' : 'white'),
             },
+            sliderStyle,
           ]}
         />
       ) : null}
@@ -148,6 +151,20 @@ const SegmentedControl = ({
             );
           })}
       </View>
+      {selectedIndex != null && segmentWidth ? (
+        <Animated.View
+          style={[
+            styles.slider,
+            sliderStyle,
+            {
+              transform: [{translateX: animation}],
+              width: segmentWidth - 4,
+              backgroundColor:
+                tintColor || (colorScheme === 'dark' ? '#636366' : 'white'),
+            },
+          ]}
+        />
+      ) : null}
     </View>
   );
 };

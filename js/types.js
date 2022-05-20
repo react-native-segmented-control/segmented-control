@@ -112,4 +112,7 @@ export type SegmentedControlProps = $ReadOnly<{|
    * array testID to each segment button
    */
   testIDS: $ReadOnlyArray<string>,
+   * Style properties for the slider component (Animated.View)
+   */
+   sliderStyle?: ViewStyle,
 |}>;
