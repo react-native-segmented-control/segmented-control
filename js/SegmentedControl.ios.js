@@ -18,7 +18,7 @@ import RNCSegmentedControlNativeComponent from './RNCSegmentedControlNativeCompo
 
 type Props = $ReadOnly<{|
   ...SegmentedControlProps,
-  forwardedRef: ?React.Ref<typeof RNCSegmentedControlNativeComponent>,
+  forwardedRef: ?React$Ref<typeof RNCSegmentedControlNativeComponent>,
 |}>;
 
 /**

@@ -16,7 +16,7 @@ type Props = $ReadOnly<{|
 export const SegmentsSeparators = ({
   values,
   selectedIndex,
-}: Props): React.Node => {
+}: Props): React$Node => {
   const colorScheme = useColorScheme();
   const hide = (val) => {
     return selectedIndex === val || selectedIndex === val + 1;

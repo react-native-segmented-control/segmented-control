@@ -18,6 +18,8 @@ node_modules/warning/.*
 ; Ignore example folder
 .*/example/.*
 
+.*/node_modules/resolve/test/resolver/malformed_package_json/package\.json$
+
 [untyped]
 .*/node_modules/@react-native-community/cli/.*/.*
 
@@ -30,9 +32,6 @@ node_modules/react-native/flow/
 [options]
 server.max_workers=4
 emoji=true
-
-esproposal.optional_chaining=enable
-esproposal.nullish_coalescing=enable
 
 module.file_ext=.js
 module.file_ext=.json
@@ -48,7 +47,6 @@ suppress_type=$FlowFixMe
 suppress_type=$FlowFixMeProps
 suppress_type=$FlowFixMeState
 
-well_formed_exports=true
 experimental.abstract_locations=true
 
 sharedmemory.heap_size=4000000000
@@ -63,7 +61,6 @@ deprecated-type=warn
 unsafe-getters-setters=warn
 unnecessary-invariant=warn
 signature-verification-failure=warn
-deprecated-utility=error
 
 [strict]
 deprecated-type

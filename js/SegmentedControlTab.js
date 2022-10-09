@@ -44,7 +44,7 @@ export const SegmentedControlTab = ({
   activeFontStyle = {},
   appearance,
   tabStyle,
-}: Props): React.Node => {
+}: Props): React$Node => {
   const colorSchemeHook = useColorScheme();
   const colorScheme = appearance || colorSchemeHook;
   const {color: textColor, fontSize, fontFamily, fontWeight} = fontStyle;

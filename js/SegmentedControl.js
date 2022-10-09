@@ -36,7 +36,7 @@ const SegmentedControl = ({
   fontStyle,
   activeFontStyle,
   appearance,
-}: SegmentedControlProps): React.Node => {
+}: SegmentedControlProps): React$Node => {
   const colorSchemeHook = useColorScheme();
   const colorScheme = appearance || colorSchemeHook;
   const [segmentWidth, setSegmentWidth] = React.useState(0);
