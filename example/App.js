@@ -9,7 +9,6 @@ import SegmentedControl from '@react-native-segmented-control/segmented-control'
 import React, {useEffect, useState} from 'react';
 import {ScrollView, StyleSheet, Text, View, useColorScheme} from 'react-native';
 
-
 const App = () => {
   const colorScheme = useColorScheme();
   const [textColor, setTextColor] = useState('#000');
@@ -33,7 +32,8 @@ const App = () => {
       contentContainerStyle={[
         styles.container,
         {backgroundColor: colorScheme === 'dark' ? '#000' : '#FFF'},
-      ]}>
+      ]}
+    >
       <View style={styles.segmentContainer}>
         <Text style={[styles.text, {color: textColor}]}>
           Segmented controls can have values and images
