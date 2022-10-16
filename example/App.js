@@ -32,8 +32,7 @@ const App = () => {
       contentContainerStyle={[
         styles.container,
         {backgroundColor: colorScheme === 'dark' ? '#000' : '#FFF'},
-      ]}
-    >
+      ]}>
       <View style={styles.segmentContainer}>
         <Text style={[styles.text, {color: textColor}]}>
           Segmented controls can have values and images
