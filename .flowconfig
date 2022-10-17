@@ -17,6 +17,8 @@ node_modules/warning/.*
 
 ; Ignore example folder
 .*/example/.*
+; Ignore test files in resolve
+.*/node_modules/resolve/test/.*
 
 [untyped]
 .*/node_modules/@react-native-community/cli/.*/.*
