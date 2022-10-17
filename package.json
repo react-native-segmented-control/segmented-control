@@ -30,7 +30,7 @@
     "@babel/runtime": "^7.10.2",
     "@expo/webpack-config": "^0.17.2",
     "@react-native-community/eslint-config": "^3.0.0",
-    "@semantic-release/git": "^8.0.0",
+    "@semantic-release/git": "^10.0.1",
     "@types/react": "^17.0.0",
     "@types/react-native": "^0.64.4",
     "babel-eslint": "^10.1.0",
