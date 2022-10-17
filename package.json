@@ -35,7 +35,7 @@
     "@types/react-native": "^0.64.4",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^29.0.3",
-    "babel-preset-expo": "^8.2.1",
+    "babel-preset-expo": "^9.2.0",
     "eslint": "7",
     "eslint-plugin-prettier": "^4.2.1",
     "expo": "^38.0.10",
