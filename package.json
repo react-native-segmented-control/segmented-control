@@ -45,7 +45,7 @@
     "metro-react-native-babel-preset": "0.73.3",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-native": "0.63.4",
+    "react-native": "0.63.5",
     "react-native-test-app": "1.4.6",
     "react-native-web": "^0.14.10",
     "react-test-renderer": "16.13.1",
