@@ -6,10 +6,11 @@ import {
   ViewProps,
   NativeSyntheticEvent,
   NativeMethods,
-  Constructor,
   TargetedEvent,
   ViewStyle,
 } from 'react-native';
+
+type Constructor<T> = new (...args: any[]) => T;
 
 export interface NativeSegmentedControlIOSChangeEvent extends TargetedEvent {
   value: string;
