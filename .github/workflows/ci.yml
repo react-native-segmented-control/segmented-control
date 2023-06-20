@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-18.04
     strategy:
       matrix:
-        node-version: [14]
+        node-version: [14, 16]
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
@@ -27,7 +27,7 @@ jobs:
     runs-on: ubuntu-18.04
     strategy:
       matrix:
-        node-version: [14]
+        node-version: [14, 16]
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
@@ -48,7 +48,7 @@ jobs:
     runs-on: ubuntu-18.04
     strategy:
       matrix:
-        node-version: [14]
+        node-version: [14, 16]
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
@@ -69,8 +69,8 @@ jobs:
     runs-on: ubuntu-18.04
     strategy:
       matrix:
-        node-version: [14]
-        java-version: [11]        
+        node-version: [14, 16]
+        java-version: [11]
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
@@ -99,7 +99,7 @@ jobs:
     runs-on: macos-latest
     strategy:
       matrix:
-        node-version: [14]
+        node-version: [14, 16]
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
@@ -117,7 +117,7 @@ jobs:
       - name: Install Example
         run: cd example && yarn
       - name: Build ios
-        run: cd example && yarn build:ios  
+        run: cd example && yarn build:ios
       - name: Pod install
         run: cd example && pod install --project-directory=ios
       - name: Run ios app
