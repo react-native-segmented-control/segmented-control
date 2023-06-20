@@ -92,6 +92,19 @@ const SegmentedControl = ({
           selectedIndex={selectedIndex}
         />
       )}
+      {selectedIndex != null && segmentWidth ? (
+        <Animated.View
+          style={[
+            styles.slider,
+            {
+              transform: [{translateX: animation}],
+              width: segmentWidth - 4,
+              backgroundColor:
+                tintColor || (colorScheme === 'dark' ? '#636366' : 'white'),
+            },
+          ]}
+        />
+      ) : null}
       <View style={styles.segmentsContainer}>
         {values &&
           values.map((value, index) => {
@@ -113,19 +126,6 @@ const SegmentedControl = ({
             );
           })}
       </View>
-      {selectedIndex != null && segmentWidth ? (
-        <Animated.View
-          style={[
-            styles.slider,
-            {
-              transform: [{translateX: animation}],
-              width: segmentWidth - 4,
-              backgroundColor:
-                tintColor || (colorScheme === 'dark' ? '#636366' : 'white'),
-            },
-          ]}
-        />
-      ) : null}
     </View>
   );
 };
