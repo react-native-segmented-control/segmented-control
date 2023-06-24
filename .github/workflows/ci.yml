@@ -3,10 +3,10 @@ on: pull_request
 
 jobs:
   lint:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [14]
+        node-version: [14, 16]
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
@@ -24,10 +24,10 @@ jobs:
       - name: ESLint Checks
         run: yarn lint
   flow:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [14]
+        node-version: [14, 16]
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
@@ -45,10 +45,10 @@ jobs:
       - name: Flow Checks
         run: yarn flow check
   tsc:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [14]
+        node-version: [14, 16]
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
@@ -66,11 +66,11 @@ jobs:
       - name: TypeScript type check
         run: yarn tsc
   android:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [14]
-        java-version: [11]        
+        node-version: [14, 16]
+        java-version: [11]
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
@@ -99,7 +99,7 @@ jobs:
     runs-on: macos-latest
     strategy:
       matrix:
-        node-version: [14]
+        node-version: [14, 16]
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
@@ -117,7 +117,7 @@ jobs:
       - name: Install Example
         run: cd example && yarn
       - name: Build ios
-        run: cd example && yarn build:ios  
+        run: cd example && yarn build:ios
       - name: Pod install
         run: cd example && pod install --project-directory=ios
       - name: Run ios app
