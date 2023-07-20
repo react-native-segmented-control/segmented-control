@@ -1,25 +1,7 @@
-require_relative '../../node_modules/react-native/scripts/react_native_pods'
-require_relative '../../node_modules/@react-native-community/cli-platform-ios/native_modules'
+require_relative '../node_modules/react-native-test-app/test_app'
 
-platform :ios, '10.0'
+use_flipper!({ 'Flipper' => '0.75.1', 'Flipper-Folly' => '2.5.3' })
 
-target 'example' do
-  pod 'react-native-segmented-control', :path => "../.."
-  config = use_native_modules!
+workspace 'SegmentedControlExample.xcworkspace'
 
-  use_react_native!(:path => '../../node_modules/react-native')
-
-  target 'exampleTests' do
-    inherit! :complete
-    # Pods for testing
-  end
-
-  # Enables Flipper.
-  #
-  # Note that if you have use_frameworks! enabled, Flipper will not work and
-  # you should disable these next few lines.
-  use_flipper!
-  post_install do |installer|
-    flipper_post_install(installer)
-  end
-end
+use_test_app!
