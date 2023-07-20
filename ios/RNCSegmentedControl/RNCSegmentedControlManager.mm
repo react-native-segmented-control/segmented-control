@@ -7,16 +7,16 @@
 
 #import "RNCSegmentedControlManager.h"
 
-#import "RNCSegmentedControl.h"
+#import "RNCSegmentedControlImpl.h"
 #import <React/RCTBridge.h>
 #import <React/RCTConvert.h>
 
 @implementation RNCSegmentedControlManager
 
-RCT_EXPORT_MODULE()
+RCT_EXPORT_MODULE(RNCSegmentedControl)
 
 - (UIView *)view {
-  return [RNCSegmentedControl new];
+  return [RNCSegmentedControlImpl new];
 }
 
 RCT_EXPORT_VIEW_PROPERTY(values, NSArray)
@@ -28,7 +28,7 @@ RCT_EXPORT_VIEW_PROPERTY(enabled, BOOL)
 RCT_EXPORT_VIEW_PROPERTY(onChange, RCTBubblingEventBlock)
 RCT_EXPORT_VIEW_PROPERTY(appearance, NSString)
 
-RCT_CUSTOM_VIEW_PROPERTY(fontStyle, NSObject, RNCSegmentedControl) {
+RCT_CUSTOM_VIEW_PROPERTY(fontStyle, NSObject, RNCSegmentedControlImpl) {
 #if defined(__IPHONE_OS_VERSION_MAX_ALLOWED) && defined(__IPHONE_13_0) &&      \
     __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_13_0
   if (@available(iOS 13.0, *)) {
@@ -55,7 +55,7 @@ RCT_CUSTOM_VIEW_PROPERTY(fontStyle, NSObject, RNCSegmentedControl) {
 #endif
 }
 
-RCT_CUSTOM_VIEW_PROPERTY(activeFontStyle, NSObject, RNCSegmentedControl) {
+RCT_CUSTOM_VIEW_PROPERTY(activeFontStyle, NSObject, RNCSegmentedControlImpl) {
 #if defined(__IPHONE_OS_VERSION_MAX_ALLOWED) && defined(__IPHONE_13_0) &&      \
     __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_13_0
   if (@available(iOS 13.0, *)) {
