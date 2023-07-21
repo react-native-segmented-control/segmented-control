@@ -86,7 +86,7 @@
   }
   if(_onChangeFabric){
       NSString *segmentTitle = [self titleForSegmentAtIndex:_selectedIndex];
-      _onChangeFabric(segmentTitle,_selectedIndex);
+      _onChangeFabric((segmentTitle) ? segmentTitle : @"RCTImage",_selectedIndex);
   }
 }
 

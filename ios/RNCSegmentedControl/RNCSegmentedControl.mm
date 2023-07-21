@@ -68,7 +68,12 @@ return self;
     auto oldValuesIt = oldViewProps.values.begin();
     
     while (oldValuesIt != oldViewProps.values.end()) {
-        [oldValues addObject: RCTNSStringFromString(*oldValuesIt)]; // FIXME how to manage images here?
+        if (oldValuesIt->type==1) {
+            [oldValues addObject: RCTNSStringFromString(oldValuesIt->stringValue)];
+        }
+        else if(oldValuesIt->type==2) {
+            [oldValues addObject: [self imageResolvedAssetSourceToDictionary:oldValuesIt->imgValue]];
+        }
         oldValuesIt++;
     }
     
@@ -76,14 +81,18 @@ return self;
     auto newValuesIt = newViewProps.values.begin();
     
     while (newValuesIt != newViewProps.values.end()) {
-        [newValues addObject: RCTNSStringFromString(*newValuesIt)]; // FIXME how to manage images here?
+        if (newValuesIt->type==1) {
+            [newValues addObject: RCTNSStringFromString(newValuesIt->stringValue)];
+        }
+        else if(newValuesIt->type==2) {
+            [newValues addObject: [self imageResolvedAssetSourceToDictionary:newValuesIt->imgValue]];
+        }
         newValuesIt++;
     }
     if(![newValues isEqualToArray:oldValues]){
         [_view setValues:newValues];
     }
     if (oldViewProps.selectedIndex != newViewProps.selectedIndex) {
-        NSLog(@"updateProps set selectedIndex to %d",newViewProps.selectedIndex);
         _view.selectedIndex = newViewProps.selectedIndex;
     }
     if (oldViewProps.tintColor != newViewProps.tintColor) {
@@ -168,19 +177,18 @@ Class<RCTComponentViewProtocol> RNCSegmentedControlCls(void)
     return RNCSegmentedControl.class;
 }
 
-// - hexStringToColor:(NSString *)stringToConvert
-// {
-// NSString *noHashString = [stringToConvert stringByReplacingOccurrencesOfString:@"#" withString:@""];
-// NSScanner *stringScanner = [NSScanner scannerWithString:noHashString];
-
-// unsigned hex;
-// if (![stringScanner scanHexInt:&hex]) return nil;
-// int r = (hex >> 16) & 0xFF;
-// int g = (hex >> 8) & 0xFF;
-// int b = (hex) & 0xFF;
-
-// return [UIColor colorWithRed:r / 255.0f green:g / 255.0f blue:b / 255.0f alpha:1.0f];
-// }
+- imageResolvedAssetSourceToDictionary:(facebook::react::RNCSegmentedControlValuesImgValueStruct)rawObject
+{
+    // it's important to have a NSMutableDictionary for the Impl to detect the right case (img vs text)
+    NSMutableDictionary *ret = [NSMutableDictionary new];
+    
+    [ret setObject:[NSNumber numberWithInt: rawObject.height] forKey:@"height"];
+    [ret setObject:[NSNumber numberWithInt: rawObject.width] forKey:@"width"];
+    [ret setObject:[NSNumber numberWithFloat: rawObject.scale] forKey:@"scale"];
+    [ret setObject:RCTNSStringFromString(rawObject.uri) forKey:@"uri"];
+    
+    return ret;
+}
 
 @end
 #endif
