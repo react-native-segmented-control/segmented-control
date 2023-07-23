@@ -23,13 +23,22 @@ This module is NOT supported in the Expo Go app on iOS, because it requires cust
 
 ## Getting started
 
-Install the library using either Yarn:
+Install the library using your package manager:
+
+pnpm:
+
+```
+pnpm install --save @react-native-segmented-control/segmented-control
+```
+
+
+yarn:
 
 ```
 yarn add @react-native-segmented-control/segmented-control
 ```
 
-or npm:
+npm:
 
 ```
 npm install --save @react-native-segmented-control/segmented-control

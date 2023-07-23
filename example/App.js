@@ -5,7 +5,7 @@
  * @flow
  */
 
-import SegmentedControl from '@react-native-segmented-control/segmented-control';
+import SegmentedControl from '..';
 import React, {useEffect, useState} from 'react';
 import {ScrollView, StyleSheet, Text, View, useColorScheme} from 'react-native';
 

@@ -134,9 +134,7 @@ export interface SegmentedControlProps extends ViewProps {
  * ````
  */
 
-declare class SegmentedControlComponent extends React.Component<
-  SegmentedControlProps
-> {}
+declare class SegmentedControlComponent extends React.Component<SegmentedControlProps> {}
 declare const SegmentedControlBase: Constructor<NativeMethods> &
   typeof SegmentedControlComponent;
 export default class SegmentedControl extends SegmentedControlBase {}

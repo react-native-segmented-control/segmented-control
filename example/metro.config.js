@@ -16,6 +16,11 @@ const exclusionList = (() => {
   }
 })();
 
+const {makeMetroConfig} = require('@rnx-kit/metro-config');
+const MetroSymlinksResolver = require('@rnx-kit/metro-resolver-symlinks');
+
+const symlinkResolver = MetroSymlinksResolver();
+
 const blockList = exclusionList([
   /node_modules\/.*\/node_modules\/react-native\/.*/,
 
@@ -35,10 +40,6 @@ const blockList = exclusionList([
 ]);
 
 module.exports = {
-  resolver: {
-    blacklistRE: blockList,
-    blockList,
-  },
   transformer: {
     getTransformOptions: async () => ({
       transform: {
@@ -47,4 +48,12 @@ module.exports = {
       },
     }),
   },
+  ...makeMetroConfig({
+    projectRoot: __dirname,
+    resolver: {
+      resolveRequest: symlinkResolver,
+      blacklistRE: blockList,
+      blockList,
+    },
+  }),
 };
