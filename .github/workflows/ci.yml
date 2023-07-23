@@ -148,5 +148,3 @@ jobs:
         run: cd example && pnpm build:ios
       - name: Pod install
         run: cd example && pod install --project-directory=ios
-      - name: Run ios app
-        run: cd example && pnpm ios
