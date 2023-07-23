@@ -55,7 +55,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-      
       - name: Install Dependencies
-        run: pnpm
+        run: pnpm install
       - name: Flow Checks
         run: pnpm flow check
   tsc:
@@ -82,7 +82,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-      
       - name: Install Dependencies
-        run: pnpm
+        run: pnpm install
       - name: TypeScript type check
         run: pnpm tsc
   android:
@@ -114,7 +114,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-      
       - name: Install Dependencies
-        run: pnpm
+        run: pnpm install
       - name: Install Example Dependencies
         run: cd example && pnpm
       - name: Build android
@@ -145,7 +145,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-      
       - name: Install Dependencies
-        run: pnpm
+        run: pnpm install
       - name: Build ios
         run: cd example && pnpm build:ios
       - name: Pod install
