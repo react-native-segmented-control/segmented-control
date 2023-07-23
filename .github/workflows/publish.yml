@@ -18,9 +18,11 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Get pnpm cache
+      - name: Get pnpm store directory
         id: pnpm-cache
-        run: echo "::set-output name=dir::$(pnpm store path)"
+        shell: bash
+        run: |
+          echo "::set-output name=dir::$(pnpm store path)"
       - uses: actions/cache@v3
         with:
           path: ${{ steps.pnpm-cache.outputs.dir }}
