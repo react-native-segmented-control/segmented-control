@@ -21,7 +21,7 @@ jobs:
       - name: Get pnpm cache
         id: pnpm-cache
         run: echo "::set-output name=dir::$(pnpm store path)"
-      - uses: actions/cache@v2
+      - uses: actions/cache@v3
         with:
           path: ${{ steps.pnpm-cache.outputs.dir }}
           key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
