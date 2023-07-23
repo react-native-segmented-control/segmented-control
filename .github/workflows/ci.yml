@@ -115,8 +115,6 @@ jobs:
             ${{ runner.os }}-pnpm-store-      
       - name: Install Dependencies
         run: pnpm install
-      - name: Install Example Dependencies
-        run: cd example && pnpm
       - name: Build android
         run: cd example && pnpm build:android
       - name: Build Android Example App and Library
