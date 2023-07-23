@@ -7,21 +7,20 @@ All work on React Native SegmentedControl happens directly on GitHub. Contributo
 > **Working on your first pull request?** You can learn how from this _free_ series: [How to Contribute to an Open Source Project on GitHub](https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github).
 
 1. Fork the repo and create your branch from `master` (a guide on [how to fork a repository](https://help.github.com/articles/fork-a-repo/)).
-2. Run `yarn` or `npm install` to install all required dependencies.
+2. Run `pnpm install` to install all required dependencies.
 3. Now you are ready to make your changes!
 
 ## Tests & Verifications
 
 Currently we use `flow` for typechecking, `eslint` with `prettier` for linting and formatting the code, and `jest` for unit testing. We also use `detox` for end-to-end testing. All of these are run on Github Actions for all opened pull requests, but you should use them locally when making changes.
 
-- `yarn test`: Run all tests and validations.
-- `yarn lint`: Run `eslint`.
-- `yarn lint --fix`: Run `eslint` and automatically fix issues. This is useful for correcting code formatting.
-- `yarn flow`: Run `flow` typechecking.
-  <!-- * `yarn validate:typescript`: Run `typescript` typechecking. -->
-  <!-- * `yarn test:jest`: Run unit tests with `jest`. -->
-  <!-- * `yarn test:detox:<android|ios>:build:<debug|release>`: Build the `debug` or `release` app for end-to-end tests with `detox` on either `android` or `ios`. You need to run this before running the test command and whenever you make changes to the native code. -->
-  <!-- * `yarn test:detox:<android|ios>:test:<debug|release>`: Run the `debug` or `release` end-to-end tests with `detox` on either `android` or `ios`. -->
+- `pnpm test`: Run all tests and validations.
+- `pnpm lint`: Run `eslint`.
+- `pnpm lint --fix`: Run `eslint` and automatically fix issues. This is useful for correcting code formatting.
+- `pnpm flow`: Run `flow` typechecking.
+  <!-- * `pnpm test:jest`: Run unit tests with `jest`. -->
+  <!-- * `pnpm test:detox:<android|ios>:build:<debug|release>`: Build the `debug` or `release` app for end-to-end tests with `detox` on either `android` or `ios`. You need to run this before running the test command and whenever you make changes to the native code. -->
+  <!-- * `pnpm test:detox:<android|ios>:test:<debug|release>`: Run the `debug` or `release` end-to-end tests with `detox` on either `android` or `ios`. -->
 
 ## Sending a pull request
 

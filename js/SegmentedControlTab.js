@@ -30,7 +30,8 @@ type Props = $ReadOnly<{|
 |}>;
 
 function isBase64(str) {
-  const regex = /^data:image\/(?:gif|png|jpeg|bmp|webp)(?:;charset=utf-8)?;base64,(?:[A-Za-z0-9]|[+/])+={0,2}/;
+  const regex =
+    /^data:image\/(?:gif|png|jpeg|bmp|webp)(?:;charset=utf-8)?;base64,(?:[A-Za-z0-9]|[+/])+={0,2}/;
   return str && regex.test(str);
 }
 

@@ -55,13 +55,8 @@ class SegmentedControlIOS extends React.Component<Props> {
   };
 
   render() {
-    const {
-      forwardedRef,
-      fontStyle,
-      activeFontStyle,
-      values,
-      ...props
-    } = this.props;
+    const {forwardedRef, fontStyle, activeFontStyle, values, ...props} =
+      this.props;
     return (
       <RNCSegmentedControlNativeComponent
         fontStyle={
