@@ -18,9 +18,12 @@ jobs:
         run: |
           echo "::set-output name=dir::$(pnpm store path)"
       - uses: actions/cache@v3
+        name: Setup pnpm cache
         with:
           path: ${{ steps.pnpm-cache.outputs.dir }}
-          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-      
       - name: Install Dependencies
         run: pnpm install
       - name: ESLint Checks
@@ -39,9 +42,12 @@ jobs:
         id: pnpm-cache
         run: echo "::set-output name=dir::$(pnpm store path)"
       - uses: actions/cache@v3
+        name: Setup pnpm cache
         with:
           path: ${{ steps.pnpm-cache.outputs.dir }}
-          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-      
       - name: Install Dependencies
         run: pnpm
       - name: Flow Checks
@@ -60,9 +66,12 @@ jobs:
         id: pnpm-cache
         run: echo "::set-output name=dir::$(pnpm store path)"
       - uses: actions/cache@v3
+        name: Setup pnpm cache
         with:
           path: ${{ steps.pnpm-cache.outputs.dir }}
-          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-      
       - name: Install Dependencies
         run: pnpm
       - name: TypeScript type check
@@ -86,9 +95,12 @@ jobs:
         id: pnpm-cache
         run: echo "::set-output name=dir::$(pnpm store path)"
       - uses: actions/cache@v3
+        name: Setup pnpm cache
         with:
           path: ${{ steps.pnpm-cache.outputs.dir }}
-          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-      
       - name: Install Dependencies
         run: pnpm
       - name: Install Example Dependencies
@@ -111,9 +123,12 @@ jobs:
         id: pnpm-cache
         run: echo "::set-output name=dir::$(pnpm store path)"
       - uses: actions/cache@v3
+        name: Setup pnpm cache
         with:
           path: ${{ steps.pnpm-cache.outputs.dir }}
-          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-      
       - name: Install Dependencies
         run: pnpm
       - name: Build ios
