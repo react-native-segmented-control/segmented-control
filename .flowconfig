@@ -36,6 +36,7 @@ emoji=true
 esproposal.optional_chaining=enable
 esproposal.nullish_coalescing=enable
 
+module.file_ext=.ts
 module.file_ext=.js
 module.file_ext=.json
 module.file_ext=.ios.js

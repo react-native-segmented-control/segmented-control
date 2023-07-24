@@ -14,11 +14,10 @@ import type {SegmentedControlProps} from './types';
 
 type NativeSegmentedControlIOS = HostComponent<SegmentedControlProps>;
 
-
 const isFabricEnabled = global.nativeFabricUIManager != null;
 
-const RNCSegmentedControl: any = isFabricEnabled ?
-     require("../SegmentedControlNativeComponent").default :
-     requireNativeComponent('RNCSegmentedControl');
+const RNCSegmentedControl: NativeSegmentedControlIOS = isFabricEnabled
+  ? require('../SegmentedControlNativeComponent').default
+  : requireNativeComponent('RNCSegmentedControl');
 
-module.exports = ((RNCSegmentedControl): NativeSegmentedControlIOS);
+module.exports = RNCSegmentedControl;

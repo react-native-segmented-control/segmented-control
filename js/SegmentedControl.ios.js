@@ -89,10 +89,13 @@ class SegmentedControlIOS extends React.Component<Props> {
             : undefined
         }
         values={values.map((val) => {
-          var ret = isFabricEnabled ? 
-            (typeof val === 'string' ? { type: 1, stringValue: val } : { type: 2, imgValue: Image.resolveAssetSource(val) }) :
-            (typeof val === 'string' ? val : Image.resolveAssetSource(val));
-console.log('DEBUG VALUE ',ret);
+          var ret = isFabricEnabled
+            ? typeof val === 'string'
+              ? {type: 1, stringValue: val}
+              : {type: 2, imgValue: Image.resolveAssetSource(val)}
+            : typeof val === 'string'
+            ? val
+            : Image.resolveAssetSource(val);
           return ret;
         })}
         {...props}
