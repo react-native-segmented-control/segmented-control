@@ -96,8 +96,8 @@ importers:
   example:
     dependencies:
       hermes-engine:
-        specifier: 0.10.0
-        version: 0.10.0
+        specifier: 0.11.0
+        version: 0.11.0
       react:
         specifier: 16.13.1
         version: 16.13.1
@@ -7493,8 +7493,8 @@ packages:
     hasBin: true
     dev: true
 
-  /hermes-engine@0.10.0:
-    resolution: {integrity: sha512-SiBo9rvuWetTIQGPPYwRHP0Omo/Iw/yd0sujWR0bW08+syIO0qDpo/fgx7GrY5PEy8wLcVz8v7adET2i5DOmJg==}
+  /hermes-engine@0.11.0:
+    resolution: {integrity: sha512-7aMUlZja2IyLYAcZ69NBnwJAR5ZOYlSllj0oMpx08a8HzxHOys0eKCzfphrf6D0vX1JGO1QQvVsQKe6TkYherw==}
     dev: false
 
   /hermes-engine@0.5.1:
