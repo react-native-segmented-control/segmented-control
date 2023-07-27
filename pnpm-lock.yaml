@@ -1538,6 +1538,12 @@ packages:
     dependencies:
       regenerator-runtime: 0.13.11
 
+  /@babel/runtime@7.22.6:
+    resolution: {integrity: sha512-wDb5pWm4WDdF6LFUde3Jl8WzPA+3ZbxYqkC6xAXuD3irdEHN1k0NfTRrJD8ZD378SJ61miMLCqIOXYhd8x+AJQ==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      regenerator-runtime: 0.13.11
+
   /@babel/template@7.22.5:
     resolution: {integrity: sha512-X7yV7eiwAxdj9k94NEylvbVHLiVG1nvzCV2EAowhxLTwODV1jl9UzZ48leOC0sH7OnuHrIkllaBgneUykIcZaw==}
     engines: {node: '>=6.9.0'}
@@ -1636,7 +1642,7 @@ packages:
     resolution: {integrity: sha512-P6yogdPCRKaoLjuH7D8jgq6kTzM4gWuQ+vssBPWhbnoymV5AClQOxvACPDHD+biKhvGsaXEQLMoi93lPQzcDlQ==}
     hasBin: true
     dependencies:
-      '@babel/runtime': 7.22.5
+      '@babel/runtime': 7.22.6
       '@expo/code-signing-certificates': 0.0.2
       '@expo/config': 7.0.3
       '@expo/config-plugins': 5.0.4
@@ -2776,7 +2782,7 @@ packages:
       node-stream-zip: 1.15.0
       ora: 3.4.0
       pretty-format: 25.5.0
-      react-native: 0.63.4(@babel/core@7.22.5)(react@17.0.2)
+      react-native: 0.63.4(@babel/core@7.22.5)(react@16.13.1)
       semver: 6.3.0
       serve-static: 1.15.0
       strip-ansi: 5.2.0
@@ -6224,7 +6230,7 @@ packages:
     resolution: {integrity: sha512-lZETkf3t+gbZjKjSceIpU7I8Rmm5nZ0ZG1WPzNBBbm+k64/+kKV96s6RqS37W1TTDpIbd+AucT9kKpvtv0JB2A==}
     hasBin: true
     dependencies:
-      '@babel/runtime': 7.22.5
+      '@babel/runtime': 7.22.6
       '@expo/cli': 0.3.2(expo-modules-autolinking@0.10.3)
       '@expo/vector-icons': 13.0.0
       babel-preset-expo: 9.2.2(@babel/core@7.22.5)
@@ -11097,7 +11103,7 @@ packages:
     peerDependencies:
       react: 16.13.1
     dependencies:
-      '@babel/runtime': 7.22.5
+      '@babel/runtime': 7.22.6
       '@react-native-community/cli': 4.10.0(@babel/core@7.22.5)(react-native@0.63.4)
       '@react-native-community/cli-platform-android': 4.13.0
       '@react-native-community/cli-platform-ios': 4.13.0
@@ -11131,6 +11137,7 @@ packages:
       - encoding
       - supports-color
       - utf-8-validate
+    dev: true
 
   /react-refresh@0.4.3:
     resolution: {integrity: sha512-Hwln1VNuGl/6bVwnd0Xdn1e84gT/8T9aYNL+HAKDArLCS7LWjwr7StE30IEYbIkx0Vi3vs+coQxe+SQDbGbbpA==}
@@ -11188,6 +11195,7 @@ packages:
     dependencies:
       loose-envify: 1.4.0
       object-assign: 4.1.1
+    dev: true
 
   /read-pkg-up@7.0.1:
     resolution: {integrity: sha512-zK0TB7Xd6JpCLmlLmufqykGE+/TlOePD6qKClNW7hHDKFh/J7/7gCWGR7joEQEW1bKq3a3yUZSObOoWLFQ4ohg==}
@@ -11278,7 +11286,7 @@ packages:
   /regenerator-transform@0.15.1:
     resolution: {integrity: sha512-knzmNAcuyxV+gQCufkYcvOqX/qIIfHLv0u5x79kRxuGojfYVky1f15TzZEu2Avte8QGepvUNTnLskf8E6X6Vyg==}
     dependencies:
-      '@babel/runtime': 7.22.5
+      '@babel/runtime': 7.22.6
 
   /regex-not@1.0.2:
     resolution: {integrity: sha512-J6SDjUgDxQj5NusnOtdFxDwN/+HWykR8GELwctJ7mdqhcyy1xEc4SRFHUXvxTp661YaVKAjfRLZ9cCqS6tn32A==}
@@ -12911,6 +12919,7 @@ packages:
     dependencies:
       react: 17.0.2
       use-sync-external-store: 1.2.0(react@17.0.2)
+    dev: true
 
   /use-sync-external-store@1.2.0(react@16.13.1):
     resolution: {integrity: sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==}
@@ -12925,6 +12934,7 @@ packages:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
       react: 17.0.2
+    dev: true
 
   /use@3.1.1:
     resolution: {integrity: sha512-cwESVXlO3url9YWlFW/TA9cshCEhtu7IKJ/p5soJ/gGpj7vbvFrAY/eIioQ6Dw23KjZhYgiIo8HOs1nQ2vr/oQ==}
