@@ -8,6 +8,7 @@
     "index.d.ts",
     "ios",
     "js",
+    "codegen",
     "react-native-segmented-control.podspec"
   ],
   "scripts": {
@@ -82,6 +83,6 @@
   "codegenConfig": {
     "name": "SegmentedControl",
     "type": "components",
-    "jsSrcsDir": "."
+    "jsSrcsDir": "./codegen"
   }
 }

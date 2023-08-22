@@ -9,15 +9,16 @@
 'use strict';
 
 import {requireNativeComponent} from 'react-native';
-import type {HostComponent} from 'react-native/Libraries/Renderer/shims/ReactNativeTypes';
-import type {SegmentedControlProps} from './types';
+// import type {HostComponent} from 'react-native/Libraries/Renderer/shims/ReactNativeTypes';
+// import type {SegmentedControlProps} from './types';
 
-type NativeSegmentedControlIOS = HostComponent<SegmentedControlProps>;
+// type NativeSegmentedControlIOS = HostComponent<SegmentedControlProps>;
 
 const isFabricEnabled = global.nativeFabricUIManager != null;
 
-const RNCSegmentedControl: NativeSegmentedControlIOS = isFabricEnabled
-  ? require('../SegmentedControlNativeComponent').default
+// const RNCSegmentedControl: NativeSegmentedControlIOS = isFabricEnabled
+const RNCSegmentedControl = isFabricEnabled
+  ? require('../codegen/SegmentedControlNativeComponent').default
   : requireNativeComponent('RNCSegmentedControl');
 
 module.exports = RNCSegmentedControl;
