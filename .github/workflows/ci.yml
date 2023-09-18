@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [16]
+        node-version: [18]
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
@@ -26,7 +26,7 @@ jobs:
           path: ${{ steps.pnpm-cache.outputs.dir }}
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
-            ${{ runner.os }}-pnpm-store-      
+            ${{ runner.os }}-pnpm-store-
       - name: Install Dependencies
         run: pnpm install
       - name: ESLint Checks
@@ -35,7 +35,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [16]
+        node-version: [18]
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
@@ -53,7 +53,7 @@ jobs:
           path: ${{ steps.pnpm-cache.outputs.dir }}
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
-            ${{ runner.os }}-pnpm-store-      
+            ${{ runner.os }}-pnpm-store-
       - name: Install Dependencies
         run: pnpm install
       - name: Flow Checks
@@ -62,7 +62,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [16]
+        node-version: [18]
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
@@ -80,7 +80,7 @@ jobs:
           path: ${{ steps.pnpm-cache.outputs.dir }}
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
-            ${{ runner.os }}-pnpm-store-      
+            ${{ runner.os }}-pnpm-store-
       - name: Install Dependencies
         run: pnpm install
       - name: TypeScript type check
@@ -89,7 +89,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [16]
+        node-version: [18]
         java-version: [11]
     steps:
       - uses: actions/checkout@v2
@@ -112,7 +112,7 @@ jobs:
           path: ${{ steps.pnpm-cache.outputs.dir }}
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
-            ${{ runner.os }}-pnpm-store-      
+            ${{ runner.os }}-pnpm-store-
       - name: Install Dependencies
         run: pnpm install
       - name: Build android
@@ -123,7 +123,7 @@ jobs:
     runs-on: macos-latest
     strategy:
       matrix:
-        node-version: [16]
+        node-version: [18]
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
@@ -141,7 +141,7 @@ jobs:
           path: ${{ steps.pnpm-cache.outputs.dir }}
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
-            ${{ runner.os }}-pnpm-store-      
+            ${{ runner.os }}-pnpm-store-
       - name: Install Dependencies
         run: pnpm install
       - name: Build ios
