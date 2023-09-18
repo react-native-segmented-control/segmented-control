@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [16]
+        node-version: [18]
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -32,9 +32,9 @@ jobs:
           path: ${{ steps.pnpm-cache.outputs.dir }}
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
-            ${{ runner.os }}-pnpm-store-      
+            ${{ runner.os }}-pnpm-store-
       - name: Install Dependencies
-        run: pnpm
+        run: pnpm install
       - name: Publish Package
         run: pnpm ci:publish
         env:
