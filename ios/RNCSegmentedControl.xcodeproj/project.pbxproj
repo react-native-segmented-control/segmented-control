@@ -3,36 +3,41 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B3E7B58A1CC2AC0600A0062D /* RNCSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNCSegmentedControl.m */; };
-		E1248FAB23D5F9D700C2FB80 /* RNCSegmentedControlManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E1248FAA23D5F9D700C2FB80 /* RNCSegmentedControlManager.m */; };
+		E47AD8772A698C10006FF43F /* RNCSegmentedControl.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = E47AD8742A698C10006FF43F /* RNCSegmentedControl.h */; };
+		E47AD87E2A698C95006FF43F /* RNCSegmentedControl.mm in Sources */ = {isa = PBXBuildFile; fileRef = E47AD87D2A698C95006FF43F /* RNCSegmentedControl.mm */; };
+		E47AD8832A698CC8006FF43F /* RNCSegmentedControlImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = E47AD8802A698CC7006FF43F /* RNCSegmentedControlImpl.m */; };
+		E47AD8842A698CC8006FF43F /* RNCSegmentedControlManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = E47AD8822A698CC8006FF43F /* RNCSegmentedControlManager.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		58B511D91A9E6C8500147676 /* CopyFiles */ = {
+		E47AD86F2A698C10006FF43F /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				E47AD8772A698C10006FF43F /* RNCSegmentedControl.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		134814201AA4EA6300B7C361 /* libRNCSegmentedControl.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNCSegmentedControl.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		B3E7B5881CC2AC0600A0062D /* RNCSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNCSegmentedControl.h; sourceTree = "<group>"; };
-		B3E7B5891CC2AC0600A0062D /* RNCSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNCSegmentedControl.m; sourceTree = "<group>"; };
-		E1248FA923D5F9D700C2FB80 /* RNCSegmentedControlManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNCSegmentedControlManager.h; sourceTree = "<group>"; };
-		E1248FAA23D5F9D700C2FB80 /* RNCSegmentedControlManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNCSegmentedControlManager.m; sourceTree = "<group>"; };
+		E47AD8712A698C10006FF43F /* libRNCSegmentedControl.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNCSegmentedControl.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E47AD8742A698C10006FF43F /* RNCSegmentedControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNCSegmentedControl.h; sourceTree = "<group>"; };
+		E47AD87D2A698C95006FF43F /* RNCSegmentedControl.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RNCSegmentedControl.mm; sourceTree = "<group>"; };
+		E47AD87F2A698CC7006FF43F /* RNCSegmentedControlImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNCSegmentedControlImpl.h; sourceTree = "<group>"; };
+		E47AD8802A698CC7006FF43F /* RNCSegmentedControlImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNCSegmentedControlImpl.m; sourceTree = "<group>"; };
+		E47AD8812A698CC8006FF43F /* RNCSegmentedControlManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNCSegmentedControlManager.h; sourceTree = "<group>"; };
+		E47AD8822A698CC8006FF43F /* RNCSegmentedControlManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RNCSegmentedControlManager.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		58B511D81A9E6C8500147676 /* Frameworks */ = {
+		E47AD86E2A698C10006FF43F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,113 +47,138 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		134814211AA4EA7D00B7C361 /* Products */ = {
+		E47AD8682A698C10006FF43F = {
 			isa = PBXGroup;
 			children = (
-				134814201AA4EA6300B7C361 /* libRNCSegmentedControl.a */,
+				E47AD8732A698C10006FF43F /* RNCSegmentedControl */,
+				E47AD8722A698C10006FF43F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E47AD8722A698C10006FF43F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E47AD8712A698C10006FF43F /* libRNCSegmentedControl.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		58B511D21A9E6C8500147676 = {
+		E47AD8732A698C10006FF43F /* RNCSegmentedControl */ = {
 			isa = PBXGroup;
 			children = (
-				E1248FA923D5F9D700C2FB80 /* RNCSegmentedControlManager.h */,
-				E1248FAA23D5F9D700C2FB80 /* RNCSegmentedControlManager.m */,
-				B3E7B5881CC2AC0600A0062D /* RNCSegmentedControl.h */,
-				B3E7B5891CC2AC0600A0062D /* RNCSegmentedControl.m */,
-				134814211AA4EA7D00B7C361 /* Products */,
+				E47AD8742A698C10006FF43F /* RNCSegmentedControl.h */,
+				E47AD87D2A698C95006FF43F /* RNCSegmentedControl.mm */,
+				E47AD87F2A698CC7006FF43F /* RNCSegmentedControlImpl.h */,
+				E47AD8802A698CC7006FF43F /* RNCSegmentedControlImpl.m */,
+				E47AD8812A698CC8006FF43F /* RNCSegmentedControlManager.h */,
+				E47AD8822A698CC8006FF43F /* RNCSegmentedControlManager.mm */,
 			);
+			path = RNCSegmentedControl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		58B511DA1A9E6C8500147676 /* RNCSegmentedControl */ = {
+		E47AD8702A698C10006FF43F /* RNCSegmentedControl */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "RNCSegmentedControl" */;
+			buildConfigurationList = E47AD87A2A698C10006FF43F /* Build configuration list for PBXNativeTarget "RNCSegmentedControl" */;
 			buildPhases = (
-				58B511D71A9E6C8500147676 /* Sources */,
-				58B511D81A9E6C8500147676 /* Frameworks */,
-				58B511D91A9E6C8500147676 /* CopyFiles */,
+				E47AD86D2A698C10006FF43F /* Sources */,
+				E47AD86E2A698C10006FF43F /* Frameworks */,
+				E47AD86F2A698C10006FF43F /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = RNCSegmentedControl;
-			productName = RCTDataManager;
-			productReference = 134814201AA4EA6300B7C361 /* libRNCSegmentedControl.a */;
+			productName = RNCSegmentedControl;
+			productReference = E47AD8712A698C10006FF43F /* libRNCSegmentedControl.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		58B511D31A9E6C8500147676 /* Project object */ = {
+		E47AD8692A698C10006FF43F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0830;
-				ORGANIZATIONNAME = Facebook;
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1430;
 				TargetAttributes = {
-					58B511DA1A9E6C8500147676 = {
-						CreatedOnToolsVersion = 6.1.1;
+					E47AD8702A698C10006FF43F = {
+						CreatedOnToolsVersion = 14.3.1;
 					};
 				};
 			};
-			buildConfigurationList = 58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "RNCSegmentedControl" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			buildConfigurationList = E47AD86C2A698C10006FF43F /* Build configuration list for PBXProject "RNCSegmentedControl" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
+				Base,
 			);
-			mainGroup = 58B511D21A9E6C8500147676;
-			productRefGroup = 58B511D21A9E6C8500147676;
+			mainGroup = E47AD8682A698C10006FF43F;
+			productRefGroup = E47AD8722A698C10006FF43F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				58B511DA1A9E6C8500147676 /* RNCSegmentedControl */,
+				E47AD8702A698C10006FF43F /* RNCSegmentedControl */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		58B511D71A9E6C8500147676 /* Sources */ = {
+		E47AD86D2A698C10006FF43F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1248FAB23D5F9D700C2FB80 /* RNCSegmentedControlManager.m in Sources */,
-				B3E7B58A1CC2AC0600A0062D /* RNCSegmentedControl.m in Sources */,
+				E47AD8832A698CC8006FF43F /* RNCSegmentedControlImpl.m in Sources */,
+				E47AD8842A698CC8006FF43F /* RNCSegmentedControlManager.mm in Sources */,
+				E47AD87E2A698C95006FF43F /* RNCSegmentedControl.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		58B511ED1A9E6C8500147676 /* Debug */ = {
+		E47AD8782A698C10006FF43F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -156,43 +186,57 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
-		58B511EE1A9E6C8500147676 /* Release */ = {
+		E47AD8792A698C10006FF43F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -200,67 +244,60 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		58B511F01A9E6C8500147676 /* Debug */ = {
+		E47AD87B2A698C10006FF43F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$(SRCROOT)/../../../React/**",
-					"$(SRCROOT)/../../react-native/React/**",
-				);
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7BW78VSQAU;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = RNCSegmentedControl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		58B511F11A9E6C8500147676 /* Release */ = {
+		E47AD87C2A698C10006FF43F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$(SRCROOT)/../../../React/**",
-					"$(SRCROOT)/../../react-native/React/**",
-				);
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7BW78VSQAU;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = RNCSegmentedControl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "RNCSegmentedControl" */ = {
+		E47AD86C2A698C10006FF43F /* Build configuration list for PBXProject "RNCSegmentedControl" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				58B511ED1A9E6C8500147676 /* Debug */,
-				58B511EE1A9E6C8500147676 /* Release */,
+				E47AD8782A698C10006FF43F /* Debug */,
+				E47AD8792A698C10006FF43F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "RNCSegmentedControl" */ = {
+		E47AD87A2A698C10006FF43F /* Build configuration list for PBXNativeTarget "RNCSegmentedControl" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				58B511F01A9E6C8500147676 /* Debug */,
-				58B511F11A9E6C8500147676 /* Release */,
+				E47AD87B2A698C10006FF43F /* Debug */,
+				E47AD87C2A698C10006FF43F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 58B511D31A9E6C8500147676 /* Project object */;
+	rootObject = E47AD8692A698C10006FF43F /* Project object */;
 }

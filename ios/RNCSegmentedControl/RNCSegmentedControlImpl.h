@@ -8,8 +8,17 @@
 #import <UIKit/UIKit.h>
 #import <React/RCTComponent.h>
 
-@interface RNCSegmentedControl : UISegmentedControl
+typedef void(^OnChangeCallback)(NSString *value, NSInteger index);
+
+@interface RNCSegmentedControlImpl : UISegmentedControl
+
+@property(nonatomic) NSArray * values;
 @property(nonatomic, assign) NSInteger selectedIndex;
+
+@property NSString * appearance;
+
 @property(nonatomic, copy) RCTBubblingEventBlock onChange;
+
+@property (nonatomic, copy) OnChangeCallback onChangeFabric;
 
 @end

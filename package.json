@@ -8,6 +8,7 @@
     "index.d.ts",
     "ios",
     "js",
+    "codegen",
     "react-native-segmented-control.podspec"
   ],
   "scripts": {
@@ -79,5 +80,10 @@
   "homepage": "https://github.com/react-native-segmented-control/segmented-control#readme",
   "publishConfig": {
     "access": "public"
+  },
+  "codegenConfig": {
+    "name": "SegmentedControl",
+    "type": "components",
+    "jsSrcsDir": "./codegen"
   }
 }

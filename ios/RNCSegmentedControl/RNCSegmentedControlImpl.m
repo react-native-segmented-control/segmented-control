@@ -5,13 +5,13 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-#import "RNCSegmentedControl.h"
+#import "RNCSegmentedControlImpl.h"
 
 #import <React/RCTConvert.h>
 #import <React/RCTEventDispatcher.h>
 #import <React/UIView+React.h>
 
-@implementation RNCSegmentedControl
+@implementation RNCSegmentedControlImpl
 
 - (instancetype)initWithFrame:(CGRect)frame {
   if ((self = [super initWithFrame:frame])) {
@@ -37,10 +37,12 @@
 								animated:NO];
 		}
 	}
+  [[UILabel appearanceWhenContainedIn:[UISegmentedControl class], nil] setNumberOfLines:0];
 	super.selectedSegmentIndex = _selectedIndex;
 }
 
 - (void)setSelectedIndex:(NSInteger)selectedIndex {
+    NSLog(@"IMPL set selectedIndex to %ld",selectedIndex);
   _selectedIndex = selectedIndex;
   super.selectedSegmentIndex = selectedIndex;
 }
@@ -76,11 +78,15 @@
 - (void)didChange {
   _selectedIndex = self.selectedSegmentIndex;
   if (_onChange) {
-	  NSString *segmentTitle = [self titleForSegmentAtIndex:_selectedIndex];
+    NSString *segmentTitle = [self titleForSegmentAtIndex:_selectedIndex];
     _onChange(@{
-		@"value" : (segmentTitle) ? segmentTitle : [self imageForSegmentAtIndex:_selectedIndex],
-      @"selectedSegmentIndex" : @(_selectedIndex)
+        @"value" : (segmentTitle) ? segmentTitle : [self imageForSegmentAtIndex:_selectedIndex],
+        @"selectedSegmentIndex" : @(_selectedIndex)
     });
+  }
+  if(_onChangeFabric){
+      NSString *segmentTitle = [self titleForSegmentAtIndex:_selectedIndex];
+      _onChangeFabric((segmentTitle) ? segmentTitle : @"RCTImage",_selectedIndex);
   }
 }
 
