@@ -27,6 +27,7 @@ type Props = $ReadOnly<{|
   activeFontStyle?: FontStyle,
   tabStyle?: ViewStyle,
   appearance?: 'dark' | 'light' | null,
+  accessibilityHint?: string,
 |}>;
 
 function isBase64(str) {
@@ -45,6 +46,7 @@ export const SegmentedControlTab = ({
   activeFontStyle = {},
   appearance,
   tabStyle,
+  accessibilityHint,
 }: Props): React.Node => {
   const colorSchemeHook = useColorScheme();
   const colorScheme = appearance || colorSchemeHook;
@@ -88,6 +90,8 @@ export const SegmentedControlTab = ({
       style={[styles.container, tabStyle]}
       disabled={!enabled}
       onPress={onSelect}
+      accessibilityHint={accessibilityHint}
+      accessibilityRole="button"
       accessibilityState={{selected: selected, disabled: !enabled}}>
       <View style={styles.default}>
         {typeof value === 'number' || typeof value === 'object' ? (
