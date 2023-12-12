@@ -120,6 +120,7 @@ const SegmentedControl = ({
             {
               transform: [{translateX: animation}],
               width: segmentWidth - 4,
+              zIndex: -1,
               backgroundColor:
                 tintColor || (colorScheme === 'dark' ? '#636366' : 'white'),
             },
