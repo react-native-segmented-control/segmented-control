@@ -60,15 +60,6 @@
     __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_13_0
   if (@available(iOS 13.0, *)) {
     [self setSelectedSegmentTintColor:tintColor];
-    NSDictionary *attributes = [NSDictionary
-        dictionaryWithObjectsAndKeys:tintColor, NSForegroundColorAttributeName,
-                                     nil];
-    NSDictionary *activeAttributes = [NSDictionary
-        dictionaryWithObjectsAndKeys:UIColor.labelColor,
-                                     NSForegroundColorAttributeName, nil];
-    [self setTitleTextAttributes:attributes forState:UIControlStateNormal];
-    [self setTitleTextAttributes:activeAttributes
-                        forState:UIControlStateSelected];
   }
 #endif
 }
