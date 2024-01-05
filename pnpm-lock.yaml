@@ -16,7 +16,7 @@ importers:
         version: 7.22.5
       '@babel/runtime':
         specifier: ^7.10.2
-        version: 7.22.5
+        version: 7.23.7
       '@expo/webpack-config':
         specifier: ^18.0.4
         version: 18.0.4(expo@46.0.16)
@@ -1543,6 +1543,12 @@ packages:
     dependencies:
       regenerator-runtime: 0.13.11
 
+  /@babel/runtime@7.23.7:
+    resolution: {integrity: sha512-w06OXVOFso7LcbzMiDGt+3X7Rh7Ho8MmgPoWU3rarH+8upf+wSU/grlGbWzQyr3DkdN6ZeuMFjpdwW0Q+HxobA==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      regenerator-runtime: 0.14.1
+
   /@babel/template@7.22.5:
     resolution: {integrity: sha512-X7yV7eiwAxdj9k94NEylvbVHLiVG1nvzCV2EAowhxLTwODV1jl9UzZ48leOC0sH7OnuHrIkllaBgneUykIcZaw==}
     engines: {node: '>=6.9.0'}
@@ -1646,7 +1652,7 @@ packages:
     resolution: {integrity: sha512-P6yogdPCRKaoLjuH7D8jgq6kTzM4gWuQ+vssBPWhbnoymV5AClQOxvACPDHD+biKhvGsaXEQLMoi93lPQzcDlQ==}
     hasBin: true
     dependencies:
-      '@babel/runtime': 7.22.5
+      '@babel/runtime': 7.23.7
       '@expo/code-signing-certificates': 0.0.2
       '@expo/config': 7.0.3
       '@expo/config-plugins': 5.0.4
@@ -6277,7 +6283,7 @@ packages:
     resolution: {integrity: sha512-lZETkf3t+gbZjKjSceIpU7I8Rmm5nZ0ZG1WPzNBBbm+k64/+kKV96s6RqS37W1TTDpIbd+AucT9kKpvtv0JB2A==}
     hasBin: true
     dependencies:
-      '@babel/runtime': 7.22.5
+      '@babel/runtime': 7.23.7
       '@expo/cli': 0.3.2(expo-modules-autolinking@0.10.3)
       '@expo/vector-icons': 13.0.0
       babel-preset-expo: 9.2.2(@babel/core@7.22.5)
@@ -10988,7 +10994,7 @@ packages:
     resolution: {integrity: sha512-YOR/kQ1etMNc6/+DhYXiZQIqIz8Oox+5QvSuA+t8W0DfuUfIQkcLmEVT/11Eq5x7jcEjZAfc0yIm5yU+mhOTJw==}
     hasBin: true
     peerDependencies:
-      '@react-native-community/cli': '>=4.10.0'
+      '@react-native-community/cli': 4.10.0
       '@react-native-community/cli-platform-android': '>=4.10.0'
       '@react-native-community/cli-platform-ios': '>=4.10.0'
       mustache: ^4.0.0
@@ -11027,7 +11033,7 @@ packages:
     resolution: {integrity: sha512-YOR/kQ1etMNc6/+DhYXiZQIqIz8Oox+5QvSuA+t8W0DfuUfIQkcLmEVT/11Eq5x7jcEjZAfc0yIm5yU+mhOTJw==}
     hasBin: true
     peerDependencies:
-      '@react-native-community/cli': '>=4.10.0'
+      '@react-native-community/cli': 4.10.0
       '@react-native-community/cli-platform-android': '>=4.10.0'
       '@react-native-community/cli-platform-ios': '>=4.10.0'
       mustache: ^4.0.0
@@ -11161,7 +11167,7 @@ packages:
     peerDependencies:
       react: 16.13.1
     dependencies:
-      '@babel/runtime': 7.22.5
+      '@babel/runtime': 7.23.7
       '@react-native-community/cli': 4.10.0(@babel/core@7.22.5)(react-native@0.63.4)
       '@react-native-community/cli-platform-android': 4.13.0
       '@react-native-community/cli-platform-ios': 4.13.0
@@ -11341,10 +11347,13 @@ packages:
   /regenerator-runtime@0.13.11:
     resolution: {integrity: sha512-kY1AZVr2Ra+t+piVaJ4gxaFaReZVH40AKNo7UCX6W+dEwBo/2oZJzqfuN1qLq1oL45o56cPaTXELwrTh8Fpggg==}
 
+  /regenerator-runtime@0.14.1:
+    resolution: {integrity: sha512-dYnhHh0nJoMfnkZs6GmmhFknAGRrLznOu5nc9ML+EJxGvrx6H7teuevqVqCuPcPK//3eDrrjQhehXVx9cnkGdw==}
+
   /regenerator-transform@0.15.1:
     resolution: {integrity: sha512-knzmNAcuyxV+gQCufkYcvOqX/qIIfHLv0u5x79kRxuGojfYVky1f15TzZEu2Avte8QGepvUNTnLskf8E6X6Vyg==}
     dependencies:
-      '@babel/runtime': 7.22.5
+      '@babel/runtime': 7.23.7
 
   /regex-not@1.0.2:
     resolution: {integrity: sha512-J6SDjUgDxQj5NusnOtdFxDwN/+HWykR8GELwctJ7mdqhcyy1xEc4SRFHUXvxTp661YaVKAjfRLZ9cCqS6tn32A==}
