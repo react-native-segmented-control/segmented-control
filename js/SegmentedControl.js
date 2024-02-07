@@ -42,6 +42,7 @@ const SegmentedControl = ({
   const colorScheme = appearance || colorSchemeHook;
   const [segmentWidth, setSegmentWidth] = React.useState(0);
   const animation = React.useRef(new Animated.Value(0)).current;
+  const [containerWidth, setContainerWidth] = React.useState(0);
 
   const handleChange = (index: number) => {
     // mocks iOS's nativeEvent
@@ -67,6 +68,14 @@ const SegmentedControl = ({
     }
   }, [animation, segmentWidth, selectedIndex]);
 
+  React.useEffect(() => {
+    const newSegmentWidth = values.length ? containerWidth / values.length : 0;
+    if (newSegmentWidth !== segmentWidth) {
+      animation.setValue(newSegmentWidth * (selectedIndex || 0));
+      setSegmentWidth(newSegmentWidth);
+    }
+  }, [values.length, containerWidth]);
+
   return (
     <View
       style={[
@@ -81,11 +90,7 @@ const SegmentedControl = ({
           layout: {width},
         },
       }) => {
-        const newSegmentWidth = values.length ? width / values.length : 0;
-        if (newSegmentWidth !== segmentWidth) {
-          animation.setValue(newSegmentWidth * (selectedIndex || 0));
-          setSegmentWidth(newSegmentWidth);
-        }
+        setContainerWidth(width);
       }}>
       {!backgroundColor && !tintColor && (
         <SegmentsSeparators
