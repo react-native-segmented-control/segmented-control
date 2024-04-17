@@ -1,6 +1,6 @@
 {
   "name": "@react-native-segmented-control/segmented-control",
-  "version": "2.4.3",
+  "version": "2.5.0",
   "description": "React Native SegmentedControlIOS library",
   "main": "js/index.js",
   "types": "index.d.ts",
@@ -51,7 +51,7 @@
     "react-native-web": "^0.14.10",
     "react-test-renderer": "17.0.2",
     "rimraf": "^3.0.2",
-    "semantic-release": "^19.0.5",
+    "semantic-release": "^23.0.6",
     "typescript": "^4"
   },
   "resolutions": {

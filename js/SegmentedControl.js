@@ -36,6 +36,7 @@ const SegmentedControl = ({
   fontStyle,
   activeFontStyle,
   appearance,
+  accessibilityHintSeperator = 'out of',
 }: SegmentedControlProps): React.Node => {
   const colorSchemeHook = useColorScheme();
   const colorScheme = appearance || colorSchemeHook;
@@ -99,6 +100,7 @@ const SegmentedControl = ({
               <SegmentedControlTab
                 enabled={enabled}
                 selected={selectedIndex === index}
+                accessibilityHint={`${index + 1} ${accessibilityHintSeperator} ${values.length}`}
                 key={index}
                 value={value}
                 tintColor={tintColor}
@@ -120,6 +122,7 @@ const SegmentedControl = ({
             {
               transform: [{translateX: animation}],
               width: segmentWidth - 4,
+              zIndex: -1,
               backgroundColor:
                 tintColor || (colorScheme === 'dark' ? '#636366' : 'white'),
             },
