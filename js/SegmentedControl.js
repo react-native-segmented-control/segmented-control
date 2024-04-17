@@ -100,7 +100,9 @@ const SegmentedControl = ({
               <SegmentedControlTab
                 enabled={enabled}
                 selected={selectedIndex === index}
-                accessibilityHint={`${index + 1} ${accessibilityHintSeperator} ${values.length}`}
+                accessibilityHint={`${
+                  index + 1
+                } ${accessibilityHintSeperator} ${values.length}`}
                 key={index}
                 value={value}
                 tintColor={tintColor}
