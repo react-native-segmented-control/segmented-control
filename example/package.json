@@ -16,7 +16,7 @@
     "windows": "react-native run-windows --sln windows/SegmentedControlExample.sln"
   },
   "dependencies": {
-    "hermes-engine": "0.10.0",
+    "hermes-engine": "0.11.0",
     "react": "16.13.1",
     "react-native": "0.63.4",
     "react-native-macos": "^0.63.0",
