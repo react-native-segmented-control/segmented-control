@@ -49,7 +49,7 @@
     "react-native": "0.63.4",
     "react-native-test-app": "1.4.6",
     "react-native-web": "^0.14.10",
-    "react-test-renderer": "17.0.2",
+    "react-test-renderer": "18.3.1",
     "rimraf": "^3.0.2",
     "semantic-release": "^23.0.6",
     "typescript": "^4"
