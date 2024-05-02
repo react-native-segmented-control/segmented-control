@@ -42,6 +42,7 @@ const SegmentedControl = ({
   const colorScheme = appearance || colorSchemeHook;
   const [segmentWidth, setSegmentWidth] = React.useState(0);
   const animation = React.useRef(new Animated.Value(0)).current;
+  const ref = React.useRef();
 
   const handleChange = (index: number) => {
     // mocks iOS's nativeEvent
@@ -55,6 +56,17 @@ const SegmentedControl = ({
     onValueChange && onValueChange(values[index]);
   };
 
+  const updateSegmentWidth = React.useCallback(
+    (width: number) => {
+      const newSegmentWidth = values.length ? width / values.length : 0;
+      if (newSegmentWidth !== segmentWidth) {
+        animation.setValue(newSegmentWidth * (selectedIndex || 0));
+        setSegmentWidth(newSegmentWidth);
+      }
+    },
+    [values.length, segmentWidth, animation, selectedIndex],
+  );
+
   React.useEffect(() => {
     if (animation && segmentWidth) {
       let isRTL = I18nManager.isRTL ? -segmentWidth : segmentWidth;
@@ -67,8 +79,15 @@ const SegmentedControl = ({
     }
   }, [animation, segmentWidth, selectedIndex]);
 
+  React.useEffect(() => {
+    if (ref.current) {
+      ref.current.measure((_x, _y, width) => updateSegmentWidth(width));
+    }
+  }, [values]);
+
   return (
     <View
+      ref={ref}
       style={[
         styles.default,
         style,
@@ -80,13 +99,7 @@ const SegmentedControl = ({
         nativeEvent: {
           layout: {width},
         },
-      }) => {
-        const newSegmentWidth = values.length ? width / values.length : 0;
-        if (newSegmentWidth !== segmentWidth) {
-          animation.setValue(newSegmentWidth * (selectedIndex || 0));
-          setSegmentWidth(newSegmentWidth);
-        }
-      }}>
+      }) => updateSegmentWidth(width)}>
       {!backgroundColor && !tintColor && (
         <SegmentsSeparators
           values={values.length}
