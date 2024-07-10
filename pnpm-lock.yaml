@@ -81,8 +81,8 @@ importers:
         specifier: ^0.14.10
         version: 0.14.10(react-dom@17.0.2)(react@17.0.2)
       react-test-renderer:
-        specifier: 17.0.2
-        version: 17.0.2(react@17.0.2)
+        specifier: 18.3.1
+        version: 18.3.1(react@17.0.2)
       rimraf:
         specifier: ^3.0.2
         version: 3.0.2
@@ -133,8 +133,8 @@ importers:
         specifier: 1.4.6
         version: 1.4.6(react-native-macos@0.63.1)(react-native-windows@0.63.0)(react-native@0.63.4)(react@16.13.1)
       react-test-renderer:
-        specifier: 16.13.1
-        version: 16.13.1(react@16.13.1)
+        specifier: 18.3.1
+        version: 18.3.1(react@16.13.1)
 
 packages:
 
@@ -10878,7 +10878,7 @@ packages:
     dependencies:
       '@jest/schemas': 29.6.3
       ansi-styles: 5.2.0
-      react-is: 18.2.0
+      react-is: 18.3.1
     dev: true
 
   /process-nextick-args@2.0.1:
@@ -11030,8 +11030,8 @@ packages:
     resolution: {integrity: sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==}
     dev: true
 
-  /react-is@18.2.0:
-    resolution: {integrity: sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==}
+  /react-is@18.3.1:
+    resolution: {integrity: sha512-/LLMVyas0ljjAtoYiPqYiL8VWXzUUdThrmU5+n20DZv+a+ClRoevUzw5JxU+Ieh5/c87ytoTBV9G1FiKfNJdmg==}
     dev: true
 
   /react-native-macos@0.63.1(@babel/core@7.22.5)(react-native@0.63.4)(react@16.13.1):
@@ -11295,6 +11295,16 @@ packages:
     resolution: {integrity: sha512-Hwln1VNuGl/6bVwnd0Xdn1e84gT/8T9aYNL+HAKDArLCS7LWjwr7StE30IEYbIkx0Vi3vs+coQxe+SQDbGbbpA==}
     engines: {node: '>=0.10.0'}
 
+  /react-shallow-renderer@16.15.0(react@16.13.1):
+    resolution: {integrity: sha512-oScf2FqQ9LFVQgA73vr86xl2NaOIX73rh+YFqcOp68CWj56tSfgtGKrEbyhCj0rSijyG9M1CYprTh39fBi5hzA==}
+    peerDependencies:
+      react: ^16.0.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      object-assign: 4.1.1
+      react: 16.13.1
+      react-is: 18.3.1
+    dev: true
+
   /react-shallow-renderer@16.15.0(react@17.0.2):
     resolution: {integrity: sha512-oScf2FqQ9LFVQgA73vr86xl2NaOIX73rh+YFqcOp68CWj56tSfgtGKrEbyhCj0rSijyG9M1CYprTh39fBi5hzA==}
     peerDependencies:
@@ -11302,31 +11312,29 @@ packages:
     dependencies:
       object-assign: 4.1.1
       react: 17.0.2
-      react-is: 18.2.0
+      react-is: 18.3.1
     dev: true
 
-  /react-test-renderer@16.13.1(react@16.13.1):
-    resolution: {integrity: sha512-Sn2VRyOK2YJJldOqoh8Tn/lWQ+ZiKhyZTPtaO0Q6yNj+QDbmRkVFap6pZPy3YQk8DScRDfyqm/KxKYP9gCMRiQ==}
+  /react-test-renderer@18.3.1(react@16.13.1):
+    resolution: {integrity: sha512-KkAgygexHUkQqtvvx/otwxtuFu5cVjfzTCtjXLH9boS19/Nbtg84zS7wIQn39G8IlrhThBpQsMKkq5ZHZIYFXA==}
     peerDependencies:
-      react: ^16.13.1
+      react: ^18.3.1
     dependencies:
-      object-assign: 4.1.1
-      prop-types: 15.8.1
       react: 16.13.1
-      react-is: 16.13.1
-      scheduler: 0.19.1
+      react-is: 18.3.1
+      react-shallow-renderer: 16.15.0(react@16.13.1)
+      scheduler: 0.23.2
     dev: true
 
-  /react-test-renderer@17.0.2(react@17.0.2):
-    resolution: {integrity: sha512-yaQ9cB89c17PUb0x6UfWRs7kQCorVdHlutU1boVPEsB8IDZH6n9tHxMacc3y0JoXOJUsZb/t/Mb8FUWMKaM7iQ==}
+  /react-test-renderer@18.3.1(react@17.0.2):
+    resolution: {integrity: sha512-KkAgygexHUkQqtvvx/otwxtuFu5cVjfzTCtjXLH9boS19/Nbtg84zS7wIQn39G8IlrhThBpQsMKkq5ZHZIYFXA==}
     peerDependencies:
-      react: 17.0.2
+      react: ^18.3.1
     dependencies:
-      object-assign: 4.1.1
       react: 17.0.2
-      react-is: 17.0.2
+      react-is: 18.3.1
       react-shallow-renderer: 16.15.0(react@17.0.2)
-      scheduler: 0.20.2
+      scheduler: 0.23.2
     dev: true
 
   /react-timer-mixin@0.13.4:
@@ -11740,6 +11748,12 @@ packages:
     dependencies:
       loose-envify: 1.4.0
       object-assign: 4.1.1
+    dev: true
+
+  /scheduler@0.23.2:
+    resolution: {integrity: sha512-UOShsPwz7NrMUqhR6t0hWjFduvOzbtv7toDH1/hIrfRNIDBnnBWd0CwJTGvTpngVlmwGCdP9/Zl/tVrDqcuYzQ==}
+    dependencies:
+      loose-envify: 1.4.0
     dev: true
 
   /schema-utils@2.7.1:
