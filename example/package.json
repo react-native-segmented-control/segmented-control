@@ -30,7 +30,7 @@
     "react-native-test-app": "1.4.6",
     "react-test-renderer": "16.13.1",
     "@rnx-kit/metro-config": "1.3.7",
-    "@rnx-kit/metro-resolver-symlinks":"0.1.30"
+    "@rnx-kit/metro-resolver-symlinks":"0.2.0"
   },
   "jest": {
     "preset": "react-native"
