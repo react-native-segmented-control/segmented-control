@@ -94,8 +94,7 @@ export const SegmentedControlTab = ({
       onPress={onSelect}
       accessibilityHint={accessibilityHint}
       accessibilityRole="button"
-      accessibilityState={{selected: selected, disabled: !enabled}}
-    >
+      accessibilityState={{selected: selected, disabled: !enabled}}>
       <View testID={testID} style={styles.default}>
         {typeof value === 'number' || typeof value === 'object' ? (
           <Image source={value} style={styles.segmentImage} />
