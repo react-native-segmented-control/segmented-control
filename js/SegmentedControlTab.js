@@ -28,6 +28,7 @@ type Props = $ReadOnly<{|
   tabStyle?: ViewStyle,
   appearance?: 'dark' | 'light' | null,
   accessibilityHint?: string,
+  testID?: string,
 |}>;
 
 function isBase64(str) {
@@ -47,6 +48,7 @@ export const SegmentedControlTab = ({
   appearance,
   tabStyle,
   accessibilityHint,
+  testID,
 }: Props): React.Node => {
   const colorSchemeHook = useColorScheme();
   const colorScheme = appearance || colorSchemeHook;
@@ -92,8 +94,9 @@ export const SegmentedControlTab = ({
       onPress={onSelect}
       accessibilityHint={accessibilityHint}
       accessibilityRole="button"
-      accessibilityState={{selected: selected, disabled: !enabled}}>
-      <View style={styles.default}>
+      accessibilityState={{selected: selected, disabled: !enabled}}
+    >
+      <View testID={testID} style={styles.default}>
         {typeof value === 'number' || typeof value === 'object' ? (
           <Image source={value} style={styles.segmentImage} />
         ) : isBase64(value) ? (
