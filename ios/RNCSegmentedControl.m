@@ -88,4 +88,17 @@
 #endif
 }
 
+- (NSArray *)accessibilityElements {
+  NSArray *elements = [super accessibilityElements];
+  [elements enumerateObjectsUsingBlock:^(UIView *obj, NSUInteger idx, BOOL *stop) {
+    @try {
+      obj.accessibilityIdentifier = self.testIDS[idx];      
+    } @catch (NSException *exception) {
+      NSLog(@"%@", exception);
+    }
+  }];
+
+  return elements;
+}
+
 @end
