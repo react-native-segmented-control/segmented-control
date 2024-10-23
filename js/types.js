@@ -107,4 +107,10 @@ export type SegmentedControlProps = $ReadOnly<{|
    * Touchable style properties for Segmented Control Tab
    */
   tabStyle?: ViewStyle,
+
+
+  /**
+   * array testID to each segment button
+   */
+  testIDS: $ReadOnlyArray<string | number | Object>,
 |}>;

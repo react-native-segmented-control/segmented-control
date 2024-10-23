@@ -27,6 +27,7 @@ RCT_EXPORT_VIEW_PROPERTY(momentary, BOOL)
 RCT_EXPORT_VIEW_PROPERTY(enabled, BOOL)
 RCT_EXPORT_VIEW_PROPERTY(onChange, RCTBubblingEventBlock)
 RCT_EXPORT_VIEW_PROPERTY(appearance, NSString)
+RCT_EXPORT_VIEW_PROPERTY(testIDS, NSArray)
 
 RCT_CUSTOM_VIEW_PROPERTY(fontStyle, NSObject, RNCSegmentedControl) {
 #if defined(__IPHONE_OS_VERSION_MAX_ALLOWED) && defined(__IPHONE_13_0) &&      \

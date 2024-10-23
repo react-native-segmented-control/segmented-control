@@ -11,5 +11,6 @@
 @interface RNCSegmentedControl : UISegmentedControl
 @property(nonatomic, assign) NSInteger selectedIndex;
 @property(nonatomic, copy) RCTBubblingEventBlock onChange;
+@property(nonatomic, copy) NSArray *testIDS;
 
 @end

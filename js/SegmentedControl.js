@@ -37,6 +37,7 @@ const SegmentedControl = ({
   activeFontStyle,
   appearance,
   accessibilityHintSeperator = 'out of',
+  testIDS,
 }: SegmentedControlProps): React.Node => {
   const colorSchemeHook = useColorScheme();
   const colorScheme = appearance || colorSchemeHook;
@@ -113,6 +114,7 @@ const SegmentedControl = ({
             return (
               <SegmentedControlTab
                 enabled={enabled}
+                testID={(testIDS?.length ?? 0) > index ? testIDS[index] : `${index}`}
                 selected={selectedIndex === index}
                 accessibilityHint={`${
                   index + 1
