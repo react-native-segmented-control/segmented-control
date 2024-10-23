@@ -114,7 +114,9 @@ const SegmentedControl = ({
             return (
               <SegmentedControlTab
                 enabled={enabled}
-                testID={(testIDS?.length ?? 0) > index ? testIDS[index] : `${index}`}
+                testID={
+                  (testIDS?.length ?? 0) > index ? testIDS[index] : `${index}`
+                }
                 selected={selectedIndex === index}
                 accessibilityHint={`${
                   index + 1
