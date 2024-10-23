@@ -108,9 +108,8 @@ export type SegmentedControlProps = $ReadOnly<{|
    */
   tabStyle?: ViewStyle,
 
-
   /**
    * array testID to each segment button
    */
-  testIDS: $ReadOnlyArray<string | number | Object>,
+  testIDS: $ReadOnlyArray<string>,
 |}>;
