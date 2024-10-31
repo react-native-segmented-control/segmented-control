@@ -13,7 +13,7 @@ import {
   TouchableOpacity,
   View,
   useColorScheme,
-  Platform
+  Platform,
 } from 'react-native';
 
 import type {FontStyle, ViewStyle} from './types';
@@ -97,8 +97,11 @@ export const SegmentedControlTab = ({
       accessibilityRole="button"
       accessibilityState={{selected: selected, disabled: !enabled}}
       testID={testID}
-      accessible={true} 
-      accessibilityLabel={Platform.select({android: testID, ios: value == 'string' ? value : testID})}>
+      accessible={true}
+      accessibilityLabel={Platform.select({
+        android: testID,
+        ios: typeof value === 'string' ? value : testID,
+      })}>
       <View style={styles.default}>
         {typeof value === 'number' || typeof value === 'object' ? (
           <Image source={value} style={styles.segmentImage} />
