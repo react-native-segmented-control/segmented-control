@@ -84,7 +84,7 @@ const SegmentedControl = ({
     if (ref.current) {
       ref.current.measure((_x, _y, width) => updateSegmentWidth(width));
     }
-  }, [values]);
+  }, [values, updateSegmentWidth]);
 
   return (
     <View
