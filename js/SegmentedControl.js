@@ -150,20 +150,6 @@ const SegmentedControl = ({
             );
           })}
       </View>
-      {selectedIndex != null && segmentWidth ? (
-        <Animated.View
-          style={[
-            styles.slider,
-            sliderStyle,
-            {
-              transform: [{translateX: animation}],
-              width: segmentWidth - 4,
-              backgroundColor:
-                tintColor || (colorScheme === 'dark' ? '#636366' : 'white'),
-            },
-          ]}
-        />
-      ) : null}
     </View>
   );
 };
