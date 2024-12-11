@@ -101,8 +101,7 @@ const SegmentedControl = ({
         nativeEvent: {
           layout: {width},
         },
-      }) => updateSegmentWidth(width)}
-    >
+      }) => updateSegmentWidth(width)}>
       {!backgroundColor && !tintColor && (
         <SegmentsSeparators
           values={values.length}
