@@ -38,6 +38,7 @@ const SegmentedControl = ({
   appearance,
   accessibilityHintSeperator = 'out of',
   testIDS,
+  sliderStyle,
 }: SegmentedControlProps): React.Node => {
   const colorSchemeHook = useColorScheme();
   const colorScheme = appearance || colorSchemeHook;
@@ -118,6 +119,7 @@ const SegmentedControl = ({
               backgroundColor:
                 tintColor || (colorScheme === 'dark' ? '#636366' : 'white'),
             },
+            sliderStyle,
           ]}
         />
       ) : null}
