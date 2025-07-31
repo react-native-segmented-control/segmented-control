@@ -116,7 +116,7 @@ jobs:
       - name: Install Dependencies
         run: pnpm install
       - name: Build android
-        run: cd example && pnpm build:android
+        run: cd example && NODE_OPTIONS="--openssl-legacy-provider" pnpm build:android
       - name: Build Android Example App and Library
         run: cd example/android && ./gradlew clean assembleDebug
   ios:
@@ -145,6 +145,6 @@ jobs:
       - name: Install Dependencies
         run: pnpm install
       - name: Build ios
-        run: cd example && pnpm build:ios
+        run: cd example && NODE_OPTIONS="--openssl-legacy-provider" pnpm build:ios
       - name: Pod install
         run: cd example && pod install --project-directory=ios
