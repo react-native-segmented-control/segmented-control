@@ -18,7 +18,7 @@ export const SegmentsSeparators = ({
   selectedIndex,
 }: Props): React.Node => {
   const colorScheme = useColorScheme();
-  const hide = (val) => {
+  const hide = (val: number) => {
     return selectedIndex === val || selectedIndex === val + 1;
   };
 

@@ -116,4 +116,8 @@ export type SegmentedControlProps = $ReadOnly<{|
    * Style properties for the slider component (Animated.View)
    */
   sliderStyle?: ViewStyle,
+  /**
+   * Accessibility hint separator text
+   */
+  accessibilityHintSeperator?: string,
 |}>;

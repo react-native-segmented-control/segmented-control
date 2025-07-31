@@ -44,7 +44,7 @@ const SegmentedControl = ({
   const colorScheme = appearance || colorSchemeHook;
   const [segmentWidth, setSegmentWidth] = React.useState(0);
   const animation = React.useRef(new Animated.Value(0)).current;
-  const ref = React.useRef();
+  const ref = React.useRef<?React.ElementRef<typeof View>>(null);
 
   const handleChange = (index: number) => {
     // mocks iOS's nativeEvent
@@ -75,7 +75,7 @@ const SegmentedControl = ({
       Animated.timing(animation, {
         toValue: isRTL * (selectedIndex || 0),
         duration: 300,
-        easing: Easing.out(Easing.quad),
+        easing: Easing.out(Easing.quad.bind(Easing)),
         useNativeDriver: true,
       }).start();
     }
@@ -83,7 +83,9 @@ const SegmentedControl = ({
 
   React.useEffect(() => {
     if (ref.current) {
-      ref.current.measure((_x, _y, width) => updateSegmentWidth(width));
+      ref.current.measure((_x: number, _y: number, width: number) =>
+        updateSegmentWidth(width),
+      );
     }
   }, [values, updateSegmentWidth]);
 
