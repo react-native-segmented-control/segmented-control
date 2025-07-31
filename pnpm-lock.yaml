@@ -44,6 +44,9 @@ importers:
       eslint:
         specifier: '8'
         version: 8.57.1
+      eslint-plugin-ft-flow:
+        specifier: ^3.0.11
+        version: 3.0.11(eslint@8.57.1)(hermes-eslint@0.31.0)
       eslint-plugin-prettier:
         specifier: ^5.0.0
         version: 5.5.3(@types/eslint@9.6.1)(eslint-config-prettier@8.10.2(eslint@8.57.1))(eslint@8.57.1)(prettier@3.6.2)
@@ -3082,6 +3085,12 @@ packages:
       '@babel/eslint-parser': ^7.12.0
       eslint: ^8.1.0
 
+  eslint-plugin-ft-flow@3.0.11:
+    resolution: {integrity: sha512-6ZJ4KYGYjIosCcU883zBBT1nFsKP58xrTOwguiw3/HRq0EpYAyhrF1nCGbK7V23cmKtPXMpDfl8qPupt5s5W8w==}
+    peerDependencies:
+      eslint: ^8.56.0 || ^9.0.0
+      hermes-eslint: '>=0.15.0'
+
   eslint-plugin-jest@26.9.0:
     resolution: {integrity: sha512-TWJxWGp1J628gxh2KhaH1H1paEdgE2J61BBF1I59c6xWeL5+D1BzMxGDN/nXAfX+aSkR5u80K+XhskK6Gwq9ng==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
@@ -3760,6 +3769,15 @@ packages:
   hermes-engine@0.5.1:
     resolution: {integrity: sha512-hLwqh8dejHayjlpvZY40e1aDCDvyP98cWx/L5DhAjSJLH8g4z9Tp08D7y4+3vErDsncPOdf1bxm+zUWpx0/Fxg==}
     deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+
+  hermes-eslint@0.31.0:
+    resolution: {integrity: sha512-KI3az1BXk7xH6izcrjjLR62NlPQvfmOSuwBce1rnsf50/dkwbBqwY1w/kqvdqUFGHk3/3S8vJKDR23Ge/fu5hw==}
+
+  hermes-estree@0.31.0:
+    resolution: {integrity: sha512-Y6/esCKvrWHgAGABeP0PzjHHFr7gXn/fA+5hpeRc51k0LDqPLxfxKgnxSIWUGiLBM3+OvV27nCW0kc99+V2+hQ==}
+
+  hermes-parser@0.31.0:
+    resolution: {integrity: sha512-M3bdvNBKA/F4r0M6k2taRj7yemj3oExAWePAEpKLK+fNGHRXXSg5vB3eqB6j4Or++cmqisRyPr/lTSFiIhTkVw==}
 
   highlight.js@10.7.3:
     resolution: {integrity: sha512-tzcUFauisWKNHaRkN4Wjl/ZA07gENAjFl3J/c480dprkGTg5EQstgaNFqBfUqCq54kZRIEcreTsAgF/m2quD7A==}
@@ -11507,6 +11525,13 @@ snapshots:
       lodash: 4.17.21
       string-natural-compare: 3.0.1
 
+  eslint-plugin-ft-flow@3.0.11(eslint@8.57.1)(hermes-eslint@0.31.0):
+    dependencies:
+      eslint: 8.57.1
+      hermes-eslint: 0.31.0
+      lodash: 4.17.21
+      string-natural-compare: 3.0.1
+
   eslint-plugin-jest@26.9.0(@typescript-eslint/eslint-plugin@5.62.0(@typescript-eslint/parser@5.62.0(eslint@8.57.1)(typescript@4.9.5))(eslint@8.57.1)(typescript@4.9.5))(eslint@8.57.1)(jest@29.7.0(@types/node@24.1.0))(typescript@4.9.5):
     dependencies:
       '@typescript-eslint/utils': 5.62.0(eslint@8.57.1)(typescript@4.9.5)
@@ -12431,6 +12456,18 @@ snapshots:
   hermes-engine@0.10.0: {}
 
   hermes-engine@0.5.1: {}
+
+  hermes-eslint@0.31.0:
+    dependencies:
+      esrecurse: 4.3.0
+      hermes-estree: 0.31.0
+      hermes-parser: 0.31.0
+
+  hermes-estree@0.31.0: {}
+
+  hermes-parser@0.31.0:
+    dependencies:
+      hermes-estree: 0.31.0
 
   highlight.js@10.7.3: {}
 
