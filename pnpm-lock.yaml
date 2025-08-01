@@ -102,17 +102,17 @@ importers:
         specifier: 0.10.0
         version: 0.10.0
       react:
-        specifier: 16.13.1
-        version: 16.13.1
+        specifier: 17.0.2
+        version: 17.0.2
       react-native:
         specifier: 0.63.4
-        version: 0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@16.13.1)
+        version: 0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@17.0.2)
       react-native-macos:
         specifier: ^0.63.0
-        version: 0.63.43(@babel/core@7.28.0)(encoding@0.1.13)(react-native@0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@16.13.1))(react@16.13.1)
+        version: 0.63.43(@babel/core@7.28.0)(encoding@0.1.13)(react-native@0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@17.0.2))(react@17.0.2)
       react-native-windows:
         specifier: ^0.63.0
-        version: 0.63.41(react-native@0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@16.13.1))(react@16.13.1)
+        version: 0.63.41(react-native@0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@17.0.2))(react@17.0.2)
     devDependencies:
       '@babel/core':
         specifier: ^7.10.2
@@ -122,7 +122,7 @@ importers:
         version: 7.28.2
       '@rnx-kit/metro-config':
         specifier: 1.3.7
-        version: 1.3.7(@babel/core@7.28.0)(@babel/plugin-transform-typescript@7.28.0(@babel/core@7.28.0))(@babel/runtime@7.28.2)(metro-config@0.58.0)(metro-react-native-babel-preset@0.77.0(@babel/core@7.28.0))(metro-resolver@0.58.0)(react-native@0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@16.13.1))(react@16.13.1)
+        version: 1.3.7(@babel/core@7.28.0)(@babel/plugin-transform-typescript@7.28.0(@babel/core@7.28.0))(@babel/runtime@7.28.2)(metro-config@0.58.0)(metro-react-native-babel-preset@0.77.0(@babel/core@7.28.0))(metro-resolver@0.58.0)(react-native@0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@17.0.2))(react@17.0.2)
       '@rnx-kit/metro-resolver-symlinks':
         specifier: 0.1.30
         version: 0.1.30
@@ -134,10 +134,10 @@ importers:
         version: 3.0.1
       react-native-test-app:
         specifier: 1.4.6
-        version: 1.4.6(@react-native-community/cli-platform-android@4.13.0(encoding@0.1.13))(@react-native-community/cli-platform-ios@4.13.0(encoding@0.1.13))(@react-native-community/cli@4.10.0(@babel/core@7.28.0)(encoding@0.1.13)(react-native@0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@16.13.1)))(mustache@4.2.0)(react-native-macos@0.63.43(@babel/core@7.28.0)(encoding@0.1.13)(react-native@0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@16.13.1))(react@16.13.1))(react-native-windows@0.63.41(react-native@0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@16.13.1))(react@16.13.1))(react-native@0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@16.13.1))(react@16.13.1)
+        version: 1.4.6(@react-native-community/cli-platform-android@4.13.0(encoding@0.1.13))(@react-native-community/cli-platform-ios@4.13.0(encoding@0.1.13))(@react-native-community/cli@4.10.0(@babel/core@7.28.0)(encoding@0.1.13)(react-native@0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@17.0.2)))(mustache@4.2.0)(react-native-macos@0.63.43(@babel/core@7.28.0)(encoding@0.1.13)(react-native@0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@17.0.2))(react@17.0.2))(react-native-windows@0.63.41(react-native@0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@17.0.2))(react@17.0.2))(react-native@0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@17.0.2))(react@17.0.2)
       react-test-renderer:
-        specifier: 16.13.1
-        version: 16.13.1(react@16.13.1)
+        specifier: 17.0.2
+        version: 17.0.2(react@17.0.2)
 
 packages:
 
@@ -6021,11 +6021,6 @@ packages:
     peerDependencies:
       react: ^16.0.0 || ^17.0.0 || ^18.0.0
 
-  react-test-renderer@16.13.1:
-    resolution: {integrity: sha512-Sn2VRyOK2YJJldOqoh8Tn/lWQ+ZiKhyZTPtaO0Q6yNj+QDbmRkVFap6pZPy3YQk8DScRDfyqm/KxKYP9gCMRiQ==}
-    peerDependencies:
-      react: ^16.13.1
-
   react-test-renderer@17.0.2:
     resolution: {integrity: sha512-yaQ9cB89c17PUb0x6UfWRs7kQCorVdHlutU1boVPEsB8IDZH6n9tHxMacc3y0JoXOJUsZb/t/Mb8FUWMKaM7iQ==}
     peerDependencies:
@@ -6033,10 +6028,6 @@ packages:
 
   react-timer-mixin@0.13.4:
     resolution: {integrity: sha512-4+ow23tp/Tv7hBM5Az5/Be/eKKF7DIvJ09voz5LyHGQaqqz9WV8YMs31eFvcYQs7d451LSg7kDJV70XYN/Ug/Q==}
-
-  react@16.13.1:
-    resolution: {integrity: sha512-YMZQQq32xHLX0bz5Mnibv1/LHb3Sqzngu7xstSM+vrkE5Kzr9xE0yMByK5kMoTK30YVJE61WfbxIFFvfeDKT1w==}
-    engines: {node: '>=0.10.0'}
 
   react@17.0.2:
     resolution: {integrity: sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA==}
@@ -9290,50 +9281,6 @@ snapshots:
 
   '@react-native-community/cli-types@4.10.1': {}
 
-  '@react-native-community/cli@4.10.0(@babel/core@7.28.0)(encoding@0.1.13)(react-native@0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@16.13.1))':
-    dependencies:
-      '@hapi/joi': 15.1.1
-      '@react-native-community/cli-debugger-ui': 4.13.1
-      '@react-native-community/cli-server-api': 4.13.1(encoding@0.1.13)
-      '@react-native-community/cli-tools': 4.13.0(encoding@0.1.13)
-      '@react-native-community/cli-types': 4.10.1
-      chalk: 3.0.0
-      command-exists: 1.2.9
-      commander: 2.20.3
-      cosmiconfig: 5.2.1
-      deepmerge: 3.3.0
-      envinfo: 7.14.0
-      execa: 1.0.0
-      find-up: 4.1.0
-      fs-extra: 8.1.0
-      glob: 7.2.3
-      graceful-fs: 4.2.11
-      inquirer: 3.3.0
-      leven: 3.1.0
-      lodash: 4.17.21
-      metro: 0.58.0(encoding@0.1.13)
-      metro-config: 0.58.0(encoding@0.1.13)
-      metro-core: 0.58.0
-      metro-react-native-babel-transformer: 0.58.0(@babel/core@7.28.0)
-      metro-resolver: 0.58.0
-      minimist: 1.2.8
-      mkdirp: 0.5.6
-      node-stream-zip: 1.15.0
-      ora: 3.4.0
-      pretty-format: 25.5.0
-      react-native: 0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@16.13.1)
-      semver: 6.3.1
-      serve-static: 1.16.2
-      strip-ansi: 5.2.0
-      sudo-prompt: 9.2.1
-      wcwidth: 1.0.1
-    transitivePeerDependencies:
-      - '@babel/core'
-      - bufferutil
-      - encoding
-      - supports-color
-      - utf-8-validate
-
   '@react-native-community/cli@4.10.0(@babel/core@7.28.0)(encoding@0.1.13)(react-native@0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@17.0.2))':
     dependencies:
       '@hapi/joi': 15.1.1
@@ -9444,7 +9391,7 @@ snapshots:
 
   '@rnx-kit/console@1.1.0': {}
 
-  '@rnx-kit/metro-config@1.3.7(@babel/core@7.28.0)(@babel/plugin-transform-typescript@7.28.0(@babel/core@7.28.0))(@babel/runtime@7.28.2)(metro-config@0.58.0)(metro-react-native-babel-preset@0.77.0(@babel/core@7.28.0))(metro-resolver@0.58.0)(react-native@0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@16.13.1))(react@16.13.1)':
+  '@rnx-kit/metro-config@1.3.7(@babel/core@7.28.0)(@babel/plugin-transform-typescript@7.28.0(@babel/core@7.28.0))(@babel/runtime@7.28.2)(metro-config@0.58.0)(metro-react-native-babel-preset@0.77.0(@babel/core@7.28.0))(metro-resolver@0.58.0)(react-native@0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@17.0.2))(react@17.0.2)':
     dependencies:
       '@rnx-kit/babel-preset-metro-react-native': 1.1.8(@babel/core@7.28.0)(@babel/plugin-transform-typescript@7.28.0(@babel/core@7.28.0))(@babel/runtime@7.28.2)(metro-react-native-babel-preset@0.77.0(@babel/core@7.28.0))
       '@rnx-kit/console': 1.1.0
@@ -9453,8 +9400,8 @@ snapshots:
       '@rnx-kit/tools-workspaces': 0.1.6
       metro-config: 0.58.0(encoding@0.1.13)
       metro-react-native-babel-preset: 0.77.0(@babel/core@7.28.0)
-      react: 16.13.1
-      react-native: 0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@16.13.1)
+      react: 17.0.2
+      react-native: 0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@17.0.2)
     optionalDependencies:
       metro-resolver: 0.58.0
     transitivePeerDependencies:
@@ -15069,44 +15016,6 @@ snapshots:
 
   react-is@18.3.1: {}
 
-  react-native-macos@0.63.43(@babel/core@7.28.0)(encoding@0.1.13)(react-native@0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@16.13.1))(react@16.13.1):
-    dependencies:
-      '@babel/runtime': 7.28.2
-      '@react-native-community/cli': 4.10.0(@babel/core@7.28.0)(encoding@0.1.13)(react-native@0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@16.13.1))
-      '@react-native-community/cli-platform-android': 4.13.0(encoding@0.1.13)
-      '@react-native-community/cli-platform-ios': 4.13.0(encoding@0.1.13)
-      abort-controller: 3.0.0
-      anser: 1.4.10
-      base64-js: 1.5.1
-      event-target-shim: 5.0.1
-      fbjs: 1.0.0
-      fbjs-scripts: 1.2.0
-      hermes-engine: 0.5.1
-      invariant: 2.2.4
-      jsc-android: 245459.0.0
-      metro-babel-register: 0.59.0
-      metro-react-native-babel-transformer: 0.59.0(@babel/core@7.28.0)
-      metro-source-map: 0.59.0
-      nullthrows: 1.1.1
-      pretty-format: 24.9.0
-      promise: 8.3.0
-      prop-types: 15.8.1
-      react: 16.13.1
-      react-devtools-core: 4.28.5
-      react-refresh: 0.4.3
-      regenerator-runtime: 0.13.11
-      scheduler: 0.19.1
-      stacktrace-parser: 0.1.11
-      use-subscription: 1.11.0(react@16.13.1)
-      whatwg-fetch: 3.6.20
-    transitivePeerDependencies:
-      - '@babel/core'
-      - bufferutil
-      - encoding
-      - react-native
-      - supports-color
-      - utf-8-validate
-
   react-native-macos@0.63.43(@babel/core@7.28.0)(encoding@0.1.13)(react-native@0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@17.0.2))(react@17.0.2):
     dependencies:
       '@babel/runtime': 7.28.2
@@ -15144,26 +15053,6 @@ snapshots:
       - react-native
       - supports-color
       - utf-8-validate
-    optional: true
-
-  react-native-test-app@1.4.6(@react-native-community/cli-platform-android@4.13.0(encoding@0.1.13))(@react-native-community/cli-platform-ios@4.13.0(encoding@0.1.13))(@react-native-community/cli@4.10.0(@babel/core@7.28.0)(encoding@0.1.13)(react-native@0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@16.13.1)))(mustache@4.2.0)(react-native-macos@0.63.43(@babel/core@7.28.0)(encoding@0.1.13)(react-native@0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@16.13.1))(react@16.13.1))(react-native-windows@0.63.41(react-native@0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@16.13.1))(react@16.13.1))(react-native@0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@16.13.1))(react@16.13.1):
-    dependencies:
-      ajv: 8.17.1
-      chalk: 4.1.2
-      prompts: 2.4.2
-      react: 16.13.1
-      react-native: 0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@16.13.1)
-      rimraf: 3.0.2
-      semver: 7.7.2
-      uuid: 8.3.2
-      yargs: 16.2.0
-    optionalDependencies:
-      '@react-native-community/cli': 4.10.0(@babel/core@7.28.0)(encoding@0.1.13)(react-native@0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@16.13.1))
-      '@react-native-community/cli-platform-android': 4.13.0(encoding@0.1.13)
-      '@react-native-community/cli-platform-ios': 4.13.0(encoding@0.1.13)
-      mustache: 4.2.0
-      react-native-macos: 0.63.43(@babel/core@7.28.0)(encoding@0.1.13)(react-native@0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@16.13.1))(react@16.13.1)
-      react-native-windows: 0.63.41(react-native@0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@16.13.1))(react@16.13.1)
 
   react-native-test-app@1.4.6(@react-native-community/cli-platform-android@4.13.0(encoding@0.1.13))(@react-native-community/cli-platform-ios@4.13.0(encoding@0.1.13))(@react-native-community/cli@4.10.0(@babel/core@7.28.0)(encoding@0.1.13)(react-native@0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@17.0.2)))(mustache@4.2.0)(react-native-macos@0.63.43(@babel/core@7.28.0)(encoding@0.1.13)(react-native@0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@17.0.2))(react@17.0.2))(react-native-windows@0.63.41(react-native@0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@17.0.2))(react@17.0.2))(react-native@0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@17.0.2))(react@17.0.2):
     dependencies:
@@ -15198,34 +15087,6 @@ snapshots:
       react-dom: 17.0.2(react@17.0.2)
       react-timer-mixin: 0.13.4
 
-  react-native-windows@0.63.41(react-native@0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@16.13.1))(react@16.13.1):
-    dependencies:
-      '@babel/runtime': 7.28.2
-      '@react-native-windows/cli': 0.63.14
-      abort-controller: 3.0.0
-      anser: 1.4.10
-      base64-js: 1.5.1
-      event-target-shim: 5.0.1
-      fbjs: 1.0.0
-      fbjs-scripts: 1.2.0
-      invariant: 2.2.4
-      nullthrows: 1.1.1
-      pretty-format: 24.9.0
-      promise: 8.3.0
-      prop-types: 15.8.1
-      react: 16.13.1
-      react-devtools-core: 4.28.5
-      react-native: 0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@16.13.1)
-      regenerator-runtime: 0.13.11
-      scheduler: 0.19.1
-      stacktrace-parser: 0.1.11
-      use-subscription: 1.11.0(react@16.13.1)
-      whatwg-fetch: 3.6.20
-    transitivePeerDependencies:
-      - bufferutil
-      - supports-color
-      - utf-8-validate
-
   react-native-windows@0.63.41(react-native@0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@17.0.2))(react@17.0.2):
     dependencies:
       '@babel/runtime': 7.28.2
@@ -15251,44 +15112,6 @@ snapshots:
       whatwg-fetch: 3.6.20
     transitivePeerDependencies:
       - bufferutil
-      - supports-color
-      - utf-8-validate
-    optional: true
-
-  react-native@0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@16.13.1):
-    dependencies:
-      '@babel/runtime': 7.28.2
-      '@react-native-community/cli': 4.10.0(@babel/core@7.28.0)(encoding@0.1.13)(react-native@0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@16.13.1))
-      '@react-native-community/cli-platform-android': 4.13.0(encoding@0.1.13)
-      '@react-native-community/cli-platform-ios': 4.13.0(encoding@0.1.13)
-      abort-controller: 3.0.0
-      anser: 1.4.10
-      base64-js: 1.5.1
-      event-target-shim: 5.0.1
-      fbjs: 1.0.0
-      fbjs-scripts: 1.2.0
-      hermes-engine: 0.5.1
-      invariant: 2.2.4
-      jsc-android: 245459.0.0
-      metro-babel-register: 0.59.0
-      metro-react-native-babel-transformer: 0.59.0(@babel/core@7.28.0)
-      metro-source-map: 0.59.0
-      nullthrows: 1.1.1
-      pretty-format: 24.9.0
-      promise: 8.3.0
-      prop-types: 15.8.1
-      react: 16.13.1
-      react-devtools-core: 4.28.5
-      react-refresh: 0.4.3
-      regenerator-runtime: 0.13.11
-      scheduler: 0.19.1
-      stacktrace-parser: 0.1.11
-      use-subscription: 1.11.0(react@16.13.1)
-      whatwg-fetch: 3.6.20
-    transitivePeerDependencies:
-      - '@babel/core'
-      - bufferutil
-      - encoding
       - supports-color
       - utf-8-validate
 
@@ -15335,15 +15158,7 @@ snapshots:
     dependencies:
       object-assign: 4.1.1
       react: 17.0.2
-      react-is: 17.0.2
-
-  react-test-renderer@16.13.1(react@16.13.1):
-    dependencies:
-      object-assign: 4.1.1
-      prop-types: 15.8.1
-      react: 16.13.1
-      react-is: 16.13.1
-      scheduler: 0.19.1
+      react-is: 18.3.1
 
   react-test-renderer@17.0.2(react@17.0.2):
     dependencies:
@@ -15354,12 +15169,6 @@ snapshots:
       scheduler: 0.20.2
 
   react-timer-mixin@0.13.4: {}
-
-  react@16.13.1:
-    dependencies:
-      loose-envify: 1.4.0
-      object-assign: 4.1.1
-      prop-types: 15.8.1
 
   react@17.0.2:
     dependencies:
@@ -16604,19 +16413,10 @@ snapshots:
       querystringify: 2.2.0
       requires-port: 1.0.0
 
-  use-subscription@1.11.0(react@16.13.1):
-    dependencies:
-      react: 16.13.1
-      use-sync-external-store: 1.5.0(react@16.13.1)
-
   use-subscription@1.11.0(react@17.0.2):
     dependencies:
       react: 17.0.2
       use-sync-external-store: 1.5.0(react@17.0.2)
-
-  use-sync-external-store@1.5.0(react@16.13.1):
-    dependencies:
-      react: 16.13.1
 
   use-sync-external-store@1.5.0(react@17.0.2):
     dependencies:
