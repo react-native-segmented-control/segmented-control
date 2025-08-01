@@ -7,16 +7,7 @@
 
 const path = require('path');
 
-const exclusionList = (() => {
-  try {
-    return require('metro-config/src/defaults/exclusionList');
-  } catch (_) {
-    // `blacklist` was renamed to `exclusionList` in 0.60
-    return require('metro-config/src/defaults/blacklist');
-  }
-})();
-
-const {makeMetroConfig} = require('@rnx-kit/metro-config');
+const {makeMetroConfig, exclusionList} = require('@rnx-kit/metro-config');
 const MetroSymlinksResolver = require('@rnx-kit/metro-resolver-symlinks');
 
 const symlinkResolver = MetroSymlinksResolver();

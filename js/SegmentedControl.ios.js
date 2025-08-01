@@ -43,7 +43,10 @@ type Props = $ReadOnly<{|
  */
 
 class SegmentedControlIOS extends React.Component<Props> {
-  static defaultProps = {
+  static defaultProps: {|
+    values: $ReadOnlyArray<string | number>,
+    enabled: boolean,
+  |} = {
     values: [],
     enabled: true,
   };
@@ -54,7 +57,7 @@ class SegmentedControlIOS extends React.Component<Props> {
       this.props.onValueChange(event.nativeEvent.value);
   };
 
-  render() {
+  render(): React.Node {
     const {forwardedRef, fontStyle, activeFontStyle, values, ...props} =
       this.props;
     return (

@@ -32,10 +32,10 @@ type Props = $ReadOnly<{|
   testID?: string,
 |}>;
 
-function isBase64(str) {
+function isBase64(str: mixed): boolean {
   const regex =
     /^data:image\/(?:gif|png|jpeg|bmp|webp)(?:;charset=utf-8)?;base64,(?:[A-Za-z0-9]|[+/])+={0,2}/;
-  return str && regex.test(str);
+  return typeof str === 'string' && regex.test(str);
 }
 
 export const SegmentedControlTab = ({
