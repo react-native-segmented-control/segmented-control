@@ -16,7 +16,7 @@ importers:
         version: 7.28.0
       '@babel/runtime':
         specifier: ^7.10.2
-        version: 7.28.2
+        version: 7.28.4
       '@expo/webpack-config':
         specifier: ^18.0.4
         version: 18.1.4(encoding@0.1.13)(expo@46.0.21(@babel/core@7.28.0)(encoding@0.1.13))
@@ -119,10 +119,10 @@ importers:
         version: 7.28.0
       '@babel/runtime':
         specifier: ^7.10.2
-        version: 7.28.2
+        version: 7.28.4
       '@rnx-kit/metro-config':
         specifier: 1.3.7
-        version: 1.3.7(@babel/core@7.28.0)(@babel/plugin-transform-typescript@7.28.0(@babel/core@7.28.0))(@babel/runtime@7.28.2)(metro-config@0.58.0)(metro-react-native-babel-preset@0.77.0(@babel/core@7.28.0))(metro-resolver@0.58.0)(react-native@0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@17.0.2))(react@17.0.2)
+        version: 1.3.7(@babel/core@7.28.0)(@babel/plugin-transform-typescript@7.28.0(@babel/core@7.28.0))(@babel/runtime@7.28.4)(metro-config@0.58.0)(metro-react-native-babel-preset@0.77.0(@babel/core@7.28.0))(metro-resolver@0.58.0)(react-native@0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@17.0.2))(react@17.0.2)
       '@rnx-kit/metro-resolver-symlinks':
         specifier: 0.1.30
         version: 0.1.30
@@ -889,8 +889,8 @@ packages:
     peerDependencies:
       '@babel/core': ^7.0.0-0
 
-  '@babel/runtime@7.28.2':
-    resolution: {integrity: sha512-KHp2IflsnGywDjBWDkR9iEqiWSpc8GIi0lgTT3mOElT0PP1tG26P4tmFI2YvAdzgq9RGyoHZQEIEdZy6Ec5xCA==}
+  '@babel/runtime@7.28.4':
+    resolution: {integrity: sha512-Q/N6JNWvIvPnLDvjlE1OUBLPQHH6l3CltCEsHIujp45zQUSSh8K+gHnaEX45yAT1nyngnINhvWtzN+Nb9D8RAQ==}
     engines: {node: '>=6.9.0'}
 
   '@babel/template@7.27.2':
@@ -4830,28 +4830,33 @@ packages:
 
   metro-react-native-babel-preset@0.58.0:
     resolution: {integrity: sha512-MRriNW+fF6jxABsgPphocUY6mIhmCm8idcrQZ58fT3Iti2vCdtkaK32TyCGUNUptzhUe2/cbE57j4aC+eaodAA==}
+    deprecated: Use @react-native/babel-preset instead
     peerDependencies:
       '@babel/core': '*'
 
   metro-react-native-babel-preset@0.59.0:
     resolution: {integrity: sha512-BoO6ncPfceIDReIH8pQ5tQptcGo5yRWQXJGVXfANbiKLq4tfgdZB1C1e2rMUJ6iypmeJU9dzl+EhPmIFKtgREg==}
+    deprecated: Use @react-native/babel-preset instead
     peerDependencies:
       '@babel/core': '*'
 
   metro-react-native-babel-preset@0.72.3:
     resolution: {integrity: sha512-uJx9y/1NIqoYTp6ZW1osJ7U5ZrXGAJbOQ/Qzl05BdGYvN1S7Qmbzid6xOirgK0EIT0pJKEEh1s8qbassYZe4cw==}
+    deprecated: Use @react-native/babel-preset instead
     peerDependencies:
       '@babel/core': '*'
 
   metro-react-native-babel-preset@0.76.8:
     resolution: {integrity: sha512-Ptza08GgqzxEdK8apYsjTx2S8WDUlS2ilBlu9DR1CUcHmg4g3kOkFylZroogVAUKtpYQNYwAvdsjmrSdDNtiAg==}
     engines: {node: '>=16'}
+    deprecated: Use @react-native/babel-preset instead
     peerDependencies:
       '@babel/core': '*'
 
   metro-react-native-babel-preset@0.77.0:
     resolution: {integrity: sha512-HPPD+bTxADtoE4y/4t1txgTQ1LVR6imOBy7RMHUsqMVTbekoi8Ph5YI9vKX2VMPtVWeFt0w9YnCSLPa76GcXsA==}
     engines: {node: '>=18'}
+    deprecated: Use @react-native/babel-preset instead
     peerDependencies:
       '@babel/core': '*'
 
@@ -8419,7 +8424,7 @@ snapshots:
       pirates: 4.0.7
       source-map-support: 0.5.21
 
-  '@babel/runtime@7.28.2': {}
+  '@babel/runtime@7.28.4': {}
 
   '@babel/template@7.27.2':
     dependencies:
@@ -8490,7 +8495,7 @@ snapshots:
 
   '@expo/cli@0.3.3(encoding@0.1.13)(expo-modules-autolinking@0.10.3)':
     dependencies:
-      '@babel/runtime': 7.28.2
+      '@babel/runtime': 7.28.4
       '@expo/code-signing-certificates': 0.0.2
       '@expo/config': 7.0.3
       '@expo/config-plugins': 5.0.4
@@ -9377,10 +9382,10 @@ snapshots:
 
   '@react-native/normalize-color@2.1.0': {}
 
-  '@rnx-kit/babel-preset-metro-react-native@1.1.8(@babel/core@7.28.0)(@babel/plugin-transform-typescript@7.28.0(@babel/core@7.28.0))(@babel/runtime@7.28.2)(metro-react-native-babel-preset@0.77.0(@babel/core@7.28.0))':
+  '@rnx-kit/babel-preset-metro-react-native@1.1.8(@babel/core@7.28.0)(@babel/plugin-transform-typescript@7.28.0(@babel/core@7.28.0))(@babel/runtime@7.28.4)(metro-react-native-babel-preset@0.77.0(@babel/core@7.28.0))':
     dependencies:
       '@babel/core': 7.28.0
-      '@babel/runtime': 7.28.2
+      '@babel/runtime': 7.28.4
       '@rnx-kit/console': 1.1.0
       babel-plugin-const-enum: 1.2.0(@babel/core@7.28.0)
     optionalDependencies:
@@ -9391,9 +9396,9 @@ snapshots:
 
   '@rnx-kit/console@1.1.0': {}
 
-  '@rnx-kit/metro-config@1.3.7(@babel/core@7.28.0)(@babel/plugin-transform-typescript@7.28.0(@babel/core@7.28.0))(@babel/runtime@7.28.2)(metro-config@0.58.0)(metro-react-native-babel-preset@0.77.0(@babel/core@7.28.0))(metro-resolver@0.58.0)(react-native@0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@17.0.2))(react@17.0.2)':
+  '@rnx-kit/metro-config@1.3.7(@babel/core@7.28.0)(@babel/plugin-transform-typescript@7.28.0(@babel/core@7.28.0))(@babel/runtime@7.28.4)(metro-config@0.58.0)(metro-react-native-babel-preset@0.77.0(@babel/core@7.28.0))(metro-resolver@0.58.0)(react-native@0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@17.0.2))(react@17.0.2)':
     dependencies:
-      '@rnx-kit/babel-preset-metro-react-native': 1.1.8(@babel/core@7.28.0)(@babel/plugin-transform-typescript@7.28.0(@babel/core@7.28.0))(@babel/runtime@7.28.2)(metro-react-native-babel-preset@0.77.0(@babel/core@7.28.0))
+      '@rnx-kit/babel-preset-metro-react-native': 1.1.8(@babel/core@7.28.0)(@babel/plugin-transform-typescript@7.28.0(@babel/core@7.28.0))(@babel/runtime@7.28.4)(metro-react-native-babel-preset@0.77.0(@babel/core@7.28.0))
       '@rnx-kit/console': 1.1.0
       '@rnx-kit/tools-node': 2.1.2
       '@rnx-kit/tools-react-native': 1.4.2
@@ -11779,7 +11784,7 @@ snapshots:
 
   expo@46.0.21(@babel/core@7.28.0)(encoding@0.1.13):
     dependencies:
-      '@babel/runtime': 7.28.2
+      '@babel/runtime': 7.28.4
       '@expo/cli': 0.3.3(encoding@0.1.13)(expo-modules-autolinking@0.10.3)
       '@expo/vector-icons': 13.0.0
       babel-preset-expo: 9.2.2(@babel/core@7.28.0)
@@ -15018,7 +15023,7 @@ snapshots:
 
   react-native-macos@0.63.43(@babel/core@7.28.0)(encoding@0.1.13)(react-native@0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@17.0.2))(react@17.0.2):
     dependencies:
-      '@babel/runtime': 7.28.2
+      '@babel/runtime': 7.28.4
       '@react-native-community/cli': 4.10.0(@babel/core@7.28.0)(encoding@0.1.13)(react-native@0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@17.0.2))
       '@react-native-community/cli-platform-android': 4.13.0(encoding@0.1.13)
       '@react-native-community/cli-platform-ios': 4.13.0(encoding@0.1.13)
@@ -15089,7 +15094,7 @@ snapshots:
 
   react-native-windows@0.63.41(react-native@0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@17.0.2))(react@17.0.2):
     dependencies:
-      '@babel/runtime': 7.28.2
+      '@babel/runtime': 7.28.4
       '@react-native-windows/cli': 0.63.14
       abort-controller: 3.0.0
       anser: 1.4.10
@@ -15117,7 +15122,7 @@ snapshots:
 
   react-native@0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@17.0.2):
     dependencies:
-      '@babel/runtime': 7.28.2
+      '@babel/runtime': 7.28.4
       '@react-native-community/cli': 4.10.0(@babel/core@7.28.0)(encoding@0.1.13)(react-native@0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@17.0.2))
       '@react-native-community/cli-platform-android': 4.13.0(encoding@0.1.13)
       '@react-native-community/cli-platform-ios': 4.13.0(encoding@0.1.13)
