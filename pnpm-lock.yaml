@@ -81,8 +81,8 @@ importers:
         specifier: 1.4.6
         version: 1.4.6(@react-native-community/cli-platform-android@4.13.0(encoding@0.1.13))(@react-native-community/cli-platform-ios@4.13.0(encoding@0.1.13))(@react-native-community/cli@4.10.0(@babel/core@7.28.0)(encoding@0.1.13)(react-native@0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@17.0.2)))(mustache@4.2.0)(react-native-macos@0.63.43(@babel/core@7.28.0)(encoding@0.1.13)(react-native@0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@17.0.2))(react@17.0.2))(react-native-windows@0.63.41(react-native@0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@17.0.2))(react@17.0.2))(react-native@0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@17.0.2))(react@17.0.2)
       react-native-web:
-        specifier: ^0.14.10
-        version: 0.14.13(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
+        specifier: ^0.18.12
+        version: 0.18.12(encoding@0.1.13)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
       react-test-renderer:
         specifier: 17.0.2
         version: 17.0.2(react@17.0.2)
@@ -1940,10 +1940,6 @@ packages:
   array-filter@0.0.1:
     resolution: {integrity: sha512-VW0FpCIhjZdarWjIz8Vpva7U95fl2Jn+b+mmFFMLn8PIVscOQcAgEznwUzTEuUHuqZqIxwzRlcaN/urTFFQoiw==}
 
-  array-find-index@1.0.2:
-    resolution: {integrity: sha512-M1HQyIXcBGtVywBt8WVdim+lrNaK7VHp99Qt5pSNziXznKHViIBbXWtfRTpEFpF/c4FdfxNAsCCwPp5phBYJtw==}
-    engines: {node: '>=0.10.0'}
-
   array-flatten@1.1.1:
     resolution: {integrity: sha512-PCVAQswWemu6UdxsDFFX/+gVeYqKAod3D3UVm91jHwynguOwAvYPhx8nNlM++NqRcK6CxxpUafjmhIdKiHibqg==}
 
@@ -2646,8 +2642,8 @@ packages:
     peerDependencies:
       postcss: ^8.0.9
 
-  css-in-js-utils@2.0.1:
-    resolution: {integrity: sha512-PJF0SpJT+WdbVVt0AOYp9C8GnuruRlL/UFW7932nLWmFLQTaWEzTBQEx7/hn4BuV+WON75iAViSUJLiU3PKbpA==}
+  css-in-js-utils@3.1.0:
+    resolution: {integrity: sha512-fJAcud6B3rRu+KHYk+Bwf+WFL2MDCJJ1XG9x137tJQ0xYxor7XziQtuGFbWNdqrvF4Tk26O3H73nfVqXt/fW1A==}
 
   css-loader@6.11.0:
     resolution: {integrity: sha512-CTJ+AEQJjq5NzLga5pE39qdiSV56F8ywCIsqNIRF0r7BDgWsN25aazToqAFg7ZrtA/U016xudB3ffgweORxX7g==}
@@ -2779,11 +2775,6 @@ packages:
     peerDependenciesMeta:
       babel-plugin-macros:
         optional: true
-
-  deep-assign@3.0.0:
-    resolution: {integrity: sha512-YX2i9XjJ7h5q/aQ/IM9PEwEnDqETAIYbggmdDB3HLTlSgo1CxPsj6pvhPG68rq6SVE0+p+6Ywsm5fTYNrYtBWw==}
-    engines: {node: '>=0.10.0'}
-    deprecated: Check out `lodash.merge` or `merge-options` instead.
 
   deep-extend@0.6.0:
     resolution: {integrity: sha512-LOHxIOaPYdHlJRtCQfDIVZtfw/ufM8+rVj649RIHzcm/vGwQRXFt6OPqIFWsm2XEMrNIEtWR64sY1LEKD2vAOA==}
@@ -3352,6 +3343,9 @@ packages:
 
   fast-levenshtein@2.0.6:
     resolution: {integrity: sha512-DCXu6Ifhqcks7TZKY3Hxp3y6qphY5SJZmrWMDrKcERSOXWQdMhU9Ig/PYrzyw/ul9jOIyh0N4M0tbC5hodg8dw==}
+
+  fast-loops@1.1.4:
+    resolution: {integrity: sha512-8dbd3XWoKCTms18ize6JmQF1SFnnfj5s0B7rRry22EofgMu7B6LKHVh+XfFqFGsqnbH54xgeO83PzpKI+ODhlg==}
 
   fast-uri@3.0.6:
     resolution: {integrity: sha512-Atfo14OibSv5wAp4VWNsFYE1AchQRTv9cBGWET4pZWHzYshFSS9NQI6I57rdKn9croWVMbYFbLhJ+yJvmZIIHw==}
@@ -3961,8 +3955,8 @@ packages:
   ini@1.3.8:
     resolution: {integrity: sha512-JV/yugV2uzW5iMRSiZAyDtQd+nxtUnjeLt0acNdw98kKLrvuRVyB80tsREOE7yvGVgalhZ6RNXCmEHkUKBKxew==}
 
-  inline-style-prefixer@5.1.2:
-    resolution: {integrity: sha512-PYUF+94gDfhy+LsQxM0g3d6Hge4l1pAqOSOiZuHWzMvQEGsbRQ/ck2WioLqrY2ZkHyPgVUXxn+hrkF7D6QUGbA==}
+  inline-style-prefixer@6.0.4:
+    resolution: {integrity: sha512-FwXmZC2zbeeS7NzGjJ6pAiqRhXR0ugUShSNb6GApMl6da0/XGc4MOJsoWAywia52EEWbXNSy0pzkwz/+Y+swSg==}
 
   inquirer@3.3.0:
     resolution: {integrity: sha512-h+xtnyk4EwKvFWHrUYsWErEVR+igKtLdchu+o0Z1RL7VU/jVMFbYir2bp6bAj8efFNxWqHX0dIss6fJQ+/+qeQ==}
@@ -4136,10 +4130,6 @@ packages:
   is-number@7.0.0:
     resolution: {integrity: sha512-41Cifkg6e8TylSpdtTpeLVMqvSBEVzTttHvERD741+pnZ8ANv0004MRL43QKPDlK9cGvNp6NZWZUBlbGXYxxng==}
     engines: {node: '>=0.12.0'}
-
-  is-obj@1.0.1:
-    resolution: {integrity: sha512-l4RyHgRqGN4Y3+9JHVrNqO+tN0rV5My76uW5/nuO4K1b6vw5G8d/cmFjP9tRfEsdhZNt0IFdZuK/c2Vr4Nb+Qg==}
-    engines: {node: '>=0.10.0'}
 
   is-obj@2.0.0:
     resolution: {integrity: sha512-drqDG3cbczxxEJRoOXcOjtdp1J/lyp1mNn0xaznRs8+muBhgQcrnbspox5X5fOw0HnMnbfDzvnEMEtqDEJEo8w==}
@@ -4830,28 +4820,33 @@ packages:
 
   metro-react-native-babel-preset@0.58.0:
     resolution: {integrity: sha512-MRriNW+fF6jxABsgPphocUY6mIhmCm8idcrQZ58fT3Iti2vCdtkaK32TyCGUNUptzhUe2/cbE57j4aC+eaodAA==}
+    deprecated: Use @react-native/babel-preset instead
     peerDependencies:
       '@babel/core': '*'
 
   metro-react-native-babel-preset@0.59.0:
     resolution: {integrity: sha512-BoO6ncPfceIDReIH8pQ5tQptcGo5yRWQXJGVXfANbiKLq4tfgdZB1C1e2rMUJ6iypmeJU9dzl+EhPmIFKtgREg==}
+    deprecated: Use @react-native/babel-preset instead
     peerDependencies:
       '@babel/core': '*'
 
   metro-react-native-babel-preset@0.72.3:
     resolution: {integrity: sha512-uJx9y/1NIqoYTp6ZW1osJ7U5ZrXGAJbOQ/Qzl05BdGYvN1S7Qmbzid6xOirgK0EIT0pJKEEh1s8qbassYZe4cw==}
+    deprecated: Use @react-native/babel-preset instead
     peerDependencies:
       '@babel/core': '*'
 
   metro-react-native-babel-preset@0.76.8:
     resolution: {integrity: sha512-Ptza08GgqzxEdK8apYsjTx2S8WDUlS2ilBlu9DR1CUcHmg4g3kOkFylZroogVAUKtpYQNYwAvdsjmrSdDNtiAg==}
     engines: {node: '>=16'}
+    deprecated: Use @react-native/babel-preset instead
     peerDependencies:
       '@babel/core': '*'
 
   metro-react-native-babel-preset@0.77.0:
     resolution: {integrity: sha512-HPPD+bTxADtoE4y/4t1txgTQ1LVR6imOBy7RMHUsqMVTbekoi8Ph5YI9vKX2VMPtVWeFt0w9YnCSLPa76GcXsA==}
     engines: {node: '>=18'}
+    deprecated: Use @react-native/babel-preset instead
     peerDependencies:
       '@babel/core': '*'
 
@@ -5991,12 +5986,11 @@ packages:
       react-native-windows:
         optional: true
 
-  react-native-web@0.14.13:
-    resolution: {integrity: sha512-L9TNwzSFwvUDRRySHeKimVIQd4qIw+nBmepNN+kDOHWW1mIpTaa4W5ub8StOeifMMwjeBob2ZAxh+HiQKoSjNA==}
-    deprecated: < 0.16.0 is no longer supported
+  react-native-web@0.18.12:
+    resolution: {integrity: sha512-fboP7yqobJ8InSr4fP+bQ3scOtSQtUoPcR+HWasH8b/fk/RO+mWcJs/8n+lewy9WTZc2D68ha7VwRDviUshEWA==}
     peerDependencies:
-      react: '>=16.5.1'
-      react-dom: '>=16.5.1'
+      react: ^17.0.2 || ^18.0.0
+      react-dom: ^17.0.2 || ^18.0.0
 
   react-native-windows@0.63.41:
     resolution: {integrity: sha512-AhLQP0dzX4jhtv9AsR5KF+BIlccKKPzTSmivg3ZUirqQxXwDDMjtIGwgFnp1WyH8cFoUEvpuyNnHsU3f7LxEyg==}
@@ -6025,9 +6019,6 @@ packages:
     resolution: {integrity: sha512-yaQ9cB89c17PUb0x6UfWRs7kQCorVdHlutU1boVPEsB8IDZH6n9tHxMacc3y0JoXOJUsZb/t/Mb8FUWMKaM7iQ==}
     peerDependencies:
       react: 17.0.2
-
-  react-timer-mixin@0.13.4:
-    resolution: {integrity: sha512-4+ow23tp/Tv7hBM5Az5/Be/eKKF7DIvJ09voz5LyHGQaqqz9WV8YMs31eFvcYQs7d451LSg7kDJV70XYN/Ug/Q==}
 
   react@17.0.2:
     resolution: {integrity: sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA==}
@@ -6740,6 +6731,9 @@ packages:
     peerDependencies:
       postcss: ^8.2.15
 
+  styleq@0.1.3:
+    resolution: {integrity: sha512-3ZUifmCDCQanjeej1f6kyl/BeP/Vae5EYkQ9iJfUm/QwZvlgnZzyflqAsAWYURdtea8Vkvswu2GrC57h3qffcA==}
+
   sucrase@3.35.0:
     resolution: {integrity: sha512-8EbVDiu9iN/nESwxeSxDKe0dunta1GOlHufmSSXxMD2z2/tMZpDMpvXQGsc+ajGo8y2uYUmixaSRUc/QPoQ0GA==}
     engines: {node: '>=16 || 14 >=14.17'}
@@ -7034,8 +7028,8 @@ packages:
     resolution: {integrity: sha512-us1E3K+3jJppDBa3Tl0L3MOJiGhe1C6P0+nIvQAFYbxlMAx0h81eOwLmU57xgqToduDDPx3y5QsdjPfDu+FgOQ==}
     hasBin: true
 
-  ua-parser-js@1.0.40:
-    resolution: {integrity: sha512-z6PJ8Lml+v3ichVojCiB8toQJBuwR42ySM4ezjXIqXK3M0HczmKQ3LF4rhU55PfD99KEEXQG6yb7iOMyvYuHew==}
+  ua-parser-js@1.0.41:
+    resolution: {integrity: sha512-LbBDqdIC5s8iROCUjMbW1f5dJQTEFB1+KO9ogbvlb3nm9n4YHa5p4KTvFPWvh2Hs8gZMBuiB1/8+pdfe/tDPug==}
     hasBin: true
 
   uglify-es@3.3.9:
@@ -10084,8 +10078,6 @@ snapshots:
 
   array-filter@0.0.1: {}
 
-  array-find-index@1.0.2: {}
-
   array-flatten@1.1.1: {}
 
   array-ify@1.0.0: {}
@@ -10988,10 +10980,9 @@ snapshots:
     dependencies:
       postcss: 8.5.6
 
-  css-in-js-utils@2.0.1:
+  css-in-js-utils@3.1.0:
     dependencies:
       hyphenate-style-name: 1.1.0
-      isobject: 3.0.1
 
   css-loader@6.11.0(webpack@5.101.0):
     dependencies:
@@ -11122,10 +11113,6 @@ snapshots:
   decode-uri-component@0.2.2: {}
 
   dedent@1.6.0: {}
-
-  deep-assign@3.0.0:
-    dependencies:
-      is-obj: 1.0.1
 
   deep-extend@0.6.0: {}
 
@@ -11900,6 +11887,8 @@ snapshots:
 
   fast-levenshtein@2.0.6: {}
 
+  fast-loops@1.1.4: {}
+
   fast-uri@3.0.6: {}
 
   fastq@1.19.1:
@@ -11956,7 +11945,7 @@ snapshots:
       object-assign: 4.1.1
       promise: 7.3.1
       setimmediate: 1.0.5
-      ua-parser-js: 1.0.40
+      ua-parser-js: 1.0.41
     transitivePeerDependencies:
       - encoding
 
@@ -12600,9 +12589,10 @@ snapshots:
 
   ini@1.3.8: {}
 
-  inline-style-prefixer@5.1.2:
+  inline-style-prefixer@6.0.4:
     dependencies:
-      css-in-js-utils: 2.0.1
+      css-in-js-utils: 3.1.0
+      fast-loops: 1.1.4
 
   inquirer@3.3.0:
     dependencies:
@@ -12776,8 +12766,6 @@ snapshots:
       kind-of: 3.2.2
 
   is-number@7.0.0: {}
-
-  is-obj@1.0.1: {}
 
   is-obj@2.0.0: {}
 
@@ -15073,19 +15061,19 @@ snapshots:
       react-native-macos: 0.63.43(@babel/core@7.28.0)(encoding@0.1.13)(react-native@0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@17.0.2))(react@17.0.2)
       react-native-windows: 0.63.41(react-native@0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@17.0.2))(react@17.0.2)
 
-  react-native-web@0.14.13(react-dom@17.0.2(react@17.0.2))(react@17.0.2):
+  react-native-web@0.18.12(encoding@0.1.13)(react-dom@17.0.2(react@17.0.2))(react@17.0.2):
     dependencies:
-      array-find-index: 1.0.2
+      '@babel/runtime': 7.28.2
       create-react-class: 15.7.0
-      deep-assign: 3.0.0
-      fbjs: 1.0.0
-      hyphenate-style-name: 1.1.0
-      inline-style-prefixer: 5.1.2
+      fbjs: 3.0.5(encoding@0.1.13)
+      inline-style-prefixer: 6.0.4
       normalize-css-color: 1.0.2
-      prop-types: 15.8.1
+      postcss-value-parser: 4.2.0
       react: 17.0.2
       react-dom: 17.0.2(react@17.0.2)
-      react-timer-mixin: 0.13.4
+      styleq: 0.1.3
+    transitivePeerDependencies:
+      - encoding
 
   react-native-windows@0.63.41(react-native@0.63.4(@babel/core@7.28.0)(encoding@0.1.13)(react@17.0.2))(react@17.0.2):
     dependencies:
@@ -15167,8 +15155,6 @@ snapshots:
       react-is: 17.0.2
       react-shallow-renderer: 16.15.0(react@17.0.2)
       scheduler: 0.20.2
-
-  react-timer-mixin@0.13.4: {}
 
   react@17.0.2:
     dependencies:
@@ -16015,6 +16001,8 @@ snapshots:
       postcss: 8.5.6
       postcss-selector-parser: 6.1.2
 
+  styleq@0.1.3: {}
+
   sucrase@3.35.0:
     dependencies:
       '@jridgewell/gen-mapping': 0.3.12
@@ -16307,7 +16295,7 @@ snapshots:
 
   ua-parser-js@0.7.40: {}
 
-  ua-parser-js@1.0.40: {}
+  ua-parser-js@1.0.41: {}
 
   uglify-es@3.3.9:
     dependencies:
