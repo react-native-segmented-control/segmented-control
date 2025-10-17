@@ -19,7 +19,7 @@
     "hermes-engine": "0.10.0",
     "react": "17.0.2",
     "react-native": "0.63.4",
-    "react-native-macos": "^0.63.0",
+    "react-native-macos": "^0.79.0",
     "react-native-windows": "^0.63.0"
   },
   "devDependencies": {
