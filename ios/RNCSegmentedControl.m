@@ -101,4 +101,10 @@
   return elements;
 }
 
+// Prevents the segmented control from interfering with scroll gestures in ScrollViews.
+// See https://stackoverflow.com/a/58193949
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
+  return YES;
+}
+
 @end
