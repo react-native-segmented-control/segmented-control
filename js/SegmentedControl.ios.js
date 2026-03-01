@@ -84,9 +84,17 @@ class SegmentedControlIOS extends React.Component<Props> {
               }
             : undefined
         }
-        values={values.map((val) =>
-          typeof val === 'string' ? val : Image.resolveAssetSource(val),
-        )}
+        values={values.map((val) => {
+          if (typeof val === 'string') {
+            return val;
+          }
+          // SF Symbol objects have a systemImage key — pass through as-is
+          if (typeof val === 'object' && val !== null && val.systemImage) {
+            return val;
+          }
+          // Image sources (require() numbers or objects) need resolution
+          return Image.resolveAssetSource(val);
+        })}
         {...props}
         ref={forwardedRef}
         style={[styles.segmentedControl, this.props.style]}

@@ -12,6 +12,41 @@ import {
 
 type Constructor<T> = new (...args: any[]) => T;
 
+export type SFSymbolWeight =
+  | 'ultraLight'
+  | 'thin'
+  | 'light'
+  | 'regular'
+  | 'medium'
+  | 'semibold'
+  | 'bold'
+  | 'heavy'
+  | 'black';
+
+/**
+ * Represents an SF Symbol configuration (iOS 13+ only).
+ * SF Symbols are Apple's built-in icon system providing thousands of
+ * configurable symbols that automatically align with text and adapt to
+ * the system appearance.
+ */
+export type SFSymbol = {
+  /**
+   * The name of the SF Symbol (e.g., 'star.fill', 'heart', 'gear').
+   * See https://developer.apple.com/sf-symbols/ for the full list.
+   */
+  systemImage: string;
+  /**
+   * The point size of the symbol. Default is 19.
+   */
+  fontSize?: number;
+  /**
+   * The weight of the symbol. Default is 'regular'.
+   */
+  weight?: SFSymbolWeight;
+};
+
+export type SegmentValue = string | number | SFSymbol;
+
 export interface NativeSegmentedControlIOSChangeEvent extends TargetedEvent {
   value: string;
   selectedSegmentIndex: number;
@@ -70,7 +105,7 @@ export interface SegmentedControlProps extends ViewProps {
   /**
    * Callback that is called when the user taps a segment; passes the segment's value as an argument
    */
-  onValueChange?: (value: string) => void;
+  onValueChange?: (value: SegmentValue) => void;
 
   /**
    * The index in props.values of the segment to be (pre)selected.
@@ -90,8 +125,9 @@ export interface SegmentedControlProps extends ViewProps {
 
   /**
    * The labels for the control's segment buttons, in order.
+   * Supports strings, image sources (require()), and SF Symbol objects (iOS 13+ only).
    */
-  values?: string[];
+  values?: SegmentValue[];
 
   /**
    * (iOS 13+ only)
