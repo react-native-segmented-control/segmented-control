@@ -47,6 +47,10 @@ const SegmentedControl = ({
   const ref = React.useRef<?React.ElementRef<typeof View>>(null);
 
   const handleChange = (index: number) => {
+    if (index === selectedIndex) {
+      return;
+    }
+
     // mocks iOS's nativeEvent
     const event: any = {
       nativeEvent: {
