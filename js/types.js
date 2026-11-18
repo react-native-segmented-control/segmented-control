@@ -16,6 +16,37 @@ export type Event = SyntheticEvent<
 
 export type ViewStyle = ViewStyleProp;
 
+export type SFSymbolWeight =
+  | 'ultraLight'
+  | 'thin'
+  | 'light'
+  | 'regular'
+  | 'medium'
+  | 'semibold'
+  | 'bold'
+  | 'heavy'
+  | 'black';
+
+/**
+ * Represents an SF Symbol configuration (iOS 13+ only).
+ */
+export type SFSymbol = $ReadOnly<{|
+  /**
+   * The name of the SF Symbol (e.g., 'star.fill', 'heart', 'gear').
+   */
+  systemImage: string,
+  /**
+   * The point size of the symbol. Default is 19.
+   */
+  fontSize?: number,
+  /**
+   * The weight of the symbol. Default is 'regular'.
+   */
+  weight?: SFSymbolWeight,
+|}>;
+
+export type SegmentValue = string | number | SFSymbol;
+
 export type FontStyle = $ReadOnly<{|
   /**
    * Font Color of Segmented Control
@@ -51,7 +82,7 @@ export type SegmentedControlProps = $ReadOnly<{|
   /**
    * The labels for the control's segment buttons, in order.
    */
-  values: $ReadOnlyArray<string | number | Object>,
+  values: $ReadOnlyArray<SegmentValue>,
   /**
    * The index in `props.values` of the segment to be (pre)selected.
    */
@@ -60,7 +91,7 @@ export type SegmentedControlProps = $ReadOnly<{|
    * Callback that is called when the user taps a segment;
    * passes the segment's value as an argument
    */
-  onValueChange?: ?(value: string | number | Object) => mixed,
+  onValueChange?: ?(value: SegmentValue) => mixed,
   /**
    * Callback that is called when the user taps a segment;
    * passes the event as an argument

@@ -24,20 +24,80 @@
 }
 
 - (void)setValues:(NSArray *)values {
-	[self removeAllSegments];
-	for (id segment in values) {
-		if ([segment isKindOfClass:[NSMutableDictionary class]]){
-			UIImage *image = [[RCTConvert UIImage:segment] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-			[self insertSegmentWithImage:image
-								 atIndex:self.numberOfSegments
-								animated:NO];
-		} else {
-			[self insertSegmentWithTitle:(NSString *)segment
-								 atIndex:self.numberOfSegments
-								animated:NO];
-		}
-	}
-	super.selectedSegmentIndex = _selectedIndex;
+  [self removeAllSegments];
+
+  for (id segment in values) {
+    if ([segment isKindOfClass:[NSDictionary class]]) {
+
+      NSDictionary *dict = (NSDictionary *)segment;
+      UIImage *image = nil;
+
+      // 🔹 CASE 1: SF Symbol
+      if (dict[@"systemImage"]) {
+
+#if defined(__IPHONE_OS_VERSION_MAX_ALLOWED) && defined(__IPHONE_13_0) &&      \
+    __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_13_0
+        if (@available(iOS 13.0, *)) {
+
+          NSString *systemName = dict[@"systemImage"];
+
+          CGFloat fontSize = dict[@"fontSize"] ? [dict[@"fontSize"] floatValue] : 19.0;
+
+          UIImageSymbolWeight weight = UIImageSymbolWeightRegular;
+
+          if (dict[@"weight"]) {
+            NSString *weightString = dict[@"weight"];
+
+            if ([weightString isEqualToString:@"ultraLight"])
+              weight = UIImageSymbolWeightUltraLight;
+            else if ([weightString isEqualToString:@"thin"])
+              weight = UIImageSymbolWeightThin;
+            else if ([weightString isEqualToString:@"light"])
+              weight = UIImageSymbolWeightLight;
+            else if ([weightString isEqualToString:@"medium"])
+              weight = UIImageSymbolWeightMedium;
+            else if ([weightString isEqualToString:@"semibold"])
+              weight = UIImageSymbolWeightSemibold;
+            else if ([weightString isEqualToString:@"bold"])
+              weight = UIImageSymbolWeightBold;
+            else if ([weightString isEqualToString:@"heavy"])
+              weight = UIImageSymbolWeightHeavy;
+            else if ([weightString isEqualToString:@"black"])
+              weight = UIImageSymbolWeightBlack;
+          }
+
+          UIImageSymbolConfiguration *config =
+            [UIImageSymbolConfiguration configurationWithPointSize:fontSize
+                                                            weight:weight];
+
+          image = [[UIImage systemImageNamed:systemName]
+                     imageByApplyingSymbolConfiguration:config];
+
+          image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+        }
+#endif
+      }
+      else {
+        image = [[RCTConvert UIImage:segment]
+                   imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+      }
+
+      if (image) {
+        [self insertSegmentWithImage:image
+                             atIndex:self.numberOfSegments
+                            animated:NO];
+      }
+    }
+
+    else if ([segment isKindOfClass:[NSString class]]) {
+
+      [self insertSegmentWithTitle:(NSString *)segment
+                           atIndex:self.numberOfSegments
+                          animated:NO];
+    }
+  }
+
+  super.selectedSegmentIndex = _selectedIndex;
 }
 
 - (void)setSelectedIndex:(NSInteger)selectedIndex {

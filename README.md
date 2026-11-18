@@ -191,11 +191,51 @@ Background color color of the control. (iOS 13+ only)
 
 ### `values`
 
-The labels for the control's segment buttons, in order.
+The labels for the control's segment buttons, in order. Supports strings, image sources (`require()`), and SF Symbol objects (iOS 13+ only).
 
-| Type    | Required |
-| ------- | -------- |
-| (string | number   | Image)[] | No |
+| Type                              | Required |
+| --------------------------------- | -------- |
+| `(string \| number \| SFSymbol)[]` | No       |
+
+#### Using SF Symbols (iOS 13+ only)
+
+You can use [SF Symbols](https://developer.apple.com/sf-symbols/) as segment values by passing an object with a `systemImage` key:
+
+```javascript
+<SegmentedControl
+  values={[
+    {systemImage: 'list.bullet'},
+    {systemImage: 'square.grid.2x2'},
+    {systemImage: 'rectangle.grid.1x2'},
+  ]}
+  selectedIndex={0}
+/>
+```
+
+SF Symbol objects support the following properties:
+
+| Property      | Type     | Default     | Description                                          |
+| ------------- | -------- | ----------- | ---------------------------------------------------- |
+| `systemImage` | string   | *required*  | The SF Symbol name (e.g., `'star.fill'`, `'heart'`)  |
+| `fontSize`    | number   | `19`        | The point size of the symbol                         |
+| `weight`      | string   | `'regular'` | Symbol weight: `'ultraLight'`, `'thin'`, `'light'`, `'regular'`, `'medium'`, `'semibold'`, `'bold'`, `'heavy'`, `'black'` |
+
+You can also mix text and SF Symbols:
+
+```javascript
+<SegmentedControl
+  values={[
+    'All',
+    {systemImage: 'star.fill', fontSize: 16, weight: 'semibold'},
+    {systemImage: 'clock', fontSize: 16},
+  ]}
+  selectedIndex={0}
+/>
+```
+
+> **Note:** SF Symbols are only supported on iOS. On Android and Web, segments with SF Symbol values will render as empty.
+
+---
 
 ### `appearance`
 

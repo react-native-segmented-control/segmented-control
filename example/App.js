@@ -7,7 +7,7 @@
 
 import SegmentedControl from '..';
 import React, {useEffect, useState} from 'react';
-import {ScrollView, StyleSheet, Text, View, useColorScheme} from 'react-native';
+import {ScrollView, StyleSheet, Text, View, Platform, useColorScheme} from 'react-native';
 
 const App = () => {
   const colorScheme = useColorScheme();
@@ -53,6 +53,36 @@ const App = () => {
           ]}
         />
       </View>
+      {Platform.OS === 'ios' && (
+        <View style={styles.segmentContainer}>
+          <Text style={[styles.text, {color: textColor}]}>
+            Segmented controls can have SF Symbols (iOS only)
+          </Text>
+          <SegmentedControl
+            values={[
+              {systemImage: 'list.bullet'},
+              {systemImage: 'square.grid.2x2'},
+              {systemImage: 'rectangle.grid.1x2'},
+            ]}
+            selectedIndex={0}
+          />
+        </View>
+      )}
+      {Platform.OS === 'ios' && (
+        <View style={styles.segmentContainer}>
+          <Text style={[styles.text, {color: textColor}]}>
+            SF Symbols can be mixed with text
+          </Text>
+          <SegmentedControl
+            values={[
+              'All',
+              {systemImage: 'star.fill', fontSize: 16, weight: 'semibold'},
+              {systemImage: 'clock', fontSize: 16},
+            ]}
+            selectedIndex={0}
+          />
+        </View>
+      )}
       <View style={styles.segmentSection}>
         <Text style={[styles.text, {color: textColor}]}>
           Segmented controls can have pre-selected values

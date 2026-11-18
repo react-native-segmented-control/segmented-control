@@ -16,10 +16,10 @@ import {
   Platform,
 } from 'react-native';
 
-import type {FontStyle, ViewStyle} from './types';
+import type {FontStyle, ViewStyle, SFSymbol} from './types';
 
 type Props = $ReadOnly<{|
-  value: string | number | Object,
+  value: string | number | SFSymbol,
   tintColor?: ?string,
   onSelect: () => void,
   selected: boolean,
@@ -103,7 +103,10 @@ export const SegmentedControlTab = ({
         ios: typeof value === 'string' ? value : testID,
       })}>
       <View style={styles.default}>
-        {typeof value === 'number' || typeof value === 'object' ? (
+        {typeof value === 'object' && value !== null && value.systemImage ? (
+          // SF Symbols are iOS-only; on Android/Web render nothing
+          null
+        ) : typeof value === 'number' || typeof value === 'object' ? (
           <Image source={value} style={styles.segmentImage} />
         ) : isBase64(value) ? (
           <Image source={{uri: value}} style={styles.segmentImage} />
