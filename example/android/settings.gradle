@@ -8,5 +8,18 @@ pluginManagement {
 
 rootProject.name = "SegmentedControlExample"
 
-apply(from: "../node_modules/react-native-test-app/test-app.gradle")
+// Resolve packages through Node rather than a fixed node_modules path: with
+// pnpm's `node-linker=hoisted` (.npmrc) they are installed in the repository
+// root's node_modules, not example/node_modules.
+def resolvePackageDir = { String name ->
+    def script = "require('path').dirname(require.resolve('${name}/package.json'))"
+    def output = ["node", "--print", script].execute(null, rootDir).text.trim()
+    if (!output) {
+        throw new GradleException("Could not resolve '${name}' from ${rootDir}. Run `pnpm install` first.")
+    }
+    return new File(output)
+}
+gradle.ext.resolvePackageDir = resolvePackageDir
+
+apply(from: new File(resolvePackageDir("react-native-test-app"), "test-app.gradle"))
 applyTestAppSettings(settings)
