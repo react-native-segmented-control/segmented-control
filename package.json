@@ -55,8 +55,10 @@
     "rimraf": "^3.0.2",
     "typescript": "^5.9.2"
   },
-  "resolutions": {
-    "@react-native-community/cli": "4.10.0"
+  "pnpm": {
+    "overrides": {
+      "@react-native-community/cli": "4.10.0"
+    }
   },
   "release-it": {
     "git": {
