@@ -1,6 +1,6 @@
 buildscript {
-    def androidTestAppDir = "../node_modules/react-native-test-app/android"
-    apply(from: "${androidTestAppDir}/dependencies.gradle")
+    def androidTestAppDir = new File(gradle.ext.resolvePackageDir("react-native-test-app"), "android")
+    apply(from: new File(androidTestAppDir, "dependencies.gradle"))
 
     repositories {
         mavenCentral()
@@ -17,9 +17,20 @@ allprojects {
     repositories {
         maven {
             // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
-            url("${rootDir}/../node_modules/react-native/android")
+            url(new File(gradle.ext.resolvePackageDir("react-native"), "android"))
         }
         mavenCentral()
         google()
+    }
+
+    // React Native 0.63 depends on Fresco 2.2.0, which was only ever published
+    // to JCenter (now shut down). 2.3.0 is the oldest release on Maven Central.
+    configurations.all {
+        resolutionStrategy.eachDependency { details ->
+            if (details.requested.group == "com.facebook.fresco" && details.requested.version == "2.2.0") {
+                details.useVersion("2.3.0")
+                details.because("Fresco 2.2.0 is not available on Maven Central")
+            }
+        }
     }
 }
