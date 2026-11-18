@@ -31,6 +31,8 @@ jobs:
         run: pnpm install
       - name: ESLint Checks
         run: pnpm lint
+      - name: Jest Tests
+        run: pnpm exec jest --runInBand
   flow:
     runs-on: ubuntu-latest
     strategy:
