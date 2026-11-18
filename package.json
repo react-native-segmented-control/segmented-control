@@ -19,7 +19,7 @@
     "flow": "flow",
     "lint": "eslint . --cache",
     "tsc": "tsc --noEmit",
-    "ci:publish": "pnpm semantic-release"
+    "release": "release-it"
   },
   "peerDependencies": {
     "react": ">=16.0",
@@ -30,7 +30,7 @@
     "@babel/runtime": "^7.10.2",
     "@expo/webpack-config": "^18.0.4",
     "@react-native-community/eslint-config": "^3.2.0",
-    "@semantic-release/git": "^10.0.1",
+    "@release-it/conventional-changelog": "^12.0.2",
     "@types/react": "^17.0.0",
     "@types/react-native": "^0.64.4",
     "babel-eslint": "^10.1.0",
@@ -51,12 +51,30 @@
     "react-native-test-app": "1.4.6",
     "react-native-web": "^0.14.10",
     "react-test-renderer": "17.0.2",
+    "release-it": "^21.1.2",
     "rimraf": "^3.0.2",
-    "semantic-release": "^23.0.6",
     "typescript": "^5.9.2"
   },
   "resolutions": {
     "@react-native-community/cli": "4.10.0"
+  },
+  "release-it": {
+    "git": {
+      "commitMessage": "chore: release ${version}",
+      "tagName": "v${version}"
+    },
+    "npm": {
+      "publish": true,
+      "skipChecks": true
+    },
+    "github": {
+      "release": true
+    },
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "preset": "conventionalcommits"
+      }
+    }
   },
   "jest": {
     "preset": "react-native",
