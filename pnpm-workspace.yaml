@@ -1,2 +1,8 @@
 packages:
   - 'example'
+
+# Kept here rather than in package.json: pnpm 11+ no longer reads the
+# "pnpm" field or "resolutions" from package.json, so a lockfile
+# regenerated with a newer pnpm (e.g. by Dependabot) would drop it.
+overrides:
+  '@react-native-community/cli': 4.10.0
