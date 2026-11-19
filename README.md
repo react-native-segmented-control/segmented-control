@@ -127,6 +127,14 @@ If false the user won't be able to interact with the control. Default value is t
 | ---- | -------- |
 | bool | No       |
 
+### `disabledIndices`
+
+Indexes of the segments (positions in `values`) the user can't interact with, while the other segments stay interactive. For example, `disabledIndices={[1]}` disables the second segment. Out-of-range indexes are ignored.
+
+| Type            | Required |
+| --------------- | -------- |
+| array of number | No       |
+
 ---
 
 ### `momentary`

@@ -97,3 +97,58 @@ describe('Android and web selection callbacks', () => {
     }).not.toThrow();
   });
 });
+
+describe('Android and web disabled segments', () => {
+  let tree;
+
+  afterEach(() => {
+    act(() => tree?.unmount());
+  });
+
+  function render(props) {
+    const onChange = jest.fn();
+    act(() => {
+      tree = renderer.create(
+        <SegmentedControl
+          values={['One', 'Two', 'Three']}
+          selectedIndex={0}
+          onChange={onChange}
+          {...props}
+        />,
+      );
+    });
+    return {
+      onChange,
+      tabs: tree.root.findAllByType(TouchableOpacity),
+    };
+  }
+
+  it('only disables the segments listed in disabledIndices', () => {
+    const {tabs} = render({disabledIndices: [1]});
+    expect(tabs.map((tab) => tab.props.disabled)).toEqual([false, true, false]);
+    expect(tabs.map((tab) => tab.props.accessibilityState.disabled)).toEqual([
+      false,
+      true,
+      false,
+    ]);
+  });
+
+  it('keeps the other segments interactive', () => {
+    const {tabs, onChange} = render({disabledIndices: [1]});
+    act(() => tabs[2].props.onPress());
+    expect(onChange).toHaveBeenCalledWith({
+      nativeEvent: {value: 'Three', selectedSegmentIndex: 2},
+    });
+  });
+
+  it('keeps every segment disabled when the whole control is disabled', () => {
+    const {tabs} = render({enabled: false, disabledIndices: [1]});
+    expect(tabs.map((tab) => tab.props.disabled)).toEqual([true, true, true]);
+  });
+
+  it('ignores out-of-range indexes and leaves all segments enabled by default', () => {
+    expect(
+      render({disabledIndices: [7]}).tabs.map((tab) => tab.props.disabled),
+    ).toEqual([false, false, false]);
+  });
+});

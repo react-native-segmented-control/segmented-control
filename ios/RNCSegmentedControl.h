@@ -12,5 +12,6 @@
 @property(nonatomic, assign) NSInteger selectedIndex;
 @property(nonatomic, copy) RCTBubblingEventBlock onChange;
 @property(nonatomic, copy) NSArray *testIDS;
+@property(nonatomic, copy) NSArray<NSNumber *> *disabledIndices;
 
 @end

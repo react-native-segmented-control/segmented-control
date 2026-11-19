@@ -38,6 +38,19 @@
 		}
 	}
 	super.selectedSegmentIndex = _selectedIndex;
+	[self applyDisabledIndices];
+}
+
+- (void)setDisabledIndices:(NSArray<NSNumber *> *)disabledIndices {
+  _disabledIndices = [disabledIndices copy];
+  [self applyDisabledIndices];
+}
+
+- (void)applyDisabledIndices {
+  for (NSUInteger index = 0; index < self.numberOfSegments; index++) {
+    BOOL disabled = [_disabledIndices containsObject:@(index)];
+    [self setEnabled:!disabled forSegmentAtIndex:index];
+  }
 }
 
 - (void)setSelectedIndex:(NSInteger)selectedIndex {
