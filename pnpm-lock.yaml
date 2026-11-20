@@ -15,8 +15,8 @@ importers:
         specifier: ^7.10.2
         version: 7.28.0(supports-color@8.1.1)
       '@babel/runtime':
-        specifier: ^7.10.2
-        version: 7.28.4
+        specifier: ^8.1.2
+        version: 8.1.2
       '@expo/webpack-config':
         specifier: ^18.0.4
         version: 18.1.4(clean-css@5.3.3)(csso@4.2.0)(debug@4.4.1(supports-color@8.1.1))(encoding@0.1.13)(expo@46.0.21(@babel/core@7.28.0(supports-color@8.1.1))(encoding@0.1.13)(supports-color@8.1.1))(supports-color@8.1.1)
@@ -118,11 +118,11 @@ importers:
         specifier: ^7.10.2
         version: 7.28.0(supports-color@8.1.1)
       '@babel/runtime':
-        specifier: ^7.10.2
-        version: 7.28.4
+        specifier: ^8.1.2
+        version: 8.1.2
       '@rnx-kit/metro-config':
         specifier: 1.3.7
-        version: 1.3.7(@babel/core@7.28.0(supports-color@8.1.1))(@babel/plugin-transform-typescript@7.28.0(@babel/core@7.28.0(supports-color@8.1.1))(supports-color@8.1.1))(@babel/runtime@7.28.4)(metro-config@0.58.0(encoding@0.1.13)(supports-color@8.1.1))(metro-react-native-babel-preset@0.77.0(@babel/core@7.28.0(supports-color@8.1.1))(supports-color@8.1.1))(metro-resolver@0.58.0)(react-native@0.63.4(@babel/core@7.28.0(supports-color@8.1.1))(encoding@0.1.13)(react@17.0.2)(supports-color@8.1.1))(react@17.0.2)(supports-color@8.1.1)
+        version: 1.3.7(@babel/core@7.28.0(supports-color@8.1.1))(@babel/plugin-transform-typescript@7.28.0(@babel/core@7.28.0(supports-color@8.1.1))(supports-color@8.1.1))(@babel/runtime@8.1.2)(metro-config@0.58.0(encoding@0.1.13)(supports-color@8.1.1))(metro-react-native-babel-preset@0.77.0(@babel/core@7.28.0(supports-color@8.1.1))(supports-color@8.1.1))(metro-resolver@0.58.0)(react-native@0.63.4(@babel/core@7.28.0(supports-color@8.1.1))(encoding@0.1.13)(react@17.0.2)(supports-color@8.1.1))(react@17.0.2)(supports-color@8.1.1)
       '@rnx-kit/metro-resolver-symlinks':
         specifier: 0.2.6
         version: 0.2.6
@@ -897,6 +897,9 @@ packages:
   '@babel/runtime@7.28.4':
     resolution: {integrity: sha512-Q/N6JNWvIvPnLDvjlE1OUBLPQHH6l3CltCEsHIujp45zQUSSh8K+gHnaEX45yAT1nyngnINhvWtzN+Nb9D8RAQ==}
     engines: {node: '>=6.9.0'}
+
+  '@babel/runtime@8.1.2':
+    resolution: {integrity: sha512-Ay6HdEKZJAeGs6KKJ/ezCK5ssjFmkvUiR0TEGv/B1abyjLWrQ2RU+M507Ppk0NikhvVFhlEFC1/rHfCiYqSUcw==}
 
   '@babel/template@7.27.2':
     resolution: {integrity: sha512-LPDZ85aEJyYSd18/DkjNh4/y1ntkE5KwUHWTiqgRxruuZL2F1yuHligVHLvcHY2vMHXttKFpJn6LwfI7cw7ODw==}
@@ -8484,6 +8487,8 @@ snapshots:
 
   '@babel/runtime@7.28.4': {}
 
+  '@babel/runtime@8.1.2': {}
+
   '@babel/template@7.27.2':
     dependencies:
       '@babel/code-frame': 7.27.1
@@ -9626,10 +9631,10 @@ snapshots:
       - conventional-commits-filter
       - conventional-commits-parser
 
-  '@rnx-kit/babel-preset-metro-react-native@1.1.8(@babel/core@7.28.0(supports-color@8.1.1))(@babel/plugin-transform-typescript@7.28.0(@babel/core@7.28.0(supports-color@8.1.1))(supports-color@8.1.1))(@babel/runtime@7.28.4)(metro-react-native-babel-preset@0.77.0(@babel/core@7.28.0(supports-color@8.1.1))(supports-color@8.1.1))(supports-color@8.1.1)':
+  '@rnx-kit/babel-preset-metro-react-native@1.1.8(@babel/core@7.28.0(supports-color@8.1.1))(@babel/plugin-transform-typescript@7.28.0(@babel/core@7.28.0(supports-color@8.1.1))(supports-color@8.1.1))(@babel/runtime@8.1.2)(metro-react-native-babel-preset@0.77.0(@babel/core@7.28.0(supports-color@8.1.1))(supports-color@8.1.1))(supports-color@8.1.1)':
     dependencies:
       '@babel/core': 7.28.0(supports-color@8.1.1)
-      '@babel/runtime': 7.28.4
+      '@babel/runtime': 8.1.2
       '@rnx-kit/console': 1.1.0
       babel-plugin-const-enum: 1.2.0(@babel/core@7.28.0(supports-color@8.1.1))(supports-color@8.1.1)
     optionalDependencies:
@@ -9642,9 +9647,9 @@ snapshots:
 
   '@rnx-kit/console@2.0.0': {}
 
-  '@rnx-kit/metro-config@1.3.7(@babel/core@7.28.0(supports-color@8.1.1))(@babel/plugin-transform-typescript@7.28.0(@babel/core@7.28.0(supports-color@8.1.1))(supports-color@8.1.1))(@babel/runtime@7.28.4)(metro-config@0.58.0(encoding@0.1.13)(supports-color@8.1.1))(metro-react-native-babel-preset@0.77.0(@babel/core@7.28.0(supports-color@8.1.1))(supports-color@8.1.1))(metro-resolver@0.58.0)(react-native@0.63.4(@babel/core@7.28.0(supports-color@8.1.1))(encoding@0.1.13)(react@17.0.2)(supports-color@8.1.1))(react@17.0.2)(supports-color@8.1.1)':
+  '@rnx-kit/metro-config@1.3.7(@babel/core@7.28.0(supports-color@8.1.1))(@babel/plugin-transform-typescript@7.28.0(@babel/core@7.28.0(supports-color@8.1.1))(supports-color@8.1.1))(@babel/runtime@8.1.2)(metro-config@0.58.0(encoding@0.1.13)(supports-color@8.1.1))(metro-react-native-babel-preset@0.77.0(@babel/core@7.28.0(supports-color@8.1.1))(supports-color@8.1.1))(metro-resolver@0.58.0)(react-native@0.63.4(@babel/core@7.28.0(supports-color@8.1.1))(encoding@0.1.13)(react@17.0.2)(supports-color@8.1.1))(react@17.0.2)(supports-color@8.1.1)':
     dependencies:
-      '@rnx-kit/babel-preset-metro-react-native': 1.1.8(@babel/core@7.28.0(supports-color@8.1.1))(@babel/plugin-transform-typescript@7.28.0(@babel/core@7.28.0(supports-color@8.1.1))(supports-color@8.1.1))(@babel/runtime@7.28.4)(metro-react-native-babel-preset@0.77.0(@babel/core@7.28.0(supports-color@8.1.1))(supports-color@8.1.1))(supports-color@8.1.1)
+      '@rnx-kit/babel-preset-metro-react-native': 1.1.8(@babel/core@7.28.0(supports-color@8.1.1))(@babel/plugin-transform-typescript@7.28.0(@babel/core@7.28.0(supports-color@8.1.1))(supports-color@8.1.1))(@babel/runtime@8.1.2)(metro-react-native-babel-preset@0.77.0(@babel/core@7.28.0(supports-color@8.1.1))(supports-color@8.1.1))(supports-color@8.1.1)
       '@rnx-kit/console': 1.1.0
       '@rnx-kit/tools-node': 2.1.2
       '@rnx-kit/tools-react-native': 1.4.2
