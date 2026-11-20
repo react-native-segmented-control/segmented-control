@@ -16,9 +16,10 @@ import {
   Platform,
 } from 'react-native';
 
+import type {TextStyle} from 'react-native';
 import type {FontStyle, ViewStyle} from './types';
 
-type Props = $ReadOnly<{|
+type Props = Readonly<{|
   value: string | number | Object,
   tintColor?: ?string,
   onSelect: () => void,
@@ -32,7 +33,7 @@ type Props = $ReadOnly<{|
   testID?: string,
 |}>;
 
-function isBase64(str: mixed): boolean {
+function isBase64(str: unknown): boolean {
   const regex =
     /^data:image\/(?:gif|png|jpeg|bmp|webp)(?:;charset=utf-8)?;base64,(?:[A-Za-z0-9]|[+/])+={0,2}/;
   return typeof str === 'string' && regex.test(str);
@@ -73,7 +74,7 @@ export const SegmentedControlTab = ({
   };
   const color = getColor();
 
-  const activeStyle = {
+  const activeStyle: TextStyle = {
     ...styles.activeText,
     fontFamily: activeFontFamily || fontFamily,
     fontSize: activeFontSize || fontSize,
@@ -81,7 +82,7 @@ export const SegmentedControlTab = ({
     fontWeight: activeFontWeight || fontWeight || styles.activeText.fontWeight,
   };
 
-  const idleStyle = {
+  const idleStyle: TextStyle = {
     color,
     fontSize: fontSize,
     fontFamily: fontFamily,
