@@ -16,9 +16,11 @@ import {Image, StyleSheet, processColor} from 'react-native';
 
 import RNCSegmentedControlNativeComponent from './RNCSegmentedControlNativeComponent';
 
-type Props = $ReadOnly<{|
+type NativeRef = React.ElementRef<typeof RNCSegmentedControlNativeComponent>;
+
+type Props = Readonly<{|
   ...SegmentedControlProps,
-  forwardedRef: ?React.Ref<typeof RNCSegmentedControlNativeComponent>,
+  forwardedRef: ?React.RefSetter<NativeRef>,
 |}>;
 
 /**
@@ -44,7 +46,7 @@ type Props = $ReadOnly<{|
 
 class SegmentedControlIOS extends React.Component<Props> {
   static defaultProps: {|
-    values: $ReadOnlyArray<string | number>,
+    values: ReadonlyArray<string | number>,
     enabled: boolean,
   |} = {
     values: [],
@@ -67,8 +69,7 @@ class SegmentedControlIOS extends React.Component<Props> {
             ? {
                 ...fontStyle,
                 color: fontStyle.color
-                  ? // $FlowFixMe color is converted to number
-                    processColor(fontStyle.color)
+                  ? processColor(fontStyle.color)
                   : undefined,
               }
             : undefined
@@ -78,8 +79,7 @@ class SegmentedControlIOS extends React.Component<Props> {
             ? {
                 ...activeFontStyle,
                 color: activeFontStyle.color
-                  ? // $FlowFixMe color is converted to number
-                    processColor(activeFontStyle.color)
+                  ? processColor(activeFontStyle.color)
                   : undefined,
               }
             : undefined
@@ -102,12 +102,11 @@ const styles = StyleSheet.create({
   },
 });
 
-// $FlowFixMe
-const SegmentedControlIOSWithRef = React.forwardRef(
-  (
-    props: SegmentedControlProps,
-    forwardedRef: ?React.Ref<typeof RNCSegmentedControlNativeComponent>,
-  ) => {
+const SegmentedControlIOSWithRef: React.ComponentType<{
+  ...SegmentedControlProps,
+  ref?: React.RefSetter<NativeRef>,
+}> = React.forwardRef(
+  (props: SegmentedControlProps, forwardedRef: ?React.RefSetter<NativeRef>) => {
     return <SegmentedControlIOS {...props} forwardedRef={forwardedRef} />;
   },
 );
