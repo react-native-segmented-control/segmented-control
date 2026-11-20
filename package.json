@@ -40,7 +40,7 @@
     "eslint-plugin-ft-flow": "^3.0.11",
     "eslint-plugin-prettier": "^5.0.0",
     "expo": "^46.0.16",
-    "flow-bin": "^0.237.2",
+    "flow-bin": "^0.340.0",
     "husky": "^9.1.7",
     "jest": "^30.5.2",
     "metro-react-native-babel-preset": "0.77.0",

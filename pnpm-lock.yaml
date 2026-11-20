@@ -54,8 +54,8 @@ importers:
         specifier: ^46.0.16
         version: 46.0.21(@babel/core@7.28.0(supports-color@8.1.1))(encoding@0.1.13)(supports-color@8.1.1)
       flow-bin:
-        specifier: ^0.237.2
-        version: 0.237.2
+        specifier: ^0.340.0
+        version: 0.340.0
       husky:
         specifier: ^9.1.7
         version: 9.1.7
@@ -3910,8 +3910,8 @@ packages:
   flatted@3.3.3:
     resolution: {integrity: sha512-GX+ysw4PBCz0PzosHDepZGANEuFCMLrnRTiEy9McGjmkCQYwRq4A/X786G/fjM/+OjsWSU1ZrY5qyARZmO/uwg==}
 
-  flow-bin@0.237.2:
-    resolution: {integrity: sha512-PlonnPvzTW4nES5YPMwZOJS+IRoaS0ABJWPjsT+5kvLDjXsPerg6A4ftWks4t4gRpPjKSl+6F1BTn9uqWP0inA==}
+  flow-bin@0.340.0:
+    resolution: {integrity: sha512-XourZh2487go6B2RTIssruf5iH1rVATg7IdE8CGfMbey/93RJR5HTsqQEgVK33lmGhew8fTRLZmeSEyMVubMpw==}
     engines: {node: '>=0.10.0'}
     hasBin: true
 
@@ -12656,7 +12656,7 @@ snapshots:
 
   flatted@3.3.3: {}
 
-  flow-bin@0.237.2: {}
+  flow-bin@0.340.0: {}
 
   follow-redirects@1.15.11(debug@4.4.1(supports-color@8.1.1)):
     optionalDependencies:
