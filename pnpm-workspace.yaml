@@ -9,3 +9,7 @@ overrides:
   'glob@10>minimatch': ^11.0.1
   'glob@13>minimatch': ^11.0.1
   'test-exclude@7>minimatch': ^11.0.1
+  # release-it pins proxy-agent 8.0.2, whose exact-pinned chain ends in
+  # basic-ftp 5 (Dependabot alert #413). 8.0.3 moves the chain to
+  # basic-ftp 6. Remove once release-it depends on proxy-agent >= 8.0.3.
+  'proxy-agent@8.0.2': 8.0.3
