@@ -9,7 +9,6 @@
   },
   "dependencies": {
     "@expo/metro-runtime": "~58.0.17",
-    "@react-native-segmented-control/segmented-control": "workspace:*",
     "expo": "~58.0.26",
     "react": "19.3.0",
     "react-dom": "19.3.0",
