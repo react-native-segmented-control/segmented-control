@@ -1,25 +1,14 @@
 const project = (() => {
-  const fs = require('fs');
-  const path = require('path');
   try {
-    const {
-      androidManifestPath,
-      iosProjectPath,
-      windowsProjectPath,
-    } = require('react-native-test-app');
-    const iosProject = iosProjectPath('ios');
-    return {
+    const {configureProjects} = require('react-native-test-app');
+    return configureProjects({
       android: {
         sourceDir: 'android',
-        manifestPath: androidManifestPath(path.join(__dirname, 'android')),
       },
-      windows: fs.existsSync('windows/SegmentedControlExample.sln') && {
-        sourceDir: 'windows',
-        solutionFile: 'SegmentedControlExample.sln',
-        project: windowsProjectPath(path.join(__dirname, 'windows')),
+      ios: {
+        sourceDir: 'ios',
       },
-      ...(iosProject ? {ios: {project: iosProject}} : undefined),
-    };
+    });
   } catch (_) {
     return undefined;
   }

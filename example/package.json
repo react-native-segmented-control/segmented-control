@@ -6,33 +6,24 @@
     "android": "react-native run-android",
     "build:android": "mkdirp dist/res && react-native bundle --entry-file index.js --platform android --dev true --bundle-output dist/main.android.jsbundle --assets-dest dist/res",
     "build:ios": "mkdirp dist && react-native bundle --entry-file index.js --platform ios --dev true --bundle-output dist/main.ios.jsbundle --assets-dest dist",
-    "build:macos": "mkdirp dist && react-native bundle --entry-file index.js --platform macos --dev true --bundle-output dist/main.macos.jsbundle --assets-dest dist",
-    "build:windows": "mkdirp dist && react-native bundle --entry-file index.js --platform windows --dev true --bundle-output dist/main.windows.bundle --assets-dest dist",
     "ios": "react-native run-ios",
-    "lint": "eslint .",
-    "macos": "react-native run-macos --scheme SegmentedControlExample",
-    "start": "react-native start",
-    "test": "jest",
-    "windows": "react-native run-windows --sln windows/SegmentedControlExample.sln"
+    "start": "react-native start"
   },
   "dependencies": {
-    "hermes-engine": "0.10.0",
-    "react": "17.0.2",
-    "react-native": "0.63.4",
-    "react-native-macos": "^0.63.0",
-    "react-native-windows": "^0.63.0"
+    "@react-native-segmented-control/segmented-control": "workspace:*",
+    "react": "19.3.0",
+    "react-native": "0.88.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.10.2",
-    "@babel/runtime": "^7.10.2",
-    "metro-react-native-babel-preset": "0.77.0",
+    "@babel/core": "^7.29.0",
+    "@babel/runtime": "^7.29.0",
+    "@react-native-community/cli": "20.2.0",
+    "@react-native-community/cli-platform-android": "20.2.0",
+    "@react-native-community/cli-platform-ios": "20.2.0",
+    "@react-native/babel-preset": "0.88.1",
+    "@react-native/metro-config": "0.88.1",
+    "@rnx-kit/metro-config": "^2.2.5",
     "mkdirp": "^3.0.1",
-    "react-native-test-app": "1.4.6",
-    "react-test-renderer": "17.0.2",
-    "@rnx-kit/metro-config": "1.3.7",
-    "@rnx-kit/metro-resolver-symlinks":"0.2.6"
-  },
-  "jest": {
-    "preset": "react-native"
+    "react-native-test-app": "^5.4.17"
   }
 }

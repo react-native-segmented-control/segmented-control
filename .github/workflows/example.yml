@@ -23,11 +23,11 @@ jobs:
       - uses: actions/setup-java@v5
         with:
           distribution: 'zulu'
-          java-version: 11
+          java-version: 17
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile
       - name: Build android
-        run: cd example && NODE_OPTIONS="--openssl-legacy-provider" pnpm build:android
+        run: cd example && pnpm build:android
       - name: Build Android Example App and Library
         run: cd example/android && ./gradlew clean assembleDebug
   ios:
@@ -44,6 +44,6 @@ jobs:
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile
       - name: Build ios
-        run: cd example && NODE_OPTIONS="--openssl-legacy-provider" pnpm build:ios
+        run: cd example && pnpm build:ios
       - name: Pod install
         run: cd example && pod install --project-directory=ios
