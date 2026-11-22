@@ -30,7 +30,7 @@
     "@babel/preset-env": "^7.29.0",
     "@babel/preset-flow": "^7.27.0",
     "@babel/preset-react": "^7.27.0",
-    "@babel/runtime": "^7.29.14",
+    "@babel/runtime": "^8.1.2",
     "@react-native/babel-preset": "0.88.1",
     "@react-native/eslint-config": "0.88.1",
     "@react-native/jest-preset": "0.88.1",
