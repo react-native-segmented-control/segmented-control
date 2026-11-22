@@ -87,9 +87,11 @@ const SegmentedControl = ({
 
   React.useEffect(() => {
     if (ref.current) {
-      ref.current.measure((_x: number, _y: number, width: number) =>
-        updateSegmentWidth(width),
-      );
+      ref.current.measure((_x: number, _y: number, width?: number) => {
+        if (width !== undefined) {
+          updateSegmentWidth(width);
+        }
+      });
     }
   }, [values, updateSegmentWidth]);
 
