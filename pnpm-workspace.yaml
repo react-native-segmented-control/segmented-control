@@ -1,2 +1,11 @@
 packages:
   - 'example'
+
+# minimatch < 11.0.1 is affected by Dependabot alert #409 (DoS via globparts
+# amplification). These dev-only packages, pulled in by jest, still depend
+# on minimatch 9/10 even in their latest releases. Remove once upstream
+# moves to minimatch >= 11.0.1.
+overrides:
+  'glob@10>minimatch': ^11.0.1
+  'glob@13>minimatch': ^11.0.1
+  'test-exclude@7>minimatch': ^11.0.1
