@@ -1,5 +1,5 @@
 name: Example apps
-# Builds the example app on Android and iOS. Kept separate from `Build` so that
+# Builds the example app on Android, iOS and web. Kept separate from `Build` so that
 # Release (release.yml), which waits for `Build`, is not blocked by the example
 # app's native toolchain.
 on:
@@ -47,3 +47,18 @@ jobs:
         run: cd example && pnpm build:ios
       - name: Pod install
         run: cd example && pod install --project-directory=ios
+  web:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: pnpm
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Export web example
+        run: cd example-web && pnpm export

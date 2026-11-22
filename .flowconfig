@@ -3,8 +3,9 @@
 **/*.macos.js
 **/*.windows.js
 
-; The example app has its own dependencies
+; The example apps have their own dependencies
 example/**
+example-web/**
 
 **/node_modules/resolve/test/**
 
