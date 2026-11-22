@@ -11,6 +11,7 @@
 .watchman-*
 .xcode.env
 android/app/
+android/.kotlin/
 android/build/
 dist/*
 !dist/.gitignore

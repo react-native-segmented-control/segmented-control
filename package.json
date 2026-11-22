@@ -15,6 +15,7 @@
     "test": "pnpm flow && pnpm lint",
     "ios": "cd example && react-native run-ios",
     "android": "react-native run-android",
+    "web": "pnpm --filter SegmentedControlExampleWeb start",
     "flow": "flow",
     "lint": "eslint . --cache",
     "tsc": "tsc --noEmit",
