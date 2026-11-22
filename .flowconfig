@@ -12,7 +12,6 @@ example/**
 .*/node_modules/.*
 
 [libs]
-flow-typed/
 node_modules/react-native/flow/
 
 [options]
