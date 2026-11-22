@@ -38,7 +38,7 @@
     "@types/react": "^19.3.0",
     "babel-jest": "^30.2.0",
     "eslint": "8",
-    "flow-bin": "^0.331.0",
+    "flow-bin": "^0.340.0",
     "husky": "^9.1.7",
     "jest": "^30.5.2",
     "prettier": "^3.0.0",
