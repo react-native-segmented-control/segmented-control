@@ -5,7 +5,7 @@
  * @flow
  */
 
-import SegmentedControl from '..';
+import SegmentedControl from '@react-native-segmented-control/segmented-control';
 import React, {useEffect, useState} from 'react';
 import {ScrollView, StyleSheet, Text, View, useColorScheme} from 'react-native';
 
@@ -46,7 +46,7 @@ const App = () => {
           values={[
             'One',
             'Two',
-            require('../assets/images/user.png'),
+            require('./assets/images/user.png'),
             'Three',
             'Four',
             'Five',
