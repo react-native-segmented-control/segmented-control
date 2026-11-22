@@ -8,6 +8,7 @@
     "index.d.ts",
     "ios",
     "js",
+    "!js/__tests__",
     "react-native-segmented-control.podspec"
   ],
   "scripts": {
