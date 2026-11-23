@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@react-native-segmented-control/segmented-control": "workspace:*",
-    "react": "19.3.0",
+    "react": "19.3.1",
     "react-native": "0.88.1"
   },
   "devDependencies": {
