@@ -8,7 +8,7 @@ import * as React from 'react';
 
 import {StyleSheet, View, useColorScheme} from 'react-native';
 
-type Props = $ReadOnly<{|
+type Props = Readonly<{|
   values: number,
   selectedIndex: ?number,
 |}>;

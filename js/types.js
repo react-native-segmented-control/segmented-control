@@ -2,21 +2,24 @@
  * @flow
  */
 
-import type {ColorValue} from 'react-native/Libraries/StyleSheet/StyleSheetTypes';
-import type {SyntheticEvent} from 'react-native/Libraries/Types/CoreEventTypes';
-import type {ViewProps} from 'react-native/Libraries/Components/View/ViewPropTypes';
-import type {ViewStyleProp} from 'react-native/Libraries/StyleSheet/StyleSheet';
+import type {
+  ColorValue,
+  NativeSyntheticEvent,
+  StyleProp,
+  ViewProps,
+  ViewStyle as RNViewStyle,
+} from 'react-native';
 
-export type Event = SyntheticEvent<
-  $ReadOnly<{|
+export type Event = NativeSyntheticEvent<
+  Readonly<{|
     value: string,
     selectedSegmentIndex: number,
   |}>,
 >;
 
-export type ViewStyle = ViewStyleProp;
+export type ViewStyle = StyleProp<RNViewStyle>;
 
-export type FontStyle = $ReadOnly<{|
+export type FontStyle = Readonly<{|
   /**
    * Font Color of Segmented Control
    */
@@ -46,12 +49,12 @@ export type FontStyle = $ReadOnly<{|
     | '900',
 |}>;
 
-export type SegmentedControlProps = $ReadOnly<{|
+export type SegmentedControlProps = Readonly<{|
   ...ViewProps,
   /**
    * The labels for the control's segment buttons, in order.
    */
-  values: $ReadOnlyArray<string | number | Object>,
+  values: ReadonlyArray<string | number | Object>,
   /**
    * The index in `props.values` of the segment to be (pre)selected.
    */
@@ -60,12 +63,12 @@ export type SegmentedControlProps = $ReadOnly<{|
    * Callback that is called when the user taps a segment;
    * passes the segment's value as an argument
    */
-  onValueChange?: ?(value: string | number | Object) => mixed,
+  onValueChange?: ?(value: string | number | Object) => unknown,
   /**
    * Callback that is called when the user taps a segment;
    * passes the event as an argument
    */
-  onChange?: ?(event: Event) => mixed,
+  onChange?: ?(event: Event) => unknown,
   /**
    * If false the user won't be able to interact with the control.
    * Default value is true.
@@ -116,7 +119,7 @@ export type SegmentedControlProps = $ReadOnly<{|
   /**
    * array testID to each segment button
    */
-  testIDS: $ReadOnlyArray<string>,
+  testIDS: ReadonlyArray<string>,
   /**
    * Style properties for the slider component (Animated.View)
    */

@@ -1,8 +1,17 @@
 packages:
   - 'example'
+  - 'example-web'
 
-# Kept here rather than in package.json: pnpm 11+ no longer reads the
-# "pnpm" field or "resolutions" from package.json, so a lockfile
-# regenerated with a newer pnpm (e.g. by Dependabot) would drop it.
+# minimatch < 11.0.1 is affected by Dependabot alert #409 (DoS via globparts
+# amplification). These dev-only packages, pulled in by jest and expo, still depend
+# on minimatch 9/10 even in their latest releases. Remove once upstream
+# moves to minimatch >= 11.0.1.
 overrides:
-  '@react-native-community/cli': 4.10.0
+  'glob@10>minimatch': ^11.0.1
+  'glob@13>minimatch': ^11.0.1
+  'test-exclude@7>minimatch': ^11.0.1
+  '@expo/fingerprint>minimatch': ^11.0.1
+  # release-it pins proxy-agent 8.0.2, whose exact-pinned chain ends in
+  # basic-ftp 5 (Dependabot alert #413). 8.0.3 moves the chain to
+  # basic-ftp 6. Remove once release-it depends on proxy-agent >= 8.0.3.
+  'proxy-agent@8.0.2': 8.0.3

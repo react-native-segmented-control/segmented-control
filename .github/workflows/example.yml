@@ -1,5 +1,5 @@
 name: Example apps
-# Builds the example app on Android and iOS. Kept separate from `Build` so that
+# Builds the example app on Android, iOS and web. Kept separate from `Build` so that
 # Release (release.yml), which waits for `Build`, is not blocked by the example
 # app's native toolchain.
 on:
@@ -12,38 +12,53 @@ jobs:
   android:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
-      - uses: pnpm/action-setup@v4
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
         with:
           version: 10
-      - uses: actions/setup-node@v5
+      - uses: actions/setup-node@v7
         with:
           node-version: 22
           cache: pnpm
-      - uses: actions/setup-java@v5
+      - uses: actions/setup-java@v6
         with:
           distribution: 'zulu'
-          java-version: 11
+          java-version: 17
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile
       - name: Build android
-        run: cd example && NODE_OPTIONS="--openssl-legacy-provider" pnpm build:android
+        run: cd example && pnpm build:android
       - name: Build Android Example App and Library
         run: cd example/android && ./gradlew clean assembleDebug
   ios:
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v5
-      - uses: pnpm/action-setup@v4
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
         with:
           version: 10
-      - uses: actions/setup-node@v5
+      - uses: actions/setup-node@v7
         with:
           node-version: 22
           cache: pnpm
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile
       - name: Build ios
-        run: cd example && NODE_OPTIONS="--openssl-legacy-provider" pnpm build:ios
+        run: cd example && pnpm build:ios
       - name: Pod install
         run: cd example && pod install --project-directory=ios
+  web:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+        with:
+          version: 10
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: pnpm
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Export web example
+        run: cd example-web && pnpm export

@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "SegmentedControlExample",
+    "slug": "segmented-control-example",
+    "platforms": ["web"],
+    "web": {
+      "bundler": "metro",
+      "output": "single"
+    }
+  }
+}
