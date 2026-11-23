@@ -28,6 +28,7 @@ const SegmentedControl = ({
   onChange,
   onValueChange,
   enabled = true,
+  disabledIndices,
   selectedIndex,
   values,
   tintColor,
@@ -134,9 +135,11 @@ const SegmentedControl = ({
       <View style={styles.segmentsContainer}>
         {values &&
           values.map((value, index) => {
+            const segmentDisabled = !!disabledIndices?.includes(index);
             return (
               <SegmentedControlTab
-                enabled={enabled}
+                enabled={enabled && !segmentDisabled}
+                dimmed={segmentDisabled}
                 testID={
                   (testIDS?.length ?? 0) > index ? testIDS[index] : `${index}`
                 }

@@ -75,6 +75,11 @@ export type SegmentedControlProps = Readonly<{|
    */
   enabled?: boolean,
   /**
+   * Indexes of the segments (in `props.values`) the user can't interact with.
+   * The other segments remain interactive.
+   */
+  disabledIndices?: ReadonlyArray<number>,
+  /**
    * Accent color of the control.
    */
   tintColor?: string,

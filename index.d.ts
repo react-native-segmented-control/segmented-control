@@ -54,6 +54,12 @@ export interface SegmentedControlProps extends ViewProps {
   enabled?: boolean;
 
   /**
+   * Indexes of the segments (in `props.values`) the user can't interact with.
+   * The other segments remain interactive.
+   */
+  disabledIndices?: number[];
+
+  /**
    * If true, then selecting a segment won't persist visually.
    * The onValueChange callback will still work as expected.
    */

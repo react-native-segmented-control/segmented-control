@@ -25,6 +25,7 @@ type Props = Readonly<{|
   onSelect: () => void,
   selected: boolean,
   enabled: boolean,
+  dimmed?: boolean,
   fontStyle?: FontStyle,
   activeFontStyle?: FontStyle,
   tabStyle?: ViewStyle,
@@ -43,6 +44,7 @@ export const SegmentedControlTab = ({
   onSelect,
   value,
   enabled,
+  dimmed = false,
   selected,
   tintColor,
   fontStyle = {},
@@ -91,7 +93,7 @@ export const SegmentedControlTab = ({
 
   return (
     <TouchableOpacity
-      style={[styles.container, tabStyle]}
+      style={[styles.container, tabStyle, dimmed && styles.dimmed]}
       disabled={!enabled}
       onPress={onSelect}
       accessibilityHint={accessibilityHint}
@@ -118,6 +120,7 @@ export const SegmentedControlTab = ({
 
 const styles = StyleSheet.create({
   container: {flex: 1, borderRadius: 5},
+  dimmed: {opacity: 0.4},
   default: {
     flex: 1,
     justifyContent: 'center',
