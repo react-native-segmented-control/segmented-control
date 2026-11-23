@@ -75,9 +75,6 @@ importers:
       release-it:
         specifier: ^21.1.2
         version: 21.1.2(@types/node@24.8.0)(supports-color@8.1.1)
-      rimraf:
-        specifier: ^3.0.2
-        version: 3.0.2
       typescript:
         specifier: ^5.9.2
         version: 5.9.2
