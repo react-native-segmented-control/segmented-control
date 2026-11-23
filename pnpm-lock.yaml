@@ -29,7 +29,7 @@ importers:
         version: 7.29.7(@babel/core@7.29.13(supports-color@8.1.1))(supports-color@8.1.1)
       '@babel/runtime':
         specifier: ^8.1.2
-        version: 8.1.2
+        version: 8.1.3
       '@react-native/babel-preset':
         specifier: 0.88.1
         version: 0.88.1(@babel/core@7.29.13(supports-color@8.1.1))(supports-color@8.1.1)
@@ -96,7 +96,7 @@ importers:
         version: 7.29.13(supports-color@8.1.1)
       '@babel/runtime':
         specifier: ^8.1.2
-        version: 8.1.2
+        version: 8.1.3
       '@react-native-community/cli':
         specifier: 20.2.0
         version: 20.2.0(supports-color@8.1.1)(typescript@6.0.3)
@@ -860,8 +860,8 @@ packages:
     resolution: {integrity: sha512-Y5tqevQaUAZhhj82BpYMNC1ssvLQTVAfwKdm8iy8qwmhvC2/CpcAu8OC+QEtjM7pMk7knx83u1Qj8gzkicyelw==}
     engines: {node: '>=6.9.0'}
 
-  '@babel/runtime@8.1.2':
-    resolution: {integrity: sha512-Ay6HdEKZJAeGs6KKJ/ezCK5ssjFmkvUiR0TEGv/B1abyjLWrQ2RU+M507Ppk0NikhvVFhlEFC1/rHfCiYqSUcw==}
+  '@babel/runtime@8.1.3':
+    resolution: {integrity: sha512-tno/enifiFAE77kbJadRE5wKfmzxlYvdB5Dj8yqmWoT49mDJE+wvLgvJY/EKt/jQllv369GMxyyJ9tKfTL33Nw==}
 
   '@babel/template@7.29.7':
     resolution: {integrity: sha512-puq+Gf35oI24FeN11LkoUQFqv9uwNeWpxXZi/Ji3rRIoKAzKnxRaZ+Gkj0vKS9ZCiTESfng1N9LyOyXvo+m+Gg==}
@@ -5278,11 +5278,6 @@ packages:
     resolution: {integrity: sha512-un0FmiRUQNr5PJqy9kP7c40F5BOfpGlYTrxonDChEZB7pzZxRNp/bt+ymiy9/npwXya9KH99nJ/GXFIiUkYGFQ==}
     engines: {node: '>=8'}
 
-  terser@5.51.2:
-    resolution: {integrity: sha512-bWnjSNscmuI+GJze6ZupnHP8G/cTcsJF+bXCeQknk2SHQsgbNJnLrqiH9jZ2W4STPVXH2mDKKRX3iwPhc9Cn/Q==}
-    engines: {node: '>=10'}
-    hasBin: true
-
   terser@5.51.3:
     resolution: {integrity: sha512-j5jPZZ6Sz0Eg2unusKhdRzUhUlHXJ3Bw2AkIXyJ6AqajWwihUlZOdJS+KSnZzmtVk6mFGdm3hHg0+M2sgyEz5Q==}
     engines: {node: '>=10'}
@@ -6549,7 +6544,7 @@ snapshots:
 
   '@babel/runtime@7.29.14': {}
 
-  '@babel/runtime@8.1.2': {}
+  '@babel/runtime@8.1.3': {}
 
   '@babel/template@7.29.7':
     dependencies:
@@ -10870,7 +10865,7 @@ snapshots:
   metro-minify-terser@0.87.3:
     dependencies:
       flow-enums-runtime: 0.0.6
-      terser: 5.51.2
+      terser: 5.51.3
 
   metro-resolver@0.87.1:
     dependencies:
@@ -12159,13 +12154,6 @@ snapshots:
     dependencies:
       ansi-escapes: 4.3.2
       supports-hyperlinks: 2.3.0
-
-  terser@5.51.2:
-    dependencies:
-      '@jridgewell/source-map': 0.3.11
-      acorn: 8.15.0
-      commander: 2.20.3
-      source-map-support: 0.5.21
 
   terser@5.51.3:
     dependencies:
