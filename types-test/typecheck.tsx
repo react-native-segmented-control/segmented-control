@@ -1,4 +1,6 @@
-// Type-level tests for index.d.ts. Checked by `pnpm tsc` (no runtime code).
+// Type-level tests for index.d.ts, checked by `pnpm tsc` (not a Jest test; the
+// file name deliberately does not match Jest's *.test.* pattern).
+/* eslint-disable react-native/no-inline-styles -- fontStyle props, not styles */
 import * as React from 'react';
 import SegmentedControl from '../index';
 
