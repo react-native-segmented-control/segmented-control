@@ -5,12 +5,35 @@ import * as React from 'react';
 import {
   ViewProps,
   NativeSyntheticEvent,
-  NativeMethods,
   TargetedEvent,
   ViewStyle,
+  ImageSourcePropType,
 } from 'react-native';
 
-type Constructor<T> = new (...args: any[]) => T;
+/**
+ * Native methods available on a ref to the control.
+ * Declared here rather than imported, because React Native renamed its type
+ * (`NativeMethods` -> `HostInstance`) and only exports one or the other
+ * depending on the version.
+ */
+export interface SegmentedControlNativeMethods {
+  measure(
+    callback: (
+      x: number,
+      y: number,
+      width: number,
+      height: number,
+      pageX: number,
+      pageY: number,
+    ) => void,
+  ): void;
+  measureInWindow(
+    callback: (x: number, y: number, width: number, height: number) => void,
+  ): void;
+  focus(): void;
+  blur(): void;
+  setNativeProps(nativeProps: object): void;
+}
 
 export interface NativeSegmentedControlIOSChangeEvent extends TargetedEvent {
   value: string;
@@ -44,7 +67,16 @@ export type FontStyle = {
     | '600'
     | '700'
     | '800'
-    | '900';
+    | '900'
+    | 100
+    | 200
+    | 300
+    | 400
+    | 500
+    | 600
+    | 700
+    | 800
+    | 900;
 };
 
 export interface SegmentedControlProps extends ViewProps {
@@ -76,7 +108,9 @@ export interface SegmentedControlProps extends ViewProps {
   /**
    * Callback that is called when the user taps a segment; passes the segment's value as an argument
    */
-  onValueChange?: (value: string) => void;
+  // Method syntax (rather than a function-typed property) so callers can
+  // annotate the value with a narrower type, e.g. a union of their labels.
+  onValueChange?(value: string): void;
 
   /**
    * The index in props.values of the segment to be (pre)selected.
@@ -96,8 +130,9 @@ export interface SegmentedControlProps extends ViewProps {
 
   /**
    * The labels for the control's segment buttons, in order.
+   * Each value is a string, or an image (e.g. `require('./icon.png')`).
    */
-  values?: string[];
+  values?: ReadonlyArray<string | ImageSourcePropType>;
 
   /**
    * (iOS 13+ only)
@@ -145,7 +180,7 @@ export interface SegmentedControlProps extends ViewProps {
  * ````
  */
 
-declare class SegmentedControlComponent extends React.Component<SegmentedControlProps> {}
-declare const SegmentedControlBase: Constructor<NativeMethods> &
-  typeof SegmentedControlComponent;
-export default class SegmentedControl extends SegmentedControlBase {}
+declare class SegmentedControl extends React.Component<SegmentedControlProps> {}
+// Instances (refs) also expose the native methods (measure, focus, ...).
+interface SegmentedControl extends SegmentedControlNativeMethods {}
+export default SegmentedControl;
