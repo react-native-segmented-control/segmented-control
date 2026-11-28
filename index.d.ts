@@ -98,6 +98,13 @@ export interface SegmentedControlProps extends ViewProps {
   momentary?: boolean;
 
   /**
+   * (iOS only)
+   * If true, the width of each segment is proportional to the width of its
+   * content instead of all segments sharing the same width.
+   */
+  apportionsSegmentWidthsByContent?: boolean;
+
+  /**
    * Callback that is called when the user taps a segment;
    * passes the event as an argument
    */

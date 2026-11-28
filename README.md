@@ -147,6 +147,16 @@ If true, then selecting a segment won't persist visually. The `onValueChange` ca
 
 ---
 
+### `apportionsSegmentWidthsByContent`
+
+If true, the width of each segment is proportional to the width of its content, so short labels take less room than long ones. By default all segments have the same width. Maps to `UISegmentedControl`'s [`apportionsSegmentWidthsByContent`](https://developer.apple.com/documentation/uikit/uisegmentedcontrol/apportionssegmentwidthsbycontent).
+
+| Type | Required | Platform |
+| ---- | -------- | -------- |
+| bool | No       | iOS      |
+
+---
+
 ### `onChange`
 
 Callback that is called when the user taps a segment; passes the event as an argument
