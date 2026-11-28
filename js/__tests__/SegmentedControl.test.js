@@ -1,7 +1,7 @@
 /* eslint-env jest */
 
 import React from 'react';
-import {TouchableOpacity} from 'react-native';
+import {Animated, StyleSheet, TouchableOpacity, View} from 'react-native';
 import renderer, {act} from 'react-test-renderer';
 import SegmentedControl from '../SegmentedControl.js';
 
@@ -150,5 +150,82 @@ describe('Android and web disabled segments', () => {
     expect(
       render({disabledIndices: [7]}).tabs.map((tab) => tab.props.disabled),
     ).toEqual([false, false, false]);
+  });
+});
+
+describe('Android and web momentary control', () => {
+  let tree;
+  let props;
+
+  beforeEach(() => {
+    props = {
+      values: ['One', 'Two'],
+      selectedIndex: 0,
+      momentary: true,
+      onChange: jest.fn(),
+      onValueChange: jest.fn(),
+    };
+  });
+
+  afterEach(() => {
+    act(() => tree?.unmount());
+  });
+
+  function render(overrides = {}) {
+    props = {...props, ...overrides};
+    act(() => {
+      tree = renderer.create(<SegmentedControl {...props} />);
+    });
+    return tree.root.findAllByType(TouchableOpacity);
+  }
+
+  function sliders() {
+    return tree.root
+      .findAllByType(Animated.View)
+      .filter(
+        (node) => StyleSheet.flatten(node.props.style).position === 'absolute',
+      );
+  }
+
+  function layout(width) {
+    act(() => {
+      tree.root.findAllByType(View)[0].props.onLayout({
+        nativeEvent: {layout: {width}},
+      });
+    });
+  }
+
+  it('does not mark any segment as selected', () => {
+    const tabs = render();
+    expect(tabs.map((tab) => tab.props.accessibilityState.selected)).toEqual([
+      false,
+      false,
+    ]);
+  });
+
+  it('does not render the selection slider', () => {
+    render();
+    layout(200);
+    expect(sliders()).toHaveLength(0);
+
+    act(() => {
+      tree.update(<SegmentedControl {...props} momentary={false} />);
+    });
+    expect(sliders()).toHaveLength(1);
+  });
+
+  it('notifies every tap, including repeated taps on the same segment', () => {
+    const tabs = render();
+    act(() => tabs[0].props.onPress());
+    act(() => tabs[0].props.onPress());
+    act(() => tabs[1].props.onPress());
+    expect(props.onChange).toHaveBeenCalledTimes(3);
+    expect(props.onChange).toHaveBeenNthCalledWith(1, {
+      nativeEvent: {value: 'One', selectedSegmentIndex: 0},
+    });
+    expect(props.onChange).toHaveBeenNthCalledWith(3, {
+      nativeEvent: {value: 'Two', selectedSegmentIndex: 1},
+    });
+    expect(props.onValueChange.mock.calls).toEqual([['One'], ['One'], ['Two']]);
   });
 });

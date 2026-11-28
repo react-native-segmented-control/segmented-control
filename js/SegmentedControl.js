@@ -29,7 +29,8 @@ const SegmentedControl = ({
   onValueChange,
   enabled = true,
   disabledIndices,
-  selectedIndex,
+  momentary = false,
+  selectedIndex: selectedIndexProp,
   values,
   tintColor,
   backgroundColor,
@@ -41,6 +42,9 @@ const SegmentedControl = ({
   testIDS,
   sliderStyle,
 }: SegmentedControlProps): React.Node => {
+  // A momentary control never shows a persistent selection, mirroring
+  // UISegmentedControl's `isMomentary` on iOS.
+  const selectedIndex = momentary ? null : selectedIndexProp;
   const colorSchemeHook = useColorScheme();
   const colorScheme = appearance || colorSchemeHook;
   const [segmentWidth, setSegmentWidth] = React.useState(0);
