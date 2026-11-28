@@ -95,6 +95,12 @@ export type SegmentedControlProps = Readonly<{|
    */
   momentary?: ?boolean,
   /**
+   * (iOS only)
+   * If true, the width of each segment is proportional to the width of its
+   * content instead of all segments sharing the same width.
+   */
+  apportionsSegmentWidthsByContent?: ?boolean,
+  /**
    * (iOS 13+ only, Android, Web)
    * Overrides the control's appearance irrespective of the OS theme
    */

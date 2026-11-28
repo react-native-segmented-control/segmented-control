@@ -55,4 +55,12 @@ export const ImageValues = () => (
   />
 );
 
+// #883: segment widths that follow their content (iOS).
+export const ContentWidths = () => (
+  <SegmentedControl
+    values={['S', 'Extra Large']}
+    apportionsSegmentWidthsByContent
+  />
+);
+
 declare function require(path: string): number;

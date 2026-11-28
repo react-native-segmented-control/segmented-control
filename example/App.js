@@ -67,6 +67,15 @@ const App = () => {
       </View>
       <View style={styles.segmentSection}>
         <Text style={[styles.text, {color: textColor}]}>
+          Segment widths can follow their content (iOS)
+        </Text>
+        <SegmentedControl
+          values={['S', 'Medium', 'Extra Large']}
+          apportionsSegmentWidthsByContent={true}
+        />
+      </View>
+      <View style={styles.segmentSection}>
+        <Text style={[styles.text, {color: textColor}]}>
           Segmented controls can be disabled
         </Text>
         <SegmentedControl
