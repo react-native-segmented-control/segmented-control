@@ -141,9 +141,9 @@ Indexes of the segments (positions in `values`) the user can't interact with, wh
 
 If true, then selecting a segment won't persist visually. The `onValueChange` callback will still work as expected.
 
-| Type | Required | Platform |
-| ---- | -------- | -------- |
-| bool | No       | iOS      |
+| Type | Required | Platform          |
+| ---- | -------- | ----------------- |
+| bool | No       | iOS, Android, Web |
 
 ---
 
